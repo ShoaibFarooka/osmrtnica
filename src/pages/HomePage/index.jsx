@@ -22,6 +22,13 @@ export default function HomePage() {
   const onSearch = (value) => {
     console.log("search:", value);
   };
+  const contentStyle = {
+    height: "160px",
+    color: "#fff",
+    lineHeight: "160px",
+    textAlign: "center",
+    background: "#364d79",
+  };
   const filterOption = (input, option) =>
     (option?.label ?? "").toLowerCase().includes(input.toLowerCase());
   return (
@@ -116,31 +123,93 @@ export default function HomePage() {
         </div>
 
         {/* Section 2 */}
-        <Carousel>
+        <Carousel autoplay autoplaySpeed={2000} dotPosition="bottom">
           {/* div1 slider */}
-          <div className="bg-[#FEFAF2] flex border-3 justify-center gap-10 p-10">
-            <span>
-              <div className="border-2 p-5 w-96 bg-white rounded-2xl ">
+          <div className="w-screen " style={contentStyle}>
+            <div className="bg-[#FEFAF2] flex border-3 justify-center gap-10 p-10">
+              <span>
+                <div className="border-2 p-5 bg-white rounded-2xl ">
+                  <div className="flex justify-center w-full mb-4 ">
+                    <div className="w-1 h-1  border-2 rounded-full bg-gray-500"></div>
+                  </div>
+                  <img className="h-[550px]" src={iPadImg} alt="" srcset="" />
+                  <div className="flex justify-center w-full mt-2">
+                    <div className="w-8 h-8 bg-white border-2 rounded-full "></div>
+                  </div>
+                </div>
+              </span>
+              <span>
+                <div className="w-96">
+                  <div>
+                    <h2 className="font-semibold text-[40px]">Osmrtnica</h2>
+                    <p className="pt-4=">
+                      Stran, kjer izvemo vse o pogrebu, se vpišete v Žalno
+                      knjigo, izrečete sožalja in prižgete virtualno svečko.{" "}
+                    </p>
+                    <h3 className="font-semibold text-[26px] pt-4">
+                      Vse navedeno je BREZPLAČNO.
+                    </h3>
+
+                    <div className="pt-10">
+                      <Button
+                        bg1={"rgba(227, 232, 236, 1)"}
+                        bg2={"rgba(255, 255, 255, 1)"}
+                        padding={2}
+                        px={6}
+                        className=""
+                      >
+                        {" "}
+                        Več informacij
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+
+          {/* div2 slider */}
+          <div className="w-screen" style={contentStyle}>
+            <div className="bg-[#FEFAF2] flex justify-center gap-10 p-10">
+              <div className=" p-5 bg-white rounded-2xl ">
                 <div className="flex justify-center w-full mb-4 ">
                   <div className="w-1 h-1  border-2 rounded-full bg-gray-500"></div>
                 </div>
-                <img className="h-[550px]" src={iPadImg} alt="" srcset="" />
+                <img className="h-[550px]" src={iPadImg2} alt="" srcset="" />
                 <div className="flex justify-center w-full mt-2">
                   <div className="w-8 h-8 bg-white border-2 rounded-full "></div>
                 </div>
               </div>
-            </span>
-            <span>
-              <div className="w-96">
-                <div>
-                  <h2 className="font-semibold text-[40px]">Osmrtnica</h2>
-                  <p className="pt-4=">
-                    Stran, kjer izvemo vse o pogrebu, se vpišete v Žalno knjigo,
-                    izrečete sožalja in prižgete virtualno svečko.{" "}
-                  </p>
-                  <h3 className="font-semibold text-[26px] pt-4">
-                    Vse navedeno je BREZPLAČNO.
-                  </h3>
+              <div className="w-3/6">
+                <div className="">
+                  <span>
+                    <h2 className="font-semibold text-[36px]  ">
+                      Spominska stran{" "}
+                      <span className="text-red-500"> s skrbnikom</span>
+                    </h2>
+                    <p className="pt-4">
+                      Nadgradnja osnovne spominske strani - osmrtnice, kjer
+                      skrbnik prevzame kontrolo nad objavljeno vsebino; ponavadi
+                      je to nekdo, ki je bil preminulemu bližnji. Upravljanje je
+                      enostavno; vsak je lahko skrbnik.
+                    </p>
+                    <p className="pt-4">
+                      Ker Skrbnik skrbi za vsebino še preden je objavljena, so
+                      tu lahko dodane številne dodatne možnosti za izdelavo
+                      prave spominske knjige, na katero se bodo bližnji radi
+                      vračali in jo dopolnjevali.
+                    </p>
+                  </span>
+                  <span className="">
+                    <h3 className="font-semibold text-[20px] pt-20">
+                      Vse navedeno je BREZPLAČNO.
+                    </h3>
+                    <p className="pt-4 pb-14">
+                      Prehitro nam uidejo, čarobni trenutki se pozabijo, slike
+                      zbledijo. Povežimo spomine na naše najdražje v celoto in
+                      jih ohranimo.
+                    </p>{" "}
+                  </span>
 
                   <div className="pt-10">
                     <Button
@@ -154,64 +223,6 @@ export default function HomePage() {
                       Več informacij
                     </Button>
                   </div>
-                </div>
-              </div>
-            </span>
-          </div>
-
-          {/* div2 slider */}
-          <div className="bg-[#FEFAF2] flex justify-center gap-10 p-10">
-            <div className="border-2 p-5 bg-white rounded-2xl ">
-              <div className="flex justify-center w-full mb-4 ">
-                <div className="w-1 h-1  border-2 rounded-full bg-gray-500"></div>
-              </div>
-              <img className="h-[550px]" src={iPadImg2} alt="" srcset="" />
-              <div className="flex justify-center w-full mt-2">
-                <div className="w-8 h-8 bg-white border-2 rounded-full "></div>
-              </div>
-            </div>
-            <div className="w-3/6">
-              <div className="">
-                <span>
-                  <h2 className="font-semibold text-[36px]  ">
-                    Spominska stran{" "}
-                    <span className="text-red-500"> s skrbnikom</span>
-                  </h2>
-                  <p className="pt-4">
-                    Nadgradnja osnovne spominske strani - osmrtnice, kjer
-                    skrbnik prevzame kontrolo nad objavljeno vsebino; ponavadi
-                    je to nekdo, ki je bil preminulemu bližnji. Upravljanje je
-                    enostavno; vsak je lahko skrbnik.
-                  </p>
-                  <p className="pt-4">
-                    Ker Skrbnik skrbi za vsebino še preden je objavljena, so tu
-                    lahko dodane številne dodatne možnosti za izdelavo prave
-                    spominske knjige, na katero se bodo bližnji radi vračali in
-                    jo dopolnjevali.
-                  </p>
-                </span>
-                <span className="">
-                  <h3 className="font-semibold text-[20px] pt-20">
-                    Vse navedeno je BREZPLAČNO.
-                  </h3>
-                  <p className="pt-4 pb-14">
-                    Prehitro nam uidejo, čarobni trenutki se pozabijo, slike
-                    zbledijo. Povežimo spomine na naše najdražje v celoto in jih
-                    ohranimo.
-                  </p>{" "}
-                </span>
-
-                <div className="pt-10">
-                  <Button
-                    bg1={"rgba(227, 232, 236, 1)"}
-                    bg2={"rgba(255, 255, 255, 1)"}
-                    padding={2}
-                    px={6}
-                    className=""
-                  >
-                    {" "}
-                    Več informacij
-                  </Button>
                 </div>
               </div>
             </div>
