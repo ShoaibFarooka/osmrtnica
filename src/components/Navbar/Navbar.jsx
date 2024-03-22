@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { MdPerson } from "react-icons/md";
 import logo from "../../assets/images/logo.png";
@@ -9,9 +9,11 @@ import {
   DropdownItem,
   Button,
 } from "@nextui-org/react";
-import { RxHamburgerMenu } from "react-icons/rx";
+import { RxCrossCircled, RxHamburgerMenu } from "react-icons/rx";
+import MegaMenu from "../MegaMenu/MegaMenu";
 
 export default function Nav() {
+  const [menu, setMenu] = useState(false);
   return (
     <div className="w-full flex justify-between p-4">
       <div className="flex items-center">
@@ -21,21 +23,27 @@ export default function Nav() {
         <img src={logo} className="w-72" />
       </div>
       <div className="flex items-center  ">
-        <Dropdown>
-          <DropdownTrigger>
-            <Button variant="bordered" className="border-white">
-              <RxHamburgerMenu className="text-[24px]" />
-            </Button>
-          </DropdownTrigger>
+        <Button
+          variant="bordered"
+          className="border-white"
+          onClick={() => setMenu(!menu)}
+        >
+          {menu ? (
+            <RxCrossCircled className="text-[24px]" />
+          ) : (
+            <RxHamburgerMenu className="text-[24px]" />
+          )}
+        </Button>
+        {menu && <MegaMenu />}
+        {/* <Dropdown>
+          <DropdownTrigger></DropdownTrigger>
           <DropdownMenu aria-label="Static Actions">
-            <DropdownItem key="new">New file</DropdownItem>
-            <DropdownItem key="copy">Copy link</DropdownItem>
-            <DropdownItem key="edit">Edit file</DropdownItem>
-            <DropdownItem key="delete" className="text-danger" color="danger">
-              Delete file
+            <DropdownItem key="new">
+              {" "}
+              <MegaMenu />
             </DropdownItem>
           </DropdownMenu>
-        </Dropdown>
+        </Dropdown> */}
       </div>
     </div>
   );
