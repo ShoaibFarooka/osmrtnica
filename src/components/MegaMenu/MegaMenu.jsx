@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import { BsChevronDoubleRight } from "react-icons/bs";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-import { item, menu } from "./data";
+import { menu } from "./data";
 import { SubCard } from "./MenuCard";
 import { IoIosArrowForward } from "react-icons/io";
-import { RiArrowDownDoubleLine } from "react-icons/ri";
+import { HiChevronDoubleDown } from "react-icons/hi";
 
 export default function MegaMenu() {
   const [selected, setSelected] = useState(0);
   return (
-    <div className="bg-white w-full z-10 p-5 absolute right-0 top-[70px] border flex gap-5">
-      <div className="">
+    <div className="bg-white w-full max-sm: z-10 p-5 max-sm:flex-wrap  absolute right-0 top-[70px]  border flex gap-5 ">
+      <div className="max-sm:border-b-1 ">
         {menu.map((item, index) => (
           <div key={index} className="w-72" onClick={() => setSelected(index)}>
             <MenuBtn
@@ -61,7 +60,7 @@ const MenuBtn = (props) => {
 
 const Osmrtnice = (props) => {
   return (
-    <div className="flex justify-between w-full flex-wrap p-2  ">
+    <div className="flex justify-between w-full flex-wrap p-2 gap-2 ">
       <div className="flex flex-col gap-5">
         <SubCard
           data={{
@@ -93,7 +92,7 @@ const Osmrtnice = (props) => {
           color={menu[props.selected].color}
         />
       </div>
-      <div className="w-80 border-2 h-fit rounded-lg bg-[#E3E8EC] flex flex-col gap-2 text-[14px] p-3">
+      <div className="w-72 max-sm:w-64 border-2 h-fit rounded-lg bg-[#E3E8EC] flex flex-col gap-2 text-[14px] p-3">
         <h1 className="text-[16px] font-semibold ">
           Oddaja osmrtnice preko naše strani
         </h1>
@@ -116,7 +115,7 @@ const Osmrtnice = (props) => {
         </p>
       </div>
 
-      <div className="w-72 bg-gradient-to-b shadow-xl from-blue-50 to-white border-2 text-[14px] flex flex-col gap-3 rounded-lg p-3 ">
+      <div className="w-72 max-sm:w-64 bg-gradient-to-b shadow-xl from-blue-50 to-white border-2 text-[14px] flex flex-col gap-3 rounded-lg p-3 ">
         <span>
           <p className="text-[#0A85C2]">PROMOCIJA</p>
           <h2 className="font-semibold text-[24px]">VSE BREZPLAČNO</h2>
@@ -148,7 +147,7 @@ const Osmrtnice = (props) => {
 
 const Spominska = (props) => {
   return (
-    <div className="flex justify-between w-full flex-wrap p-2 ">
+    <div className="flex justify-between w-full flex-wrap p-2 gap-2">
       <div className="flex flex-col gap-5">
         <SubCard
           data={{
@@ -244,7 +243,7 @@ const Spominska = (props) => {
 
 const Lokalne = (props) => {
   return (
-    <div className="flex justify-between w-full">
+    <div className="flex justify-between w-full flex-wrap gap-2">
       <div className="flex flex-col gap-5">
         <SubCard
           data={{
@@ -271,7 +270,7 @@ const Lokalne = (props) => {
         />
       </div>
 
-      <div className="w-80 border-2 h-fit rounded-lg bg-[#E3E8EC] flex flex-col gap-2 text-[14px] p-3">
+      <div className="w-72 h-fit rounded-lg bg-cardColor flex flex-col  text-[14px] p-3">
         <h1 className="text-[16px] font-semibold ">
           Kako naročiti v cvetličarnah
         </h1>
@@ -286,9 +285,9 @@ const Lokalne = (props) => {
         </p>
         <a
           href="#"
-          className={`text-[#0A85C2] flex items-center text-[30px]  justify-center`}
+          className={`text-[#256B8C] flex items-center text-[34px] font-extrabold justify-center`}
         >
-          <RiArrowDownDoubleLine />
+          <HiChevronDoubleDown />
         </a>
         <p>
           Cvetličarna vas bo v kratkem času kontaktirala nazaj; včasih že po
@@ -296,16 +295,16 @@ const Lokalne = (props) => {
         </p>
         <a
           href="#"
-          className={`text-[#0A85C2] flex items-center text-[30px]  justify-center`}
+          className={`text-[#256B8C] flex items-center text-[34px] font-extrabold justify-center`}
         >
-          <RiArrowDownDoubleLine />
+          <HiChevronDoubleDown />
         </a>
         <p>Vse se s cvetličarno dogovorite direktno, tako kot ste vajeni.</p>
         <p>Op. kmalu tudi spletno naročanje.</p>
       </div>
 
-      <div className="w-72 bg-blue-500 text-white shadow-xl  border-2 text-[14px] flex flex-col gap-3 rounded-lg p-3 ">
-        <span className="flex flex-col gap-4">
+      <div className="w-72 bg-gradient-to-t from-[#1464E1] to-[#1151B5] text-white shadow-xl  border-2 text-[14px] flex flex-col gap-3 rounded-lg p-3 ">
+        <span className="flex flex-col gap-2">
           <span>
             <h2 className="font-semibold text-[24px]">IMATE CVETLIČARNO?</h2>
           </span>
@@ -313,7 +312,7 @@ const Lokalne = (props) => {
 
           <a
             href="#"
-            className={`text-blue-300 flex gap-2 items-center text-[14px]`}
+            className={`text-[#41C0FF] flex gap-2 items-center text-[14px]`}
           >
             Več o promociji <IoIosArrowForward />
           </a>
@@ -330,7 +329,7 @@ const Lokalne = (props) => {
 
           <a
             href="#"
-            className={`text-blue-300 flex gap-2 items-center text-[14px]`}
+            className={`text-[#41C0FF] flex gap-2 items-center text-[14px]`}
           >
             Kontaktirajte nas <IoIosArrowForward />
           </a>
@@ -342,7 +341,7 @@ const Lokalne = (props) => {
 
 const Vse = (props) => {
   return (
-    <div className="flex justify-between w-full">
+    <div className="flex justify-between w-full flex-wrap gap-2">
       <div>
         <SubCard
           data={{

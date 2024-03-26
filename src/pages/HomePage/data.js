@@ -1,6 +1,6 @@
 import img1 from "../../assets/images/profile.png";
 
-import img2 from "../../assets/images/Candle (1).png";
+// import img2 from "../../assets/images/Candle (1).png";
 import img3 from "../../assets/images/Candle (2).png";
 import img4 from "../../assets/images/Candle (3).png";
 import img5 from "../../assets/images/Candle (4).png";
@@ -32,7 +32,7 @@ export const profiles = [
     name: "Marija Špes",
     date: "1938 – 29.01.2024 (86 let)",
     city: "Sv. Jernej",
-    img: img2,
+    img: img3,
   },
   {
     name: "Franc Novak",
@@ -62,7 +62,7 @@ export const profiles = [
     name: "Milan Kelher",
     date: "1944 – 29.01.2024 (80 let)",
     city: "Muta",
-    img: img2,
+    img: img3,
   },
   {
     name: "Miroslav Vodnik",

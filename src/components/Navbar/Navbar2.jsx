@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-
+import { RxCrossCircled, RxHamburgerMenu } from "react-icons/rx";
+import MegaMenu from "../MegaMenu/MegaMenu";
 import { MdPerson } from "react-icons/md";
 import logo from "../../assets/images/logo.png";
 import { Button } from "@nextui-org/react";
-import { RxCrossCircled, RxHamburgerMenu } from "react-icons/rx";
-import MegaMenu from "../MegaMenu/MegaMenu";
 
-export default function Nav() {
+export default function Navbar2() {
   const [menu, setMenu] = useState(false);
+
   return (
     <div className="w-full flex justify-between p-4 ">
       <div className="flex items-center">
@@ -30,14 +30,14 @@ export default function Nav() {
         </Button>
         {menu && <MegaMenu />}
         {/* <Dropdown>
-          <DropdownTrigger></DropdownTrigger>
-          <DropdownMenu aria-label="Static Actions">
-            <DropdownItem key="new">
-              {" "}
-              <MegaMenu />
-            </DropdownItem>
-          </DropdownMenu>
-        </Dropdown> */}
+      <DropdownTrigger></DropdownTrigger>
+      <DropdownMenu aria-label="Static Actions">
+        <DropdownItem key="new">
+          {" "}
+          <MegaMenu />
+        </DropdownItem>
+      </DropdownMenu>
+    </Dropdown> */}
       </div>
     </div>
   );
