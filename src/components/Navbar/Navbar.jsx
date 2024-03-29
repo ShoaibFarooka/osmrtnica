@@ -6,7 +6,7 @@ import { Button } from "@nextui-org/react";
 import { RxCrossCircled, RxHamburgerMenu } from "react-icons/rx";
 import MegaMenu from "../MegaMenu/MegaMenu";
 
-export default function Nav() {
+export default function Navbar() {
   const [menu, setMenu] = useState(false);
   return (
     <div className="w-full flex justify-between p-4 ">

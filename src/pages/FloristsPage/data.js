@@ -76,6 +76,8 @@ export const profiles = [
     text: "Ulica cvetličarn 28, Mesto",
     number: "055-0045655",
     website: "www.suniflower.co",
+    arrowText: "Odpri",
+    role: "Partner",
     img: img1,
   },
   {
@@ -83,6 +85,8 @@ export const profiles = [
     text: "Trg svobode 134, Mesto ",
     number: "055-0012345",
     website: "www.cvlucijan.si",
+    arrowText: "Odpri",
+    // role: "Partner",
     img: img2,
   },
   {
@@ -90,6 +94,8 @@ export const profiles = [
     text: "Ulica cvetličarn 23, Mesto",
     number: "055-009123",
     website: "www.mestnacv1.si",
+    arrowText: "Odpri",
+    // role: "Partner",
     img: img3,
   },
   {
@@ -97,6 +103,8 @@ export const profiles = [
     text: "Ulica cvetličarn 134, Mesto",
     number: "055-006142",
     website: "www.nasacvtl.si",
+    arrowText: "Odpri",
+    // role: "Partner",
     img: img3,
   },
 ];
