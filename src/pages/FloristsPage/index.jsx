@@ -2,11 +2,8 @@ import React, { useEffect, useState } from "react";
 import Navbar2 from "../../components/Navbar/Navbar2";
 import Navbar from "../../components/Navbar/Navbar";
 import banner from "../../assets/images/flowersBanner.jpg";
-import Suponcer1 from "../../assets/images/Suponcer1.png";
-import Suponcer2 from "../../assets/images/Suponcer2.png";
-import Suponcer3 from "../../assets/images/Suponcer3.png";
-import Suponcer4 from "../../assets/images/Suponcer4.png";
-import Suponcer5 from "../../assets/images/Suponcer5.png";
+import obituary from "../../assets/images/Obituary.png";
+
 import { FlowerCard, animals, profiles } from "./data";
 import { Select, SelectItem } from "@nextui-org/react";
 import { Card2, Card3 } from "../../components/Card/Card";
@@ -14,6 +11,8 @@ import Footer from "../../components/Footer/Footer";
 import HeaderTop from "../../components/HeaderTop/HeaderTop";
 import topBanner from "../../assets/images/topBanner2.jpg";
 import { CiSearch } from "react-icons/ci";
+import { Button2 } from "../../components/Button/Buttons";
+import Sponcers from "../../components/Sponcers/Sponcers";
 
 export default function FloristsListing() {
   const [width, setWidth] = useState();
@@ -57,15 +56,15 @@ export default function FloristsListing() {
             <div className="flex flex-col gap-3">
               <h2 className="text-[28px]">Hitri izbor</h2>
               <div className="flex gap-2 flex-wrap">
-                <Button>Ljubljana</Button>
-                <Button>Maribor</Button>
-                <Button>Celje</Button>
-                <Button>Kranj</Button>
-                <Button>Koper</Button>
-                <Button>Novo Mesto</Button>
-                <Button>Domžale</Button>
-                <Button>Velenje</Button>
-                <Button>Nova Gorica</Button>
+                <Button2>Ljubljana</Button2>
+                <Button2>Maribor</Button2>
+                <Button2>Celje</Button2>
+                <Button2>Kranj</Button2>
+                <Button2>Koper</Button2>
+                <Button2>Novo Mesto</Button2>
+                <Button2>Domžale</Button2>
+                <Button2>Velenje</Button2>
+                <Button2>Nova Gorica</Button2>
               </div>
             </div>
           </div>
@@ -161,15 +160,8 @@ export default function FloristsListing() {
         </div>
 
         {/* section 4 Suponsers */}
-        <div className="my-10 w-full  flex flex-col gap-5 items-center">
-          <p className="font-semibold max-lg:text-[24px]">Sponsorji</p>
-          <div className="flex w-5/6 justify-between max-lg:justify-center  items-center flex-wrap md:gap-10">
-            <img className="h-fit" src={Suponcer5} alt="" />
-            <img className="h-fit" src={Suponcer4} alt="" />
-            <img className="h-fit" src={Suponcer3} alt="" />
-            <img className="h-fit" src={Suponcer2} alt="" />
-            <img className="h-fit" src={Suponcer1} alt="" />
-          </div>
+        <div className="w-full">
+          <Sponcers />
         </div>
         {/* section 5 footer */}
         <div className="w-full">
@@ -180,10 +172,10 @@ export default function FloristsListing() {
   );
 }
 
-const Button = (props) => {
-  return (
-    <button className="italic bg-gradient-to-r from-[#E3E8EC] to-[#FFFFFF] border-1 border-gray-300 rounded-sm px-2 text-[12px] font-semibold text-gray-800">
-      {props.children}
-    </button>
-  );
-};
+// const Button = (props) => {
+//   return (
+//     <button className="italic bg-gradient-to-r from-[#E3E8EC] to-[#FFFFFF] border-1 border-gray-300 rounded-sm px-2 text-[12px] font-semibold text-gray-800">
+//       {props.children}
+//     </button>
+//   );
+// };
