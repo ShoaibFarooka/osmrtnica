@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar2 from "../../components/Navbar/Navbar2";
 import HeaderTop from "../../components/HeaderTop/HeaderTop";
 import topBanner from "../../assets/images/topBanner3.jpg";
@@ -17,15 +17,18 @@ import { Card2, Card4 } from "../../components/Card/Card";
 import { data } from "./data";
 import { Button } from "../../components/Button/Buttons";
 import Footer from "../../components/Footer/Footer";
+import Navbar from "../../components/Navbar/Navbar";
 
 export default function Funeral() {
+  const [width, setWidth] = useState();
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, [window.innerWidth]);
   return (
     <div>
       <header>
         {/* Navbar */}
-        <div>
-          <Navbar2 />
-        </div>
+        <div>{width < 800 ? <Navbar /> : <Navbar2 />}</div>
         {/* Top Header */}
         <div>
           <HeaderTop btnText={"Pogrebna podjetja"} topBanner={topBanner} />
@@ -35,7 +38,7 @@ export default function Funeral() {
       <body>
         {/* Section 1 */}
         <div className=" flex flex-col items-center">
-          <div className="flex justify-center items-center py-20 gap-3">
+          <div className="flex justify-center items-center py-16  gap-3">
             <button className="h-12 w-12 border-1 flex justify-center items-center text-[24px] rounded-lg bg-[#414141] text-white shadow-sm">
               <CiSearch />
             </button>
@@ -55,18 +58,25 @@ export default function Funeral() {
             </div>
           </div>
           {/* Cards */}
-          <div className="w-full border-3 flex flex-col items-center">
-            <div className="w-4/5 flex flex-col my-20 gap-1">
-              <h2 className="text-[20px] font-medium">Zasavska regija</h2>
+          <div className="w-full flex flex-col items-center">
+            <div className="w-4/5 flex flex-col mb-20 gap-1">
+              <h2 className="text-[20px] font-medium max-lg:hidden">
+                Zasavska regija
+              </h2>
               <div className="flex gap-5">
                 <div className="w-full">
                   {data.map((profile) => (
                     <span>
-                      <Card2 profile={profile} />
+                      <Card2
+                        style={
+                          "max-sm:flex-col max-sm:h-fit max-sm:items-center max-sm:pl-3 max-sm:pt-3"
+                        }
+                        profile={profile}
+                      />
                     </span>
                   ))}
                 </div>
-                <div className=" w-2/5 ">
+                <div className=" w-2/5 max-lg:hidden">
                   <div className="flex text-gray-400 gap-2 justify-center items-center shadow-sm  w-full h-48 border-1 border-gray-300  rounded-lg m-3">
                     Kmalu
                   </div>
@@ -81,7 +91,7 @@ export default function Funeral() {
 
         {/* Section 2 */}
         <div className="w-full  bg-[#083545]">
-          <div className="p-20 text-[#D4D4D4] flex flex-col gap-5">
+          <div className="p-20 text-[#D4D4D4] flex flex-col gap-5 md:items-center lg:items-start">
             <p className="text-[32px]  font-thin">Sodelujmo!</p>
             <p className="text-[16px]  font-thin">
               Imate ideje, vprašanja, predloge?
@@ -92,12 +102,12 @@ export default function Funeral() {
           </div>
         </div>
 
-        {/* Section 3 */}
+        {/* Section 3 Partners*/}
         <div className="py-10 bg-[#DAEBF1]">
           <h3 className="text-[32px] text-[#083545] text-center py-4">
             Postani partner!
           </h3>
-          <div className="flex gap-3 w-full justify-center">
+          <div className="flex gap-4 w-full justify-center flex-wrap">
             <Card4
               item={{
                 icon: icon1,
@@ -142,14 +152,14 @@ export default function Funeral() {
         {/* Section 4 Suponsers */}
         <div className="my-10 w-full flex flex-col gap-5 items-center">
           <p className="font-semibold">Sponsorji</p>
-          <div className="flex w-3/6 justify-between items-center">
-            <img className="h-fit" src={Suponcer3} alt="" />
-            <img className="h-fit" src={Suponcer2} alt="" />
-            <img className="h-fit" src={Suponcer1} alt="" />
+          <div className="flex lg:w-3/6 md:w-5/6 max-sm:w-5/6  justify-between items-center ">
+            <img className="h-fit max-sm:hidden" src={Suponcer3} alt="" />
+            <img className="h-fit max-sm:w-32" src={Suponcer2} alt="" />
+            <img className="h-fit max-sm:w-32" src={Suponcer1} alt="" />
           </div>
         </div>
         {/* Section 5 Banner*/}
-        <div className="relative">
+        <div className="relative max-sm:hidden">
           <div className="absolute right-0 p-20 w-full flex flex-col items-end h-full justify-center">
             <p className="text-[32px]">Lokalne cvetličarne</p>
             <Select

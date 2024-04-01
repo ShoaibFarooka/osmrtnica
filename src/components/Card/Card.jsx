@@ -43,7 +43,9 @@ export function Card(props) {
 
 export function Card2(props) {
   return (
-    <div className="flex  gap-2 h-48 shadow-sm  w-full shadow-gray-400 bg-gradient-to-r bg-[#ebf0f499] border-2 border-white rounded-lg m-3">
+    <div
+      className={`${props.style} flex  gap-2 h-48 shadow-sm  w-full shadow-gray-400 bg-gradient-to-r bg-[#ebf0f499] border-2 border-white rounded-lg m-3`}
+    >
       <div className="flex items-center   ">
         <img
           src={props.profile.img}

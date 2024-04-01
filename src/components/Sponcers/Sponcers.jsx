@@ -9,12 +9,12 @@ export default function Sponcers() {
     <div>
       <div className="my-10 w-full  flex flex-col gap-5 items-center ">
         <p className="font-semibold max-lg:text-[24px]">Sponsorji</p>
-        <div className="flex w-5/6 justify-between max-lg:justify-center  items-center flex-wrap md:gap-10">
-          <img className="h-fit" src={Suponcer5} alt="" />
-          <img className="h-fit" src={Suponcer4} alt="" />
+        <div className="flex w-5/6  justify-between max-lg:justify-center  items-center flex-wrap gap-10 ">
+          <img className="h-fit max-md:hidden" src={Suponcer5} alt="" />
+          <img className="h-fit max-md:hidden" src={Suponcer4} alt="" />
           <img className="h-fit" src={Suponcer3} alt="" />
           <img className="h-fit" src={Suponcer2} alt="" />
-          <img className="h-fit" src={Suponcer1} alt="" />
+          <img className="h-fit max-md:hidden" src={Suponcer1} alt="" />
         </div>
       </div>
     </div>

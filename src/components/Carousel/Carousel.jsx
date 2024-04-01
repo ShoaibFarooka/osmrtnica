@@ -16,7 +16,9 @@ const Carousel = (props) => {
   };
 
   return (
-    <div className=" bottom-2  flex gap-6 border-t-1 w-full px-5 pl-10 border-gray-300 ">
+    <div
+      className={`${props.style} bottom-2 max-sm:px-0 md:px-0 lg:px-5 flex gap-6 border-t-1 w-full  pl-10 border-gray-300 `}
+    >
       {props.children.map((item, index) => (
         <div
           key={index}
@@ -28,11 +30,13 @@ const Carousel = (props) => {
           {item}
         </div>
       ))}
-      <div className=" top-1/2 right-4  flex flex-col space-y-2 p-1">
+      <div
+        className={` top-1/2 right-4  flex space-y-2 p-1 ${props.circleStyle}`}
+      >
         {props.children.map((_, index) => (
           <div
             key={index}
-            className={`w-3 h-3 rounded-full cursor-pointer ${
+            className={`w-3 h-3 rounded-full cursor-pointer  ${
               index === currentIndex ? "bg-gray-500" : "bg-gray-300"
             }`}
             onClick={() => setCurrentIndex(index)}

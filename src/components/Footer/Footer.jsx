@@ -9,7 +9,7 @@ import Carousel from "../Carousel/Carousel";
 export default function Footer() {
   return (
     <div className=" px-10 flex flex-col bg-gradient-to-r from-p_bg1 to-p_bg pt-16 border-t-1 flex-wrap">
-      <div className=" border-gray-300 gap-1 pb-16  flex 7 flex-wrap justify-between">
+      <div className=" border-gray-300 gap-1 pb-16  flex 7 flex-wrap justify-between max-sm:gap-10m max-lg:justify-center md:gap-20 lg:gap-0">
         <div className="items-center p-4 flex flex-col gap-10 mt-4">
           <img src={groupLogo} alt="" className="w-[200px]" />
           {/* info with logo */}
@@ -51,7 +51,7 @@ export default function Footer() {
           <a href="#">Kontakt</a>
           <a href="#">Povej naprej</a>
         </div>
-        <div className=" flex flex-col gap-3 max-sm:text-[14px] mt-4">
+        <div className=" flex flex-col gap-3 max-sm:text-[14px] mt-4 max-lg:hidden">
           <h3 className="font-bold">Drobni tisk</h3>
           <a href="#">Splošni pogoji poslovanja</a>
           <a href="#">Politika zasebnosti </a>
@@ -85,8 +85,8 @@ export default function Footer() {
           </span>
           <p>© osmrtnica.com, 2024. Vse pravice pridržane.</p>
         </div>
-        <div className="lg:w-7/12 md:w-full max-sm:w-full">
-          <Carousel>
+        <div className="lg:w-7/12 md:w-full max-sm:w-full ">
+          <Carousel circleStyle={"flex-col items-end "}>
             <Banner
               title={"Imate cvetličarno?"}
               content={
