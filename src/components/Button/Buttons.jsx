@@ -2,7 +2,7 @@ export const Button = (prop) => {
   console.log(prop);
   return (
     <button
-      className={`border-white ${prop.padding} ${prop.px} shadow-lg rounded-lg bg-gradient-to-r from-${prop.bg1} to-${prop.bg2} hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-500 border-2`}
+      className={`border-white ${prop.padding} ${prop.px} shadow-lg rounded-lg bg-gradient-to-r ${prop.bg1} ${prop.bg2} hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-500 border-2 ${prop.style}`}
     >
       {prop.children}
     </button>

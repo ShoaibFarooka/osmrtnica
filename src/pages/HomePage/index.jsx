@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import bg_image from "../../assets/images/Union.png";
 import { Carousel, Checkbox, Input, Select } from "antd";
@@ -9,7 +9,7 @@ import iPadImg from "../../assets/images/Vector (3).png";
 import iPadImg2 from "../../assets/images/Frame2.png";
 import mobileImg from "../../assets/images/Vector (4).png";
 import mobileScreen from "../../assets/images/Vector (2).png";
-import frameImg from "../../assets/images/Frame 194.png";
+import frameImg from "../../assets/images/mainPageBanner.png";
 import groupLogo from "../../assets/images/GroupLogo.png";
 import { HiPhone } from "react-icons/hi";
 import { MdAlternateEmail } from "react-icons/md";
@@ -18,6 +18,10 @@ import Footer from "../../components/Footer/Footer";
 import { Card } from "../../components/Card/Card";
 
 export default function HomePage() {
+  const [width, setWidth] = useState();
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, [window.innerWidth]);
   const onChange = (value) => {
     console.log(`selected ${value}`);
   };
@@ -43,11 +47,15 @@ export default function HomePage() {
       {/* Body of the page */}
       <div className="">
         {/* Body Top Section 1*/}
-        <div className="bg-gradient-to-r from-p_bg1 to-p_bg2">
+        <div className="bg-gradient-to-r from-[#E3EAEF] to-[#F3F6F8] ">
           {/* Background */}
-          <div className="flex justify-center max-md:h-screen lg:h-screen  max-sm:h-fit">
-            <img src={bg_image} alt="" className="w-full  opacity-100" />
-            <div className="absolute  lg:top-[545px] mr-16  sm:top-80 sm:gap-10  max-sm:hidden  w-4/6 flex flex-wrap justify-around ">
+          <div className="relative  flex justify-center  max-md:h-screen lg:h-screen  max-sm:h-fit">
+            <img
+              src={bg_image}
+              alt=""
+              className="w-full lg:h-screen  opacity-100"
+            />
+            <div className="absolute   items-end  mr-16 lg:bottom-14 md:bottom-7  sm:gap-10  max-sm:hidden  w-4/6 flex flex-wrap justify-around ">
               <div className=" flex flex-col  text-white">
                 <span className=" top-0 text-gray-400 font-thin  px-2 pb-6 text-[46px]">
                   01
@@ -84,14 +92,14 @@ export default function HomePage() {
           </div>
           {/* Card */}
           <div className="w-full h-full flex flex-col items-center pb-20  ">
-            <div className="flex justify-center pt-10 text-[40px]">
+            <div className="flex justify-center pt-10 text-[40px] max-sm:text-[28px]">
               Zadnje osmrtnice
             </div>
             {/* Search Boxes Display */}
             <div className="flex justify-center gap-3 my-10  flex-wrap">
               <Input
                 placeholder="Išči po imenu / priimku"
-                className="w-56 p-3 max-sm:w-full max-sm:mx-4 border-1 shadow-sm"
+                className="lg:w-[227px] lg:h-[48px] hidden lg:block p-3  border-1 shadow-sm"
               />
               <Select
                 showSearch
@@ -100,7 +108,7 @@ export default function HomePage() {
                 onChange={onChange}
                 onSearch={onSearch}
                 filterOption={filterOption}
-                className="h-12 w-48 max-sm:w-full max-sm:mx-4 hover:border-gray-400 focus:border-gray-400 shadow-sm"
+                className="lg:w-[227px] lg:h-[48px] md:w-[292px] md:h-[48px] max-sm:w-[296px] max-sm:h-[48px]  max-sm:mx-4 hover:border-gray-400 focus:border-gray-400 shadow-sm"
                 options={option}
               />
               <Select
@@ -110,15 +118,15 @@ export default function HomePage() {
                 onChange={onChange}
                 onSearch={onSearch}
                 filterOption={filterOption}
-                className="h-12 w-48 max-sm:w-full max-sm:mx-4 hover:border-gray-400 focus:border-gray-400 shadow-sm"
+                className="lg:w-[227px] lg:h-[48px]  md:w-[292px] md:h-[48px] max-sm:w-[296px] max-sm:h-[48px] max-sm:mx-4 hover:border-gray-400 focus:border-gray-400 shadow-sm"
                 options={option}
               />
-              <button className="h-12 w-12 border-1 flex justify-center items-center text-[24px] rounded-lg bg-[#414141] text-white shadow-sm">
-                <CiSearch />
+              <button className="lg:w-[48px] lg:h-[48px] md:w-[292px] md:h-[48px] max-sm:w-[296px] max-sm:h-[48px] border-1 flex justify-center items-center lg:text-[24px] md:font-thin rounded-lg bg-[#414141] text-white shadow-sm">
+                {width <= 768 ? "Prikaži" : <CiSearch />}
               </button>
             </div>
             {/* Cards Display */}
-            <div className=" flex flex-wrap  w-5/6 max-sm:w-full max-md:w-full   justify-center ">
+            <div className=" flex  md:flex-wrap max-sm:flex-wrap  max-sm:w-full max-md:w-full   justify-center ">
               {profiles.map((data) => (
                 <Card profile={data} />
               ))}
@@ -127,126 +135,214 @@ export default function HomePage() {
         </div>
 
         {/* Section 2 */}
-        <Carousel
-          autoplay
-          autoplaySpeed={2000}
-          dotPosition="bottom"
-          className="bg-[#FEFAF2]"
-        >
-          {/* div1 slider */}
-          <div className="w-screen" style={contentStyle}>
-            <div className="bg-[#FEFAF2] flex  flex-wrap  justify-center gap-10 p-10">
-              <span>
-                <div className="border-2 p-5 bg-white rounded-2xl ">
-                  <div className="flex justify-center w-full mb-4 ">
-                    <div className="w-1 h-1  border-2 rounded-full bg-gray-500"></div>
-                  </div>
-                  <img
-                    className="h-[550px] max-sm:h-[350px]"
-                    src={iPadImg}
-                    alt=""
-                    srcset=""
-                  />
-                  <div className="flex justify-center w-full mt-2">
-                    <div className="w-8 h-8 bg-white border-2 rounded-full "></div>
-                  </div>
-                </div>
-              </span>
-              <span>
-                <div className="w-96 max-md:w-72">
-                  <div>
-                    <h2 className="font-semibold text-[40px]">Osmrtnica</h2>
-                    <p className="pt-4=">
-                      Stran, kjer izvemo vse o pogrebu, se vpišete v Žalno
-                      knjigo, izrečete sožalja in prižgete virtualno svečko.{" "}
-                    </p>
-                    <h3 className="font-semibold text-[26px] pt-4">
-                      Vse navedeno je BREZPLAČNO.
-                    </h3>
-
-                    <div className="pt-10">
-                      <Button
-                        bg1={"rgba(227, 232, 236, 1)"}
-                        bg2={"rgba(255, 255, 255, 1)"}
-                        padding={"p-2"}
-                        px={"px-6"}
-                        className=""
-                      >
-                        {" "}
-                        Več informacij
-                      </Button>
+        <div className="border ">
+          <div className="w-screen lg:h-[891px] md:h-[1204px] max-sm:[885px] bg-[#FEFAF2] lg:hidden md:block sm:block">
+            <div className="flex justify-center lg:h-full h-full items-center py-5">
+              <div className=" flex lg:h-[639.78px] lg:w-[994px] max-sm:w-full max-lg:flex-wrap-reverse   justify-center gap-10 max-sm:gap-0 ">
+                {/* Tablet */}
+                <div className="flex flex-col items-center ">
+                  <div className=" p-5  bg-white rounded-2xl border-1  h-[627.35px] w-[420px] max-sm:w-[294.4px] max-sm:h-[494.65px]">
+                    <div className="flex justify-center w-full mb-4 ">
+                      <div className="w-1 h-1  border-2 rounded-full bg-gray-500"></div>
+                    </div>
+                    <img
+                      className="h-[531.31px] w-[384.5px] max-sm:w-[274px] max-sm:h-[405px]"
+                      src={iPadImg}
+                      alt=""
+                      srcset=""
+                    />
+                    <div className="flex justify-center w-full mt-2">
+                      <div className="w-8 h-8 bg-white border-2 rounded-full "></div>
                     </div>
                   </div>
-                </div>
-              </span>
-            </div>
-          </div>
-
-          {/* div2 slider */}
-          <div className="w-screen" style={contentStyle}>
-            <div className="bg-[#FEFAF2] flex justify-center gap-10 p-10 flex-wrap">
-              <div className=" p-5 bg-white rounded-2xl">
-                <div className="flex justify-center w-full mb-4 ">
-                  <div className="w-1 h-1  border-2 rounded-full bg-gray-500"></div>
-                </div>
-                <img
-                  className="h-[550px] max-sm:h-[350px]"
-                  src={iPadImg2}
-                  alt=""
-                  srcset=""
-                />
-                <div className="flex justify-center w-full mt-2">
-                  <div className="w-8 h-8 bg-white border-2 rounded-full "></div>
-                </div>
-              </div>
-              <div className="w-3/6 max-sm:w-full">
-                <div className="">
-                  <span>
-                    <h2 className="font-semibold text-[36px]  ">
-                      Spominska stran{" "}
-                      <span className="text-red-500"> s skrbnikom</span>
-                    </h2>
-                    <p className="pt-4 ">
-                      Nadgradnja osnovne spominske strani - osmrtnice, kjer
-                      skrbnik prevzame kontrolo nad objavljeno vsebino; ponavadi
-                      je to nekdo, ki je bil preminulemu bližnji. Upravljanje je
-                      enostavno; vsak je lahko skrbnik.
-                    </p>
-                    <p className="pt-4">
-                      Ker Skrbnik skrbi za vsebino še preden je objavljena, so
-                      tu lahko dodane številne dodatne možnosti za izdelavo
-                      prave spominske knjige, na katero se bodo bližnji radi
-                      vračali in jo dopolnjevali.
-                    </p>
-                  </span>
-                  <span className="">
-                    <h3 className="font-semibold text-[20px] pt-20">
-                      Vse navedeno je BREZPLAČNO.
-                    </h3>
-                    <p className="pt-4 pb-14">
-                      Prehitro nam uidejo, čarobni trenutki se pozabijo, slike
-                      zbledijo. Povežimo spomine na naše najdražje v celoto in
-                      jih ohranimo.
-                    </p>{" "}
-                  </span>
-
-                  <div className="pt-10">
+                  <div className="py-4">
                     <Button
-                      bg1={"rgba(227, 232, 236, 1)"}
-                      bg2={"rgba(255, 255, 255, 1)"}
+                      bg1={"from-[#e3e8ec]"}
+                      bg2={"to-[#ffffff]"}
                       padding={"p-2"}
                       px={"px-6"}
-                      className=""
+                      style={"border-none hidden max-sm:block"}
+                      className=" "
                     >
                       {" "}
                       Več informacij
                     </Button>
                   </div>
                 </div>
+                {/* text lines */}
+                <div className="lg:mt-10 md:mt-0">
+                  <div className=" w-[504px] h-[259px] max-sm:w-[321px] max-sm:h-fit lg:text-start max-lg:text-center ">
+                    {/* <div> */}
+                    <h2 className="font-semibold text-[40px] max-sm:text-[28px]">
+                      Osmrtnica
+                    </h2>
+                    <p className="pt-4 text-[16px]">
+                      Stran, kjer izvemo vse o pogrebu, se vpišete v Žalno
+                      knjigo, izrečete sožalja in prižgete virtualno svečko.{" "}
+                    </p>
+                    <h3 className="font-semibold text-[20px] pt-4">
+                      Vse navedeno je BREZPLAČNO.
+                    </h3>
+
+                    <div className="pt-10">
+                      <Button
+                        bg1={"from-[#e3e8ec]"}
+                        bg2={"to-[#ffffff]"}
+                        padding={"p-2"}
+                        px={"px-6"}
+                        style={"border-none max-sm:hidden"}
+                        className=" "
+                      >
+                        {" "}
+                        Več informacij
+                      </Button>
+                    </div>
+                    {/* </div> */}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </Carousel>
+          <div className="hidden lg:block">
+            <Carousel
+              autoplay
+              autoplaySpeed={2000}
+              dotPosition="bottom"
+              className="bg-[#FEFAF2] "
+            >
+              {/* div1 slider */}
+              <div
+                className="w-screen lg:h-[891px] md:h-[1204px]"
+                style={contentStyle}
+              >
+                <div className="flex justify-center lg:h-full h-full items-center ">
+                  <div className="bg-[#FEFAF2]  flex lg:h-[639.78px] lg:w-[994px] md:flex-wrap-reverse  justify-center gap-10 ">
+                    <div className="  h-[627.35px] w-[420px]">
+                      <div className=" p-5  bg-white rounded-2xl border-1">
+                        <div className="flex justify-center w-full mb-4 ">
+                          <div className="w-1 h-1  border-2 rounded-full bg-gray-500"></div>
+                        </div>
+                        <img
+                          className="h-[531.31px] w-[384.5px]"
+                          src={iPadImg}
+                          alt=""
+                          srcset=""
+                        />
+                        <div className="flex justify-center w-full mt-2">
+                          <div className="w-8 h-8 bg-white border-2 rounded-full "></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="lg:mt-10 md:mt-0">
+                      <div className=" w-[504px] h-[259px] lg:text-start md:text-center">
+                        <div>
+                          <h2 className="font-semibold text-[40px]">
+                            Osmrtnica
+                          </h2>
+                          <p className="pt-4 text-[16px]">
+                            Stran, kjer izvemo vse o pogrebu, se vpišete v Žalno
+                            knjigo, izrečete sožalja in prižgete virtualno
+                            svečko.{" "}
+                          </p>
+                          <h3 className="font-semibold text-[20px] pt-4">
+                            Vse navedeno je BREZPLAČNO.
+                          </h3>
+
+                          <div className="pt-10">
+                            <Button
+                              bg1={"from-[#e3e8ec]"}
+                              bg2={"to-[#ffffff]"}
+                              padding={"p-2"}
+                              px={"px-6"}
+                              style={"border-none"}
+                              className=""
+                            >
+                              {" "}
+                              Več informacij
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* div2 slider */}
+              <div
+                className="w-screen  lg:h-[891px] my-10 "
+                style={contentStyle}
+              >
+                <div className="flex justify-center h-full items-center">
+                  <div className=" bg-[#FEFAF2] flex  justify-center lg:w-[994px] h-[627.35px gap-10 flex-wrap">
+                    <div className=" p-5 bg-white rounded-2xl h-[627.35px] w-[420px] border-2 ">
+                      <div className="flex justify-center w-full mb-4 ">
+                        <div className="w-1 h-1  border-2 rounded-full bg-gray-500"></div>
+                      </div>
+                      <img
+                        className="h-[531.31px] w-[384.5px]"
+                        src={iPadImg2}
+                        alt=""
+                        srcset=""
+                      />
+                      <div className="flex justify-center w-full mt-2">
+                        <div className="w-8 h-8 bg-white border-2 rounded-full "></div>
+                      </div>
+                    </div>
+                    <div className="w-3/6 max-sm:w-full">
+                      <div className="">
+                        <span>
+                          <h2 className="font-semibold text-[36px]  ">
+                            Spominska stran{" "}
+                            <span className="text-red-500"> s skrbnikom</span>
+                          </h2>
+                          <p className="pt-4 ">
+                            Nadgradnja osnovne spominske strani - osmrtnice,
+                            kjer skrbnik prevzame kontrolo nad objavljeno
+                            vsebino; ponavadi je to nekdo, ki je bil preminulemu
+                            bližnji. Upravljanje je enostavno; vsak je lahko
+                            skrbnik.
+                          </p>
+                          <p className="pt-4">
+                            Ker Skrbnik skrbi za vsebino še preden je
+                            objavljena, so tu lahko dodane številne dodatne
+                            možnosti za izdelavo prave spominske knjige, na
+                            katero se bodo bližnji radi vračali in jo
+                            dopolnjevali.
+                          </p>
+                        </span>
+                        <span className="">
+                          <h3 className="font-semibold text-[20px] pt-20">
+                            Vse navedeno je BREZPLAČNO.
+                          </h3>
+                          <p className="pt-4 pb-14">
+                            Prehitro nam uidejo, čarobni trenutki se pozabijo,
+                            slike zbledijo. Povežimo spomine na naše najdražje v
+                            celoto in jih ohranimo.
+                          </p>{" "}
+                        </span>
+
+                        <div className="pt-10">
+                          <Button
+                            bg1={"from-[#e3e8ec]"}
+                            bg2={"to-[#ffffff]"}
+                            padding={"p-2"}
+                            px={"px-6"}
+                            className=""
+                            style={"border-none"}
+                          >
+                            {" "}
+                            Več informacij
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Carousel>
+          </div>
+        </div>
 
         {/* Section 3 */}
         <div className="  py-20 border-4 justify-around px-10 flex flex-wrap w-full  bg-gradient-to-r from-p_bg1 to-p_bg bg-gray-50">
@@ -294,8 +390,25 @@ export default function HomePage() {
         </div>
 
         {/* section 4 */}
-        <div>
-          <img src={frameImg} className="w-full " alt="" />
+        <div
+          style={{ backgroundImage: `url('${frameImg}')` }}
+          className="bg-cover bg-center  h-80 flex justify-around items-center"
+        >
+          {/* <img src={frameImg} className="w-full " alt="" /> */}
+          <div className="hidden lg:block md:block"></div>
+          <div className=" text-white lg:w-4/12 md:w-7/12 max-sm:w-10/12 flex flex-col gap-8 items-center">
+            <h2 className="text-[32px] font-thin">Lokalne cvetličarne </h2>
+            <Select
+              showSearch
+              placeholder="Mesto"
+              optionFilterProp="children"
+              onChange={onChange}
+              onSearch={onSearch}
+              filterOption={filterOption}
+              className="h-12 w-4/6 max-sm:w-full md:w-full max-sm:mx-4 hover:border-gray-400 focus:border-gray-400 shadow-sm"
+              options={option}
+            />
+          </div>
         </div>
         {/* section 5 */}
         <div className="py-20 flex flex-col items-center bg-[#FFFBF4]">

@@ -6,35 +6,39 @@ import icon1 from "../../assets/images/mini_icon1.png";
 
 export function Card(props) {
   return (
-    <div className="flex  gap-2 h-full shadow-md lg:w-5/12 sm:w-full max-sm:w-full shadow-gray-400 bg-gradient-to-r from-p_bg1 to-p_bg2 border-2 border-white rounded-lg m-3">
-      <div className="flex items-center">
-        <img
-          src={props.profile.img}
-          alt="Image"
-          className="h-full max-sm:h-fit w-44 "
-        />
-      </div>
-      <div className="w-full">
-        <div className="flex">
-          <div className="flex flex-col text-[14px] mt-4 gap-3">
-            <span className="text-[24px]">{props.profile.name}</span>
-            <p className="flex  flex-col">
-              <span>{props.profile.date}</span>
-              <span>{props.profile.city}</span>
-            </p>
-          </div>
-          <span>
-            {props.profile.symbol_img ? (
-              <img src={props.profile.symbol_img} alt="img" />
-            ) : (
-              <></>
-            )}
-          </span>
+    <div className="flex  gap-2  shadow-md h-[170px] w-[466px] max-sm:h-[124px] max-sm:w-[296px] justify-center items-center shadow-gray-400 bg-gradient-to-r from-[#E3EAEF] to-[#F3F6F8] border-2 border-white rounded-lg m-3">
+      <div className="w-[420px] h-[130px] max-sm:w-[261px] flex justify-around items-center max-sm:justify-normal">
+        <div className="flex items-center h-fit max-sm:w-[100px]">
+          <img
+            src={props.profile.img}
+            alt="Image"
+            className="h-[130px] w-[110px] max-sm:w-[72px] max-sm:h-fit "
+          />
         </div>
-        <div className=" flex justify-end cursor-pointer ">
-          <span className="flex  items-center text-[14px] p-3">
-            Odpri <MdOutlineKeyboardArrowRight className="text-[20px]" />
-          </span>
+        <div className=" w-[293.33px] max-sm:w-full h-fit">
+          <div className="flex ">
+            <div className="flex flex-col text-[14px] gap-3 max-sm:gap-1">
+              <span className="text-[24px] max-sm:text-[16px] max-sm:font-semibold">
+                {props.profile.name}
+              </span>
+              <p className="flex  flex-col text-[16px] max-sm:text-[14px]">
+                <span>{props.profile.date}</span>
+                <span>{props.profile.city}</span>
+              </p>
+            </div>
+            <span>
+              {props.profile.symbol_img ? (
+                <img src={props.profile.symbol_img} alt="img" />
+              ) : (
+                <></>
+              )}
+            </span>
+          </div>
+          <div className=" flex justify-end cursor-pointer  w-full">
+            <span className="flex  items-center text-[14px] p-3 max-sm:p-0">
+              Odpri <MdOutlineKeyboardArrowRight className="text-[20px]" />
+            </span>
+          </div>
         </div>
       </div>
     </div>

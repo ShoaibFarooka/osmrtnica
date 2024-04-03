@@ -7,7 +7,7 @@ import Obituary from "../pages/ObituaryPage";
 export default function router(isLogin) {
   if (isLogin) {
     return [
-      { path: "/home", element: <HomePage /> },
+      { path: "/", element: <HomePage /> },
       { path: "/florist", element: <FloristsListing /> },
       { path: "/funeral", element: <Funeral /> },
       { path: "/obituary", element: <Obituary /> },
