@@ -47,7 +47,7 @@ export default function HomePage() {
       {/* Body of the page */}
       <div className="">
         {/* Body Top Section 1*/}
-        <div className="bg-gradient-to-r from-[#E3EAEF] to-[#F3F6F8] ">
+        <div className="lg:bg-gradient-to-r max-sm:bg-gradient-to-r from-[#E3EAEF] to-[#F3F6F8] bg-white ">
           {/* Background */}
           <div className="relative  flex justify-center  max-md:h-screen lg:h-screen  max-sm:h-fit">
             <img
@@ -126,7 +126,7 @@ export default function HomePage() {
               </button>
             </div>
             {/* Cards Display */}
-            <div className=" flex  md:flex-wrap max-sm:flex-wrap  max-sm:w-full max-md:w-full   justify-center ">
+            <div className=" flex  md:flex-wrap max-sm:flex-wrap  max-sm:w-full max-md:w-full justify-center ">
               {profiles.map((data) => (
                 <Card profile={data} />
               ))}
@@ -134,7 +134,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Section 2 */}
+        {/* Section 2 Caroucel*/}
         <div className="border ">
           <div className="w-screen lg:h-[891px] md:h-[1204px] max-sm:[885px] bg-[#FEFAF2] lg:hidden md:block sm:block">
             <div className="flex justify-center lg:h-full h-full items-center py-5">
@@ -345,47 +345,65 @@ export default function HomePage() {
         </div>
 
         {/* Section 3 */}
-        <div className="  py-20 border-4 justify-around px-10 flex flex-wrap w-full  bg-gradient-to-r from-p_bg1 to-p_bg bg-gray-50">
-          <div className="w-2/6 max-sm:w-5/6 max-sm:text-center my-20">
-            <div>
-              <h2 className="font-semibold text-[40px]">
-                Obveščanje o pogrebu
-              </h2>
-              <p className="pt-4">
-                V težkih trenutkih je včasih lažje poslati ali deliti po
-                socialnih omrežjih, kot obveščati vsakega posebej.{" "}
-              </p>
-              <p className="pt-4">
-                Na spominski strani pokojnika/ce si prenesete obvestilo o
-                pogrebu, ki ga lahko potem pošiljate naprej sorodnikom in
-                znancem. Obvestilo je prilagojeno meram mobilnega telefona.
-              </p>
-              <h3 className=" text-[20px] pt-4">
-                Obvestilo o pogrebu je BREZPLAČNO.{" "}
-              </h3>
+        <div className="  py-20 justify-around px-10 flex flex-wrap w-full  bg-gradient-to-r from-p_bg1 to-p_bg bg-gray-50">
+          <div className="flex lg:w-[936px] md:w-[495.45px] max-sm:w-[303px] lg:justify-between md:justify-center max-sm:justify-center max-sm:text-center lg:text-start md:text-center flex-wrap">
+            <div className="w-[495.45px]  my-20">
+              <div>
+                <h2 className=" lg:text-[40px] md:text-[40px] max-sm:text-[28px]">
+                  Obveščanje o pogrebu
+                </h2>
+                <p className="pt-4 text-[16px]">
+                  V težkih trenutkih je včasih lažje poslati ali deliti po
+                  socialnih omrežjih, kot obveščati vsakega posebej.{" "}
+                </p>
+                <p className="pt-4 text-[16px]">
+                  Na spominski strani pokojnika/ce si prenesete obvestilo o
+                  pogrebu, ki ga lahko potem pošiljate naprej sorodnikom in
+                  znancem. Obvestilo je prilagojeno meram mobilnega telefona.
+                </p>
+                <h3 className=" text-[20px] pt-4">
+                  Obvestilo o pogrebu je BREZPLAČNO.{" "}
+                </h3>
 
-              <div className="pt-10">
-                <Button
-                  bg1={"rgba(227, 232, 236, 1)"}
-                  bg2={"rgba(255, 255, 255, 1)"}
-                  padding={"p-2"}
-                  px={"px-6"}
-                  className=""
-                >
-                  {" "}
-                  Poišči osmrtnico
-                </Button>
+                <div className="pt-10 max-sm:hidden">
+                  <Button
+                    bg1={"rgba(227, 232, 236, 1)"}
+                    bg2={"rgba(255, 255, 255, 1)"}
+                    padding={"p-2"}
+                    px={"px-6"}
+                    className=""
+                  >
+                    {" "}
+                    Poišči osmrtnico
+                  </Button>
+                </div>
               </div>
             </div>
-          </div>
-          <div>
-            <div className="w-full  flex justify-center relative gap-1 left-3  top-5 z-10">
-              <div className="border-gray-800 w-1 rounded-full  border-3 "></div>
-              <div className="border-gray-800 w-10  rounded-full  border-3 bg-gray-500"></div>
-              <div className="border-gray-800 w-1 rounded-full border-3 "></div>
+            <div className="  w-[250px]">
+              <div className="w-full  flex justify-center relative gap-1 left-3  top-5 z-10">
+                <div className="border-gray-800 w-1 rounded-full  border-3 "></div>
+                <div className="border-gray-800 w-10 rounded-full  border-3 bg-gray-500"></div>
+                <div className="border-gray-800 w-1 rounded-full border-3 "></div>
+              </div>
+              <img className="absolute z-0 " src={mobileImg} alt="" />
+              <img
+                className="relative left-3 top-3 "
+                src={mobileScreen}
+                alt=""
+              />
             </div>
-            <img className="absolute z-0" src={mobileImg} alt="" />
-            <img className="relative left-3 top-3" src={mobileScreen} alt="" />
+            <div className="pt-16 hidden max-sm:block">
+              <Button
+                bg1={"rgba(227, 232, 236, 1)"}
+                bg2={"rgba(255, 255, 255, 1)"}
+                padding={"p-2"}
+                px={"px-6"}
+                className=""
+              >
+                {" "}
+                Poišči osmrtnico
+              </Button>
+            </div>
           </div>
         </div>
 
@@ -396,8 +414,10 @@ export default function HomePage() {
         >
           {/* <img src={frameImg} className="w-full " alt="" /> */}
           <div className="hidden lg:block md:block"></div>
-          <div className=" text-white lg:w-4/12 md:w-7/12 max-sm:w-10/12 flex flex-col gap-8 items-center">
-            <h2 className="text-[32px] font-thin">Lokalne cvetličarne </h2>
+          <div className=" text-white lg:w-[476px] md:w-[300px] flex flex-col gap-8 items-center">
+            <h2 className="lg:text-[40px] md:text-[32px] max-sm:text-[28px] ">
+              Lokalne cvetličarne{" "}
+            </h2>
             <Select
               showSearch
               placeholder="Mesto"
@@ -405,7 +425,7 @@ export default function HomePage() {
               onChange={onChange}
               onSearch={onSearch}
               filterOption={filterOption}
-              className="h-12 w-4/6 max-sm:w-full md:w-full max-sm:mx-4 hover:border-gray-400 focus:border-gray-400 shadow-sm"
+              className="h-12 lg:w-[476px] md:w-[300px] max-sm:w-[300px] max-sm:mx-4 hover:border-gray-400 focus:border-gray-400 shadow-sm"
               options={option}
             />
           </div>
@@ -413,7 +433,7 @@ export default function HomePage() {
         {/* section 5 */}
         <div className="py-20 flex flex-col items-center bg-[#FFFBF4]">
           <div className=" max-sm:text-center">
-            <span className="max-sm:text-[24px] text-center">
+            <span className="max-sm:text-[28px] max-sm:w-[32px] lg:text-[32px] md:text-[32px] text-center">
               Obveščanje o osmrtnicah v domačem kraju{" "}
             </span>
           </div>
@@ -425,12 +445,12 @@ export default function HomePage() {
               onChange={onChange}
               onSearch={onSearch}
               filterOption={filterOption}
-              className="h-12 w-60 max-sm:w-72 hover:border-gray-400 focus:border-gray-400 shadow-sm bg-white"
+              className="h-[48px] lg:w-[306px] md:w-[286px] max-sm:w-[296px] hover:border-gray-400 focus:border-gray-400 shadow-sm bg-white"
               options={option}
             />
             <Input
               placeholder="Vpiši svoj e-poštni naslov "
-              className="w-64 p-3 max-sm:w-72 border-1 shadow-sm bg-white "
+              className="h-[48px] lg:w-[306px] md:w-[286px] max-sm:w-[296px] p-3  border-1 shadow-sm bg-white "
             />
           </div>
           <div className="flex gap-2 flex-col max-sm:items-center font-medium">
@@ -449,7 +469,9 @@ export default function HomePage() {
             <SimpButton
               textColor={"blue-500"}
               bgColor={"bg-[#CAF0F8]"}
-              padding={"p-2"}
+              padding={
+                "w-[276px] h-[48px] flex justify-center items-center text-[18px]"
+              }
               px={"px-20"}
             >
               Prijava
