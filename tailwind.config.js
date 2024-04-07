@@ -8,17 +8,14 @@ export default {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      sm: "599px",
+      md: "600px",
+      lg: "1200px",
+      // xl: "1280px",
+    },
     fontFamily: {
       roboto: ["Roboto", "Helvetica", "Arial", "sans-serif"],
-      serif: ["Georgia", "Cambria", "Times New Roman", "Times", "serif"],
-      mono: [
-        "Menlo",
-        "Monaco",
-        "Consolas",
-        "Liberation Mono",
-        "Courier New",
-        "monospace",
-      ],
     },
     extend: {
       colors: {
@@ -28,6 +25,9 @@ export default {
         p_bg2: "rgba(255, 255, 255, 1)",
         p_bg: "rgba(254, 250, 242, 1)",
         cardColor: "rgba(227, 232, 236, 0.6)",
+
+        col1: "rgba(182, 236, 236, 0.09)",
+        col2: "rgba(190, 244, 244, 0)",
       },
     },
   },

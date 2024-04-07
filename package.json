@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource-variable/roboto-flex": "^5.0.14",
+    "@fontsource/roboto-flex": "^5.0.14",
     "@nextui-org/react": "^2.2.10",
     "@reduxjs/toolkit": "^2.2.1",
     "antd": "^5.15.3",
@@ -21,7 +23,8 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.22.3",
     "react-slick": "^0.30.2",
-    "redux": "^5.0.1"
+    "redux": "^5.0.1",
+    "typeface-roboto": "^1.1.13"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",

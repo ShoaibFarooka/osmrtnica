@@ -1,18 +1,15 @@
 import React from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import cardimg from "../../assets/images/CardFlower1.png";
-import oneImg from "../../assets/images/01.png";
-import icon1 from "../../assets/images/mini_icon1.png";
 
 export function Card(props) {
   return (
-    <div className="flex  gap-2  shadow-md h-[170px] w-[466px] max-sm:h-[124px] max-sm:w-[296px] justify-center items-center shadow-gray-400 bg-gradient-to-r from-[#E3EAEF] to-[#F3F6F8] border-2 border-white rounded-lg m-3">
+    <div className="flex  gap-2  shadow-md shadow-[#c2c2c280] h-[170px] w-[466px] max-sm:h-[124px] max-sm:w-[296px] justify-center items-center  bg-gradient-to-r from-[#E3EAEF] to-[#F3F6F8] border-2 border-white rounded-lg m-3">
       <div className="w-[420px] h-[130px] max-sm:w-[261px] flex justify-around items-center max-sm:justify-normal">
         <div className="flex items-center h-fit max-sm:w-[100px]">
           <img
             src={props.profile.img}
             alt="Image"
-            className="h-[130px] w-[110px] max-sm:w-[72px] max-sm:h-fit "
+            className="h-[130px] w-[95px] max-sm:w-[72px] max-sm:h-[98.53px]  "
           />
         </div>
         <div className=" w-[293.33px] max-sm:w-full h-fit">

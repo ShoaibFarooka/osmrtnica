@@ -38,53 +38,56 @@ export default function HomePage() {
   const filterOption = (input, option) =>
     (option?.label ?? "").toLowerCase().includes(input.toLowerCase());
   return (
-    <div className="m-0 p-0">
+    <div
+      className="m-0 p-0 text-[#414141]"
+      style={{ width: "100vw", overflow: "hidden" }}
+    >
       {/* Navbar */}
-      <div className="shadow-md">
+      <div className="shadow-md flex justify-center w-full">
         <Navbar />
       </div>
 
       {/* Body of the page */}
       <div className="">
         {/* Body Top Section 1*/}
-        <div className="lg:bg-gradient-to-r max-sm:bg-gradient-to-r from-[#E3EAEF] to-[#F3F6F8] bg-white ">
+        <div className=" flex flex-col items-center border-[1px] border-[#E3E8EC] lg:bg-gradient-to-r max-sm:bg-gradient-to-l  from-[#F3F6F8] to-[#F3F6F8] bg-white ">
           {/* Background */}
-          <div className="relative  flex justify-center  max-md:h-screen lg:h-screen  max-sm:h-fit">
+          <div className="relative  flex justify-center   lg:w-[1280px] md:w-[744px] max-sm:w-[360px]  md:h-[586px] max-sm:h-[257px]">
             <img
               src={bg_image}
               alt=""
-              className="w-full lg:h-screen  opacity-100"
+              className="lg:w-full  md:h-[586px] max-sm:h-[257px]  opacity-100"
             />
-            <div className="absolute   items-end  mr-16 lg:bottom-14 md:bottom-7  sm:gap-10  max-sm:hidden  w-4/6 flex flex-wrap justify-around ">
-              <div className=" flex flex-col  text-white">
-                <span className=" top-0 text-gray-400 font-thin  px-2 pb-6 text-[46px]">
+            <div className="absolute items-end  mr-16 lg:bottom-14 md:bottom-14  sm:gap-10  max-sm:hidden  w-4/6 flex flex-wrap justify-around ">
+              <div className=" flex flex-col  text-[#DEDEDE]">
+                <span className=" top-0 text-[#7C7C7C] font-[200]  px-2 pb-6 lg:text-[64px] md:text-[40px]">
                   01
                 </span>
-                <span className="absolute bottom-0 pt-5 border-l-1 px-2 text-[20px]">
+                <span className="absolute  bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
                   OSMRTNICE
                 </span>
               </div>
-              <div className=" flex flex-col  text-white">
-                <span className=" top-0 text-gray-400 font-thin px-2 pb-6 text-[46px]">
+              <div className=" flex flex-col  text-[#DEDEDE]">
+                <span className=" top-0 text-[#7C7C7C] font-[200] px-2 pb-6 lg:text-[64px] md:text-[40px]">
                   02
                 </span>
-                <span className="absolute bottom-0 pt-5 border-l-1 px-2 text-[20px]">
+                <span className="absolute bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
                   POGREBI
                 </span>
               </div>
-              <div className=" flex flex-col  text-white">
-                <span className=" top-0 text-gray-400 font-thin px-2 pb-6 text-[46px]">
+              <div className=" flex flex-col  text-[#DEDEDE]">
+                <span className=" top-0 text-[#7C7C7C] font-[200] px-2 pb-6 lg:text-[64px] md:text-[40px]">
                   03
                 </span>
-                <span className="absolute bottom-0 pt-5 border-l-1 px-2 text-[20px]">
+                <span className="absolute bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
                   SPOMINSKA
                 </span>
               </div>
-              <div className=" flex flex-col  text-white">
-                <span className=" top-0 text-gray-400 font-thin px-2 pb-6 text-[46px]">
+              <div className=" flex flex-col  text-[#DEDEDE]">
+                <span className=" top-0 text-[#7C7C7C] font-[200] px-2 pb-6 lg:text-[64px] md:text-[40px]">
                   04
                 </span>
-                <span className="absolute bottom-0 pt-5 border-l-1 px-2 text-[20px]">
+                <span className="absolute bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
                   CVETLIČARNE
                 </span>
               </div>
@@ -92,56 +95,103 @@ export default function HomePage() {
           </div>
           {/* Card */}
           <div className="w-full h-full flex flex-col items-center pb-20  ">
-            <div className="flex justify-center pt-10 text-[40px] max-sm:text-[28px]">
+            <div className="flex justify-center pt-10 text-[40px] text-[#1E2125] max-sm:text-[28px]">
               Zadnje osmrtnice
             </div>
             {/* Search Boxes Display */}
-            <div className="flex justify-center gap-3 my-10  flex-wrap">
-              <Input
+            <div className="flex justify-center gap-3 my-10 lg:flex-nowrap  flex-wrap lg:w-[777px] md:w-[600px]">
+              {/* <Input
                 placeholder="Išči po imenu / priimku"
-                className="lg:w-[227px] lg:h-[48px] hidden lg:block p-3  border-1 shadow-sm"
+                className="lg:w-[227px] lg:h-[48px] hidden lg:block p-3   shadow-sm border-[#7C7C7C] border-1 placeholder-[#7C7C7C]"
+              /> */}
+              <input
+                placeholder="Išči po imenu / priimku"
+                className="h-[48px] lg:w-[227px] lg:h-[48px] hidden lg:block outline-[#7C7C7C] md:w-[286px] text-[16px] max-sm:w-[296px] p-3 placeholder-[#7C7C7C] border-1 border-[#7C7C7C] rounded-lg shadow-sm bg-white "
               />
-              <Select
+              <select
+                id="select"
+                placeholder="Izberi mesto"
+                defaultChecked
+                defaultValue={""}
+                name="select"
+                class="h-[48px] lg:w-[227px]   md:w-[292px] max-sm:w-[296px] px-2 text-[#7C7C7C] text-[16px] border-1 border-[#7C7C7C] focus:outline-[#7C7C7C] rounded-lg"
+              >
+                <option value="Išči po kraju">Išči po kraju</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+              <select
+                id="select"
+                placeholder="Išči po regiji"
+                defaultChecked
+                defaultValue={"helo"}
+                name="select"
+                class="h-[48px] lg:w-[227px]  md:w-[292px] max-sm:w-[296px] px-2 text-[#7C7C7C] text-[16px] border-1 border-[#7C7C7C] focus:outline-[#7C7C7C] rounded-lg"
+              >
+                <option value="Išči po kraju">Išči po kraju</option>
+                <option value="option2">helo</option>
+                <option value="option3">Option 3</option>
+              </select>
+              {/* <Select
                 showSearch
                 placeholder="Išči po kraju"
                 optionFilterProp="children"
                 onChange={onChange}
                 onSearch={onSearch}
                 filterOption={filterOption}
-                className="lg:w-[227px] lg:h-[48px] md:w-[292px] md:h-[48px] max-sm:w-[296px] max-sm:h-[48px]  max-sm:mx-4 hover:border-gray-400 focus:border-gray-400 shadow-sm"
+                className="lg:w-[227px] lg:h-[48px] md:w-[292px] md:h-[48px] max-sm:w-[296px] max-sm:h-[48px]  max-sm:mx-4 border-[#7C7C7C] border-1 rounded-lg shadow-sm"
                 options={option}
-              />
-              <Select
+              /> */}
+              {/* <Select
                 showSearch
                 placeholder="Išči po regiji"
                 optionFilterProp="children"
                 onChange={onChange}
                 onSearch={onSearch}
                 filterOption={filterOption}
-                className="lg:w-[227px] lg:h-[48px]  md:w-[292px] md:h-[48px] max-sm:w-[296px] max-sm:h-[48px] max-sm:mx-4 hover:border-gray-400 focus:border-gray-400 shadow-sm"
+                className="lg:w-[227px] lg:h-[48px]  md:w-[292px] md:h-[48px] max-sm:w-[296px] max-sm:h-[48px] max-sm:mx-4 border-[#7C7C7C] border-1 rounded-lg placeholder-[#7C7C7C] shadow-sm"
                 options={option}
-              />
+              /> */}
               <button className="lg:w-[48px] lg:h-[48px] md:w-[292px] md:h-[48px] max-sm:w-[296px] max-sm:h-[48px] border-1 flex justify-center items-center lg:text-[24px] md:font-thin rounded-lg bg-[#414141] text-white shadow-sm">
-                {width <= 768 ? "Prikaži" : <CiSearch />}
+                <span className="lg:hidden">Prikaži</span>
+                <span className="hidden lg:block">
+                  <CiSearch />
+                </span>
               </button>
             </div>
             {/* Cards Display */}
-            <div className=" flex  md:flex-wrap max-sm:flex-wrap  max-sm:w-full max-md:w-full justify-center ">
+            <div className=" flex  md:flex-wrap max-sm:flex-wrap  max-sm:w-full max-md:w-full justify-center lg:w-[1280px] md:w-[470px]">
               {profiles.map((data) => (
-                <Card profile={data} />
+                <div>
+                  <Card profile={data} />
+                </div>
               ))}
+            </div>
+            <div className="pt-10">
+              <Button
+                bg1={"from-[#e3e8ec]"}
+                bg2={"to-[#ffffff]"}
+                padding={"p-2"}
+                px={"px-6"}
+                style={"border-none"}
+                className=" "
+              >
+                {" "}
+                Prikaži več
+              </Button>
             </div>
           </div>
         </div>
 
         {/* Section 2 Caroucel*/}
-        <div className="border ">
+        <div className="border-[1px] border-[#E3E8EC]">
+          {/* Responsive for tablet and mobile */}
           <div className="w-screen lg:h-[891px] md:h-[1204px] max-sm:[885px] bg-[#FEFAF2] lg:hidden md:block sm:block">
-            <div className="flex justify-center lg:h-full h-full items-center py-5">
-              <div className=" flex lg:h-[639.78px] lg:w-[994px] max-sm:w-full max-lg:flex-wrap-reverse   justify-center gap-10 max-sm:gap-0 ">
-                {/* Tablet */}
+            <div className="flex justify-center md:h-[1204px] items-center ">
+              {/* Tablet and phone */}
+              <div className=" flex  md:w-[497.91px]  max-sm:w-full max-lg:flex-wrap-reverse justify-center gap-10 max-sm:gap-0 ">
                 <div className="flex flex-col items-center ">
-                  <div className=" p-5  bg-white rounded-2xl border-1  h-[627.35px] w-[420px] max-sm:w-[294.4px] max-sm:h-[494.65px]">
+                  <div className=" p-5  bg-white rounded-2xl border-2  h-[627.35px] w-[420px] max-sm:w-[294.4px] max-sm:h-[494.65px]">
                     <div className="flex justify-center w-full mb-4 ">
                       <div className="w-1 h-1  border-2 rounded-full bg-gray-500"></div>
                     </div>
@@ -170,17 +220,17 @@ export default function HomePage() {
                   </div>
                 </div>
                 {/* text lines */}
-                <div className="lg:mt-10 md:mt-0">
-                  <div className=" w-[504px] h-[259px] max-sm:w-[321px] max-sm:h-fit lg:text-start max-lg:text-center ">
+                <div className="">
+                  <div className=" w-[467px] h-[259px] max-sm:w-[321px] max-sm:h-fit lg:text-start max-lg:text-center ">
                     {/* <div> */}
-                    <h2 className="font-semibold text-[40px] max-sm:text-[28px]">
+                    <h2 className=" text-[40px] max-sm:text-[28px]">
                       Osmrtnica
                     </h2>
                     <p className="pt-4 text-[16px]">
                       Stran, kjer izvemo vse o pogrebu, se vpišete v Žalno
                       knjigo, izrečete sožalja in prižgete virtualno svečko.{" "}
                     </p>
-                    <h3 className="font-semibold text-[20px] pt-4">
+                    <h3 className="font-[500] text-[20px] pt-4">
                       Vse navedeno je BREZPLAČNO.
                     </h3>
 
@@ -203,7 +253,8 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="hidden lg:block">
+          {/* Caroucel for Desktop */}
+          <div className="hidden lg:block ">
             <Carousel
               autoplay
               autoplaySpeed={2000}
@@ -211,44 +262,41 @@ export default function HomePage() {
               className="bg-[#FEFAF2] "
             >
               {/* div1 slider */}
-              <div
-                className="w-screen lg:h-[891px] md:h-[1204px]"
-                style={contentStyle}
-              >
-                <div className="flex justify-center lg:h-full h-full items-center ">
+              <div className="w-screen h-[891px] " style={contentStyle}>
+                <div className="flex justify-center h-[891px] items-center ">
                   <div className="bg-[#FEFAF2]  flex lg:h-[639.78px] lg:w-[994px] md:flex-wrap-reverse  justify-center gap-10 ">
-                    <div className="  h-[627.35px] w-[420px]">
-                      <div className=" p-5  bg-white rounded-2xl border-1">
-                        <div className="flex justify-center w-full mb-4 ">
-                          <div className="w-1 h-1  border-2 rounded-full bg-gray-500"></div>
-                        </div>
-                        <img
-                          className="h-[531.31px] w-[384.5px]"
-                          src={iPadImg}
-                          alt=""
-                          srcset=""
-                        />
-                        <div className="flex justify-center w-full mt-2">
-                          <div className="w-8 h-8 bg-white border-2 rounded-full "></div>
+                    <div className="">
+                      <div className="  h-[627.35px] w-[420px]">
+                        <div className=" p-5  bg-white rounded-2xl border-1 border-[#000000]">
+                          <div className="flex justify-center w-full mb-4 ">
+                            <div className="w-1 h-1  border-2 rounded-full bg-gray-500"></div>
+                          </div>
+                          <img
+                            className="h-[531.31px] w-[384.5px]"
+                            src={iPadImg}
+                            alt=""
+                            srcset=""
+                          />
+                          <div className="flex justify-center w-full mt-2">
+                            <div className="w-8 h-8 bg-white border-2 rounded-full "></div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="lg:mt-10 md:mt-0">
-                      <div className=" w-[504px] h-[259px] lg:text-start md:text-center">
-                        <div>
-                          <h2 className="font-semibold text-[40px]">
-                            Osmrtnica
-                          </h2>
+                    <div className="lg:mt-20  md:mt-0">
+                      <div className="relative w-[504px] h-[259px]  lg:text-start md:text-center">
+                        <div className="">
+                          <h2 className="font-[400] text-[40px]">Osmrtnica</h2>
                           <p className="pt-4 text-[16px]">
                             Stran, kjer izvemo vse o pogrebu, se vpišete v Žalno
                             knjigo, izrečete sožalja in prižgete virtualno
                             svečko.{" "}
                           </p>
-                          <h3 className="font-semibold text-[20px] pt-4">
+                          <h3 className="font-[500] text-[20px] pt-4">
                             Vse navedeno je BREZPLAČNO.
                           </h3>
 
-                          <div className="pt-10">
+                          <div className="absolute bottom-0 left-20">
                             <Button
                               bg1={"from-[#e3e8ec]"}
                               bg2={"to-[#ffffff]"}
@@ -269,13 +317,10 @@ export default function HomePage() {
               </div>
 
               {/* div2 slider */}
-              <div
-                className="w-screen  lg:h-[891px] my-10 "
-                style={contentStyle}
-              >
-                <div className="flex justify-center h-full items-center">
-                  <div className=" bg-[#FEFAF2] flex  justify-center lg:w-[994px] h-[627.35px gap-10 flex-wrap">
-                    <div className=" p-5 bg-white rounded-2xl h-[627.35px] w-[420px] border-2 ">
+              <div className="w-screen  lg:h-[891px]" style={contentStyle}>
+                <div className="flex justify-center  bg-[#FEFAF2] h-[891px] items-center">
+                  <div className="  flex  justify-center  gap-10 h-[627.35px] flex-wrap">
+                    <div className=" p-5 bg-white rounded-2xl border-[#000000] h-[627.35px] w-[420px] border-[1px] ">
                       <div className="flex justify-center w-full mb-4 ">
                         <div className="w-1 h-1  border-2 rounded-full bg-gray-500"></div>
                       </div>
@@ -289,7 +334,7 @@ export default function HomePage() {
                         <div className="w-8 h-8 bg-white border-2 rounded-full "></div>
                       </div>
                     </div>
-                    <div className="w-3/6 max-sm:w-full">
+                    <div className="w-[495px] max-sm:w-full">
                       <div className="">
                         <span>
                           <h2 className="font-semibold text-[36px]  ">
@@ -345,9 +390,9 @@ export default function HomePage() {
         </div>
 
         {/* Section 3 */}
-        <div className="  py-20 justify-around px-10 flex flex-wrap w-full  bg-gradient-to-r from-p_bg1 to-p_bg bg-gray-50">
-          <div className="flex lg:w-[936px] md:w-[495.45px] max-sm:w-[303px] lg:justify-between md:justify-center max-sm:justify-center max-sm:text-center lg:text-start md:text-center flex-wrap">
-            <div className="w-[495.45px]  my-20">
+        <div className=" lg:h-[739px] max-sm:h-[1059px] border-[1px] border-[#E3E8EC] items-center justify-around px-10 flex flex-wrap w-full  bg-gradient-to-r from-[#b6ecec17] to-[#bef4f400] bg-gray-50">
+          <div className="flex lg:w-[936px] lg:h-[500px] md:h-[997px] max-sm:h-[883px] md:w-[495.45px] max-sm:w-[303px] lg:justify-between  md:justify-center max-sm:justify-center max-sm:text-center lg:text-start md:text-center flex-wrap">
+            <div className="w-[495.45px] md:h-[319px]  lg:my-20 md:mt-10 max-sm:mb-4 ">
               <div>
                 <h2 className=" lg:text-[40px] md:text-[40px] max-sm:text-[28px]">
                   Obveščanje o pogrebu
@@ -361,14 +406,14 @@ export default function HomePage() {
                   pogrebu, ki ga lahko potem pošiljate naprej sorodnikom in
                   znancem. Obvestilo je prilagojeno meram mobilnega telefona.
                 </p>
-                <h3 className=" text-[20px] pt-4">
+                <h3 className=" text-[20px] pt-4 max-sm:w-[326px] font-[500]">
                   Obvestilo o pogrebu je BREZPLAČNO.{" "}
                 </h3>
 
-                <div className="pt-10 max-sm:hidden">
+                <div className="pt-10  max-sm:hidden">
                   <Button
-                    bg1={"rgba(227, 232, 236, 1)"}
-                    bg2={"rgba(255, 255, 255, 1)"}
+                    bg1={"from-[#E3E8EC] "}
+                    bg2={"to-[#FFFFFF]"}
                     padding={"p-2"}
                     px={"px-6"}
                     className=""
@@ -394,10 +439,11 @@ export default function HomePage() {
             </div>
             <div className="pt-16 hidden max-sm:block">
               <Button
-                bg1={"rgba(227, 232, 236, 1)"}
-                bg2={"rgba(255, 255, 255, 1)"}
+                bg1={"from-[#E3E8EC] "}
+                bg2={"to-[#FFFFFF]"}
                 padding={"p-2"}
                 px={"px-6"}
+                style={"border-none max-sm:hidden"}
                 className=""
               >
                 {" "}
@@ -407,78 +453,120 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* section 4 */}
-        <div
-          style={{ backgroundImage: `url('${frameImg}')` }}
-          className="bg-cover bg-center  h-80 flex justify-around items-center"
-        >
-          {/* <img src={frameImg} className="w-full " alt="" /> */}
-          <div className="hidden lg:block md:block"></div>
-          <div className=" text-white lg:w-[476px] md:w-[300px] flex flex-col gap-8 items-center">
-            <h2 className="lg:text-[40px] md:text-[32px] max-sm:text-[28px] ">
-              Lokalne cvetličarne{" "}
-            </h2>
-            <Select
-              showSearch
-              placeholder="Mesto"
-              optionFilterProp="children"
-              onChange={onChange}
-              onSearch={onSearch}
-              filterOption={filterOption}
-              className="h-12 lg:w-[476px] md:w-[300px] max-sm:w-[300px] max-sm:mx-4 hover:border-gray-400 focus:border-gray-400 shadow-sm"
-              options={option}
-            />
+        {/* section 4 Banner*/}
+        <div className="w-full justify-center flex bg-black ">
+          <div
+            style={{ backgroundImage: `url('${frameImg}')` }}
+            className="bg-cover bg-center w-[1280px]   h-80 flex justify-around items-center border-[1px] border-black"
+          >
+            {/* <img src={frameImg} className="w-full " alt="" /> */}
+            <div className="hidden lg:block md:block"></div>
+            <div className=" text-white lg:w-[476px] md:w-[300px] flex flex-col gap-8 items-center">
+              <h2 className="lg:text-[40px] md:text-[32px] max-sm:text-[28px] ">
+                Lokalne cvetličarne{" "}
+              </h2>
+              <Select
+                showSearch
+                placeholder="Mesto"
+                optionFilterProp="children"
+                onChange={onChange}
+                onSearch={onSearch}
+                filterOption={filterOption}
+                className="h-12 lg:w-[476px] md:w-[300px] max-sm:w-[300px] max-sm:mx-4 hover:border-gray-400 focus:border-gray-400 shadow-sm"
+                options={option}
+              />
+            </div>
           </div>
         </div>
+
         {/* section 5 */}
-        <div className="py-20 flex flex-col items-center bg-[#FFFBF4]">
-          <div className=" max-sm:text-center">
-            <span className="max-sm:text-[28px] max-sm:w-[32px] lg:text-[32px] md:text-[32px] text-center">
-              Obveščanje o osmrtnicah v domačem kraju{" "}
-            </span>
-          </div>
-          <div className="flex gap-2 py-4 flex-wrap max-sm:justify-center">
-            <Select
-              showSearch
-              placeholder="Išči po kraju"
-              optionFilterProp="children"
-              onChange={onChange}
-              onSearch={onSearch}
-              filterOption={filterOption}
-              className="h-[48px] lg:w-[306px] md:w-[286px] max-sm:w-[296px] hover:border-gray-400 focus:border-gray-400 shadow-sm bg-white"
-              options={option}
-            />
-            <Input
-              placeholder="Vpiši svoj e-poštni naslov "
-              className="h-[48px] lg:w-[306px] md:w-[286px] max-sm:w-[296px] p-3  border-1 shadow-sm bg-white "
-            />
-          </div>
-          <div className="flex gap-2 flex-col max-sm:items-center font-medium">
-            <Checkbox className="text-[12px] max-sm:w-72" onChange={onChange}>
-              Strinjam se s{" "}
-              <a className="underline hover:underline">
-                splošnimi pogoji in pravili
-              </a>
-            </Checkbox>
-            <Checkbox className="text-[12px] max-sm:w-72" onChange={onChange}>
-              Enkrat mesečno prejemam tudi novice, posebne popuste, občasne
-              brezplačne nadgradnje
-            </Checkbox>
-          </div>
-          <div className="py-6 flex flex-col items-center gap-2 font-medium">
-            <SimpButton
-              textColor={"blue-500"}
-              bgColor={"bg-[#CAF0F8]"}
-              padding={
-                "w-[276px] h-[48px] flex justify-center items-center text-[18px]"
-              }
-              px={"px-20"}
-            >
-              Prijava
-            </SimpButton>
-            <p className="text-[12px]">
-              Osmrtnice boste prejemali enkrat dnevno.
-            </p>
+        <div className="py-20 flex flex-col items-center border-[1px] border-[#E3E8EC] bg-[#FFFBF4]">
+          <div className="lg:w-[1088px] md:w-[600px]  md:text-center flex flex-col items-center">
+            <div className=" max-sm:text-center max-sm:w-[296px]">
+              <span className="max-sm:text-[28px] max-sm:hidden lg:text-[32px] md:text-[32px] text-center">
+                Obveščanje o osmrtnicah v domačem kraju{" "}
+              </span>
+              <span className="text-[28px]  max-sm:block hidden  text-center">
+                Obveščanje o lokalnih osmrtnicah
+              </span>
+            </div>
+            <div className="flex gap-2 py-4 flex-wrap max-sm:justify-center">
+              {/* <Select
+                showSearch
+                placeholder="Išči po kraju"
+                optionFilterProp="children"
+                onChange={onChange}
+                onSearch={onSearch}
+                filterOption={filterOption}
+                // style={{ placeholder }}
+                className="h-[48px] lg:w-[306px] border-1 border-[#7C7C7C] rounded-lg md:w-[286px] max-sm:w-[296px] hover:border-gray-400 focus:border-gray-400 shadow-sm bg-white"
+                options={option}
+              /> */}
+              <div className="">
+                <select
+                  id="select"
+                  placeholder="Izberi mesto"
+                  defaultChecked
+                  defaultValue={""}
+                  name="select"
+                  class="h-[48px] lg:w-[306px] md:w-[286px] max-sm:w-[296px] px-2 text-[#7C7C7C] text-[16px] border-1 border-[#7C7C7C] focus:outline-[#7C7C7C] rounded-lg"
+                >
+                  <option value="Izberi mesto">Izberi mesto</option>
+                  <option value="option2">Option 2</option>
+                  <option value="option3">Option 3</option>
+                </select>
+              </div>
+              <input
+                placeholder="Vpiši svoj e-poštni naslov "
+                className="h-[48px] lg:w-[306px] outline-[#7C7C7C] md:w-[286px] text-[16px] max-sm:w-[296px] p-3 placeholder-[#7C7C7C] border-1 border-[#7C7C7C] rounded-lg shadow-sm bg-white "
+              />
+            </div>
+            <div className="flex gap-2 flex-col max-sm:items-center font-medium">
+              <div className="flex justify-start gap-2">
+                <input
+                  type="checkbox"
+                  className="appearance-auto w-4 h-4 rounded border-2"
+                  onChange={onChange}
+                />
+                <span className="text-[12px]  max-sm:w-[264px]">
+                  {" "}
+                  Strinjam se s{" "}
+                  <a className="underline hover:underline">
+                    splošnimi pogoji in pravili
+                  </a>
+                </span>
+              </div>
+              {/* <Checkbox className="text-[12px] max-sm:w-72" onChange={onChange}>
+                Enkrat mesečno prejemam tudi novice, posebne popuste, občasne
+                brezplačne nadgradnje
+              </Checkbox> */}
+              <div className="flex gap-2">
+                <input
+                  type="checkbox"
+                  className="border-black appearance-auto w-4 h-4 rounded border-2"
+                  onChange={onChange}
+                />
+                <span className="text-[12px] max-sm:w-[264px]">
+                  Enkrat mesečno prejemam tudi novice, posebne popuste, občasne
+                  brezplačne nadgradnje
+                </span>
+              </div>
+            </div>
+            <div className="py-6 flex flex-col items-center gap-2 font-medium">
+              <SimpButton
+                textColor={"blue-500"}
+                bgColor={"bg-[#CAF0F8]"}
+                padding={
+                  "w-[276px] h-[48px] flex justify-center items-center text-[18px]"
+                }
+                px={"px-20"}
+              >
+                Prijava
+              </SimpButton>
+              <p className="text-[12px]">
+                Osmrtnice boste prejemali enkrat dnevno.
+              </p>
+            </div>
           </div>
         </div>
         {/* Section 6 Footer */}

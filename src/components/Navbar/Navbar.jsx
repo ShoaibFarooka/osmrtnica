@@ -9,7 +9,7 @@ import MegaMenu from "../MegaMenu/MegaMenu";
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
   return (
-    <div className="w-full flex justify-between p-4 ">
+    <div className="lg:w-[1280px] md:w-[744px] max-sm:w-[360px] flex justify-between p-4 ">
       <div className="flex items-center">
         <MdPerson className="text-[28px] max-sm:text-[20px]" />
       </div>
@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="flex items-center  ">
         <Button
           variant="bordered"
-          className="border-white"
+          className="border-white "
           onClick={() => setMenu(!menu)}
         >
           {menu ? (

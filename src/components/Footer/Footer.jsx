@@ -8,8 +8,8 @@ import Carousel from "../Carousel/Carousel";
 
 export default function Footer() {
   return (
-    <div className="  flex flex-col items-center  py-5 max-sm:items-center lg:bg-gradient-to-r max-sm:bg-gradient-to-r md:bg-white from-p_bg1 to-p_bg pt-16 border-t-1 flex-wrap">
-      <div className="max-sm:w-[311px] lg:w-11/12 md:w-[620px] ">
+    <div className="  flex flex-col items-center  py-5 border-[1px] border-[#E3E8EC] max-sm:items-center lg:bg-[#E3E8EC] max-sm:bg-[#E3E8EC] md:bg-white  pt-16 border-t-1 flex-wrap">
+      <div className="lg:w-[1157px] max-sm:w-[311px] md:w-[620px] ">
         <div className=" border-gray-300 pb-16  flex 7 max-sm:flex-wrap max-sm:justify-between lg:justify-between max-sm:gap-10 md:justify-between lg:gap-0">
           <div className=" max-sm:w-full items-center p-4 flex flex-col gap-10 mt-4">
             <img src={groupLogo} alt="" className="w-[200px]" />
@@ -79,10 +79,12 @@ export default function Footer() {
         <div className="flex lg:justify-between items-center lg:flex-nowrap lg:flex-row flex-col   w-full md:flex-wrap md:justify-center max-sm:justify-center ">
           <div className="flex flex-col gap-4  mb-6 lg:w-fit md:w-full  max-sm:hidden">
             <span>
-              <p className="font-semibold text-gray-500 mb-2">
+              <p className="font-semibold text-[#7C7C7C] text-[16px] font[400] mb-2">
                 Trenutno ste na strani:
               </p>
-              <p>osmrtnica.com </p>
+              <p className="text-[#414141] text-[16px] font[400]">
+                osmrtnica.com{" "}
+              </p>
             </span>
             <p className="hidden lg:block">
               © osmrtnica.com, 2024. Vse pravice pridržane.

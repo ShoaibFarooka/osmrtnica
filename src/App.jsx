@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { loginSuccess } from "./Redux/reducers/slices/authSlice";
 import router from "./routes/router";
 import { NextUIProvider } from "@nextui-org/react";
+import "typeface-roboto";
 
 const AppWraper = () => {
   const auth = useSelector((state) => state.auth.loginSuccess);
@@ -21,7 +22,7 @@ function App() {
     <>
       <NextUIProvider>
         <Router>
-          <div className="font-roboto">
+          <div className="font-roboto font-[400]">
             <AppWraper />
           </div>
         </Router>
