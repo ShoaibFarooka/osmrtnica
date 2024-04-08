@@ -58,7 +58,55 @@ export default function HomePage() {
               alt=""
               className="lg:w-full  md:h-[586px] max-sm:h-[257px]  opacity-100"
             />
-            <div className="absolute items-end  mr-16 lg:bottom-14 md:bottom-14  sm:gap-10  max-sm:hidden  w-4/6 flex flex-wrap justify-around ">
+            <div className="hidden  max-sm:block">
+              <div className="absolute flex flex-col bg-gradient-to-l to-[#FFFFFF] from-[#ffffff4d] gap-[24px] top-[10px] left-[14px] rounded-[8px] h-[332px] w-[153px] p-[16px] border-[1px] border-[#D4D4D4] ">
+                <div className=" flex items-center h-[57px]">
+                  <div className="h-[57px] border-l-[1px] border-[#C0C0C0]"></div>
+                  <div className=" flex flex-col    pl-[6px]">
+                    <span className="text-[#A2A2A2] font-[200] text-[32px] ">
+                      01
+                    </span>
+                    <span className="text-[#414141] font-[500] text-[16px] ">
+                      OSMRTNICE
+                    </span>
+                  </div>
+                </div>
+                <div className=" flex items-center h-[57px]">
+                  <div className="h-[57px] border-l-[1px] border-[#C0C0C0]"></div>
+                  <div className=" flex flex-col    pl-[6px]">
+                    <span className="text-[#A2A2A2] font-[200] text-[32px] ">
+                      02
+                    </span>
+                    <span className="text-[#414141] font-[500] text-[16px] ">
+                      POGREBI
+                    </span>
+                  </div>
+                </div>
+                <div className=" flex items-center h-[57px]">
+                  <div className="h-[57px] border-l-[1px] border-[#C0C0C0]"></div>
+                  <div className=" flex flex-col    pl-[6px]">
+                    <span className="text-[#A2A2A2] font-[200] text-[32px] ">
+                      03
+                    </span>
+                    <span className="text-[#414141] font-[500] text-[16px] ">
+                      SPOMINSKA
+                    </span>
+                  </div>
+                </div>
+                <div className=" flex items-center h-[57px]">
+                  <div className="h-[57px] border-l-[1px] border-[#C0C0C0]"></div>
+                  <div className=" flex flex-col    pl-[6px]">
+                    <span className="text-[#A2A2A2] font-[200] text-[32px] ">
+                      04
+                    </span>
+                    <span className="text-[#414141] font-[500] text-[16px] ">
+                      CVETLIČARNE
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="absolute items-end  mr-16 lg:bottom-14 md:bottom-14    max-sm:hidden  w-4/6 flex flex-wrap justify-around ">
               <div className=" flex flex-col  text-[#DEDEDE]">
                 <span className=" top-0 text-[#7C7C7C] font-[200]  px-2 pb-6 lg:text-[64px] md:text-[40px]">
                   01
@@ -94,7 +142,7 @@ export default function HomePage() {
             </div>
           </div>
           {/* Card */}
-          <div className="w-full h-full flex flex-col items-center pb-20  ">
+          <div className="w-full max-sm:mt-20 h-full flex flex-col items-center pb-20  ">
             <div className="flex justify-center pt-10 text-[40px] text-[#1E2125] max-sm:text-[28px]">
               Zadnje osmrtnice
             </div>
@@ -186,10 +234,10 @@ export default function HomePage() {
         {/* Section 2 Caroucel*/}
         <div className="border-[1px] border-[#E3E8EC]">
           {/* Responsive for tablet and mobile */}
-          <div className="w-screen lg:h-[891px] md:h-[1204px] max-sm:[885px] bg-[#FEFAF2] lg:hidden md:block sm:block">
+          <div className="w-screen lg:h-[891px] md:h-[1204px] max-sm:h-[885px] flex  bg-[#FEFAF2] lg:hidden md:block sm:block">
             <div className="flex justify-center md:h-[1204px] items-center ">
               {/* Tablet and phone */}
-              <div className=" flex  md:w-[497.91px]  max-sm:w-full max-lg:flex-wrap-reverse justify-center gap-10 max-sm:gap-0 ">
+              <div className=" flex  md:w-[497.91px]   max-sm:w-full max-lg:flex-wrap-reverse justify-center gap-10 max-sm:gap-0 ">
                 <div className="flex flex-col items-center ">
                   <div className=" p-5  bg-white rounded-2xl border-2  h-[627.35px] w-[420px] max-sm:w-[294.4px] max-sm:h-[494.65px]">
                     <div className="flex justify-center w-full mb-4 ">
@@ -221,26 +269,26 @@ export default function HomePage() {
                 </div>
                 {/* text lines */}
                 <div className="">
-                  <div className=" w-[467px] h-[259px] max-sm:w-[321px] max-sm:h-fit lg:text-start max-lg:text-center ">
+                  <div className=" md:w-[467px] md:h-[259px] max-sm:w-[321px] max-sm:h-[183px] text-center ">
                     {/* <div> */}
                     <h2 className=" text-[40px] max-sm:text-[28px]">
                       Osmrtnica
                     </h2>
-                    <p className="pt-4 text-[16px]">
+                    <p className="mt-4 text-[16px]">
                       Stran, kjer izvemo vse o pogrebu, se vpišete v Žalno
                       knjigo, izrečete sožalja in prižgete virtualno svečko.{" "}
                     </p>
-                    <h3 className="font-[500] text-[20px] pt-4">
-                      Vse navedeno je BREZPLAČNO.
+                    <h3 className="font-[500] text-[20px] py-4">
+                      Vse navedeno je BREZPLAČNeO.
                     </h3>
 
-                    <div className="pt-10">
+                    <div className="pt-10 max-sm:hidden">
                       <Button
                         bg1={"from-[#e3e8ec]"}
                         bg2={"to-[#ffffff]"}
                         padding={"p-2"}
                         px={"px-6"}
-                        style={"border-none max-sm:hidden"}
+                        style={"border-none "}
                         className=" "
                       >
                         {" "}
@@ -457,7 +505,7 @@ export default function HomePage() {
         <div className="w-full justify-center flex bg-black ">
           <div
             style={{ backgroundImage: `url('${frameImg}')` }}
-            className="bg-cover bg-center w-[1280px]   h-80 flex justify-around items-center border-[1px] border-black"
+            className="bg-cover bg-center max-sm:bg-[-300px] w-[1280px]  h-80 flex justify-around items-center border-[1px] border-black"
           >
             {/* <img src={frameImg} className="w-full " alt="" /> */}
             <div className="hidden lg:block md:block"></div>

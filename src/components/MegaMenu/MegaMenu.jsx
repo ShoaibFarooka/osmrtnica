@@ -66,7 +66,7 @@ const MenuBtn = (props) => {
 
 const Osmrtnice = (props) => {
   return (
-    <div className="flex   w-full  md:flex-wrap p-2 gap-[25px]">
+    <div className="flex   w-full  md:flex-wrap max-sm:flex-wrap p-2 gap-[25px]">
       <div className="flex flex-col w-[270px] gap-5">
         <SubCard
           data={{
@@ -125,7 +125,7 @@ const Osmrtnice = (props) => {
 
       <div className="w-[270px] text-[#686868] max-sm:w-64 bg-gradient-to-l shadow-xl from-col1 to-col2 border-2 text-[12px] flex flex-col gap-3 rounded-lg p-3 ">
         <span>
-          <p className="text-[#0A85C2]">PROMOCIJA</p>
+          <p className="text-[#00B4D8]">PROMOCIJA</p>
           <h2 className="font-[500] text-[24px]">VSE BREZPLAČNO</h2>
         </span>
         <p>
@@ -144,7 +144,7 @@ const Osmrtnice = (props) => {
         </p>
         <a
           href="#"
-          className={`text-[#0A85C2] flex gap-2 items-center text-[14px]`}
+          className={`text-[#41C0FF] flex gap-2 items-center text-[14px]`}
         >
           Več o promociji <IoIosArrowForward />
         </a>
