@@ -4,12 +4,19 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 export function Card(props) {
   return (
     <div className="flex  gap-2  shadow-md shadow-[#c2c2c280] h-[170px] w-[466px] max-sm:h-[124px] max-sm:w-[296px] justify-center items-center  bg-gradient-to-r from-[#E3EAEF] to-[#F3F6F8] border-2 border-white rounded-lg m-3">
-      <div className="w-[420px] h-[130px] max-sm:w-[261px] flex justify-around items-center max-sm:justify-normal">
+      <div className="w-[420px] h-[130px] max-sm:w-[261px] flex gap-[32px] items-center max-sm:justify-normal">
         <div className="flex items-center h-fit max-sm:w-[100px]">
           <img
             src={props.profile.img}
             alt="Image"
-            className="h-[130px] w-[95px] max-sm:w-[72px] max-sm:h-[98.53px]  "
+            style={{
+              // boxShadow: "-3px -3px 7px 0px #FFFFFFB2",
+
+              // boxShadow: `5px 5px 10px 0px #C2C2C280`,
+
+              boxShadow: `1px 4px 4px 0px #00000040`,
+            }}
+            className="h-[130px] w-[95px] drop-shadow-xl max-sm:w-[72px] max-sm:h-[98.53px] border-[4px] border-[#FFFFFF] rounded-[8px]"
           />
         </div>
         <div className=" w-[293.33px] max-sm:w-full h-fit">
