@@ -45,47 +45,49 @@ export function Card(props) {
 export function Card2(props) {
   return (
     <div
-      className={`${props.style} flex  gap-2 h-48 shadow-sm  w-full shadow-gray-400 bg-gradient-to-r bg-[#ebf0f499] border-2 border-white rounded-lg m-3`}
+      className={`${props.style} relative flex items-center justify-center gap-2  shadow-md shadow-[#ebf0f4b3]  w-[762px] h-[200px] bg-gradient-to-r bg-[#ebf0f499] border-2 border-white rounded-lg `}
     >
-      <div className="flex items-center   ">
+      <div className="flex items-center    justify-center">
         <img
           src={props.profile.img}
           alt="Image"
-          className="h-fit max-sm:h-fit  p-5 max-md:p-0"
+          className="w-[230px] h-[140px] absolute left-[32px] top-[30px]"
         />
       </div>
-      <div className="w-full">
-        <div className="flex">
-          <div className="flex justify-between w-full">
-            <div className="flex flex-col mt-4  gap-2 max-md:gap-1 text-[14px]">
-              <span className="text-[24px] max-md:text-[16px] max-md:font-bold">
+      <div className=" ">
+        <div className="flex ">
+          <div className="flex  ">
+            <div className="absolute left-[303px] top-[30px] flex flex-col  w-[332px] h-[139px]  text-[#414141] gap-2 max-md:gap-1 text-[14px]">
+              <span className="text-[24px] text-[#1E2125] font-[400]  ">
                 {props.profile.name}
               </span>
-              <p className="flex  flex-col max-md:text-[12px]">
+              <p className="flex  flex-col text-[16px] ">
                 <span>{props.profile.text}</span>
                 <span>{props.profile.number}</span>
               </p>
-              <p>{props.profile.website}</p>
+              <p className="text-[20px]">{props.profile.website}</p>
             </div>
-            <div className="p-6 text-[14px] max-md:p-0 max-md:pt-6 max-md:pr-6 text-[#CC6F6F]">
+            <div
+              className={` absolute left-[676px] top-[32px] text-[12px] max-md:p-0   ${props.roleStyle}`}
+            >
               {props.profile.role}
             </div>
+            <div className="absolute bottom-[32px] left-[676px] flex  justify-end cursor-pointer ">
+              {props.profile.arrowText && (
+                <span className="flex  items-center text-[14px]">
+                  {props.profile.arrowText}{" "}
+                  <MdOutlineKeyboardArrowRight className="text-[20px]" />
+                </span>
+              )}
+            </div>
           </div>
-          <span>
+          {/* <div className="">
             {props.profile.symbol_img ? (
               <img src={props.profile.symbol_img} className="" alt="img" />
             ) : (
               <></>
             )}
-          </span>
-        </div>
-        <div className=" flex justify-end cursor-pointer ">
-          {props.profile.arrowText && (
-            <span className="flex  items-center  p-3 text-[14px]">
-              {props.profile.arrowText}{" "}
-              <MdOutlineKeyboardArrowRight className="text-[20px]" />
-            </span>
-          )}
+          </div> */}
         </div>
       </div>
     </div>

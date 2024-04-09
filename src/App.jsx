@@ -22,7 +22,7 @@ function App() {
     <>
       <NextUIProvider>
         <Router>
-          <div className="font-roboto font-[400]">
+          <div className="font-roboto font-[400] ">
             <AppWraper />
           </div>
         </Router>

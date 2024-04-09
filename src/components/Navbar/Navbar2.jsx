@@ -9,12 +9,12 @@ export default function Navbar2() {
   const [menu, setMenu] = useState(false);
 
   return (
-    <div className="w-full flex justify-between p-4 shadow-sm">
+    <div className="flex justify-between p-4 shadow-sm md:w-[744px] lg:w-[1280px]">
       <div className="flex items-center">
-        <img src={logo} className="w-56 max-sm:w-40" />
+        <img src={logo} className="md:w-[182.76px] lg:w-[265.83px]" />
       </div>
-      <div className="flex gap-5">
-        <div className="flex gap-8 px-5 ">
+      <div className="flex lg:gap-5 items-center">
+        <div className="flex text-[20px] md:text-[18px] text-[#1E2125] gap-[16px] px-5 items-center ">
           <button>Osmrtnice</button>
           <button>Pogrebi</button>
           <button>Spominske</button>
@@ -23,7 +23,7 @@ export default function Navbar2() {
         <div className="flex items-center ">
           <Button
             variant="bordered"
-            className="border-white"
+            className="border-white text-[#333333] font-[700]"
             onClick={() => setMenu(!menu)}
           >
             {menu ? (

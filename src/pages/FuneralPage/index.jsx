@@ -26,27 +26,33 @@ export default function Funeral() {
   }, [window.innerWidth]);
   return (
     <div>
-      <header>
+      <header className="">
         {/* Navbar */}
-        <div>{width < 800 ? <Navbar /> : <Navbar2 />}</div>
+        <div className="hidden max-sm:block">
+          <span className="w-full flex justify-center">
+            <Navbar />
+          </span>
+        </div>
+        <div className="  max-sm:hidden">
+          <span className="md:w-[744px] lg:w-[1280px] max-sm: flex justify-center ">
+            <Navbar2 />
+          </span>
+        </div>
         {/* Top Header */}
         <div>
           <HeaderTop btnText={"Pogrebna podjetja"} topBanner={topBanner} />
         </div>
       </header>
 
-      <body>
+      <body className="w-full flex flex-col items-center">
         {/* Section 1 */}
-        <div className=" flex flex-col items-center">
+        <div className=" flex flex-col items-center border-3  lg:w-[1280px] md:w-[744px]">
           <div className="flex justify-center items-center py-16  gap-3">
-            <button className="h-12 w-12 border-1 flex justify-center items-center text-[24px] rounded-lg bg-[#414141] text-white shadow-sm">
-              <CiSearch />
-            </button>
             <div>
               <Select
                 size="sm"
                 label="Išči po krajih"
-                className="w-52 h-fit  border-1 border-gray-400 rounded-md"
+                className="lg:w-[227px] md:w-[372px] max-sm:w-[244.47px] h-fit  border-1 border-gray-400 rounded-md"
                 style={{ backgroundColor: "white" }}
               >
                 {animals.map((animal) => (
@@ -56,31 +62,43 @@ export default function Funeral() {
                 ))}
               </Select>
             </div>
+            <div className="hidden lg:block max-sm:block">
+              <button className=" h-[48px] w-[48px] border-1 flex justify-center items-center text-[24px] rounded-lg bg-[#414141] text-[#F6F6F6] shadow-sm">
+                <CiSearch />
+              </button>
+            </div>
+            <div className="lg:hidden max-sm:hidden md:block">
+              <button className=" h-[48px] w-[211px] border-1 flex justify-center items-center text-[16px] font-[400] rounded-lg bg-[#414141] text-[#F6F6F6] shadow-sm">
+                Prikaži
+              </button>
+            </div>
           </div>
-          {/* Cards */}
-          <div className="w-full flex flex-col items-center">
-            <div className="w-4/5 flex flex-col mb-20 gap-1">
-              <h2 className="text-[20px] font-medium max-lg:hidden">
+          {/* Cards Sub-Section*/}
+          <div className="w-full flex flex-col items-center lg:w-[1088px]">
+            <div className=" flex flex-col mb-20 gap-1 ">
+              <h2 className="lg:text-[24px] font-[#1E2125] font-[400] max-lg:hidden">
                 Zasavska regija
               </h2>
-              <div className="flex gap-5">
-                <div className="w-full">
+              <div className="flex gap-[40px] w-[1088px] mt-4 ">
+                {/* Card */}
+                <div className="w-[762px] flex flex-col gap-[32px] ">
                   {data.map((profile) => (
-                    <span>
+                    <span className="">
                       <Card2
                         style={
-                          "max-sm:flex-col max-sm:h-fit max-sm:items-center max-sm:pl-3 max-sm:pt-3"
+                          "max-sm:flex-col  max-sm:h-fit max-sm:items-center max-sm:pl-3 max-sm:pt-3"
                         }
+                        roleStyle={"text-[#6F94CC]"}
                         profile={profile}
                       />
                     </span>
                   ))}
                 </div>
-                <div className=" w-2/5 max-lg:hidden">
-                  <div className="flex text-gray-400 gap-2 justify-center items-center shadow-sm  w-full h-48 border-1 border-gray-300  rounded-lg m-3">
+                <div className=" w-[286px] flex flex-col gap-[32px] text-[#414141] font-[100] text-[24px]">
+                  <div className="flex  gap-2 justify-center items-center shadow-sm  w-[286px] h-[200px] border-1 border-gray-300  rounded-lg ">
                     Kmalu
                   </div>
-                  <div className="flex text-gray-400 gap-2 justify-center items-center shadow-sm  w-full h-96 border-1 border-gray-300  rounded-lg m-3">
+                  <div className="flex gap-2 justify-center items-center shadow-sm  w-full h-[429px] border-1 border-gray-300  rounded-lg ">
                     Kmalu
                   </div>
                 </div>

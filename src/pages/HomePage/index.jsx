@@ -38,10 +38,7 @@ export default function HomePage() {
   const filterOption = (input, option) =>
     (option?.label ?? "").toLowerCase().includes(input.toLowerCase());
   return (
-    <div
-      className="m-0 p-0 text-[#414141]"
-      style={{ width: "100vw", overflow: "hidden" }}
-    >
+    <div className="m-0 p-0 text-[#414141] ">
       {/* Navbar */}
       <div className="shadow-md flex justify-center w-full">
         <Navbar />
@@ -505,7 +502,7 @@ export default function HomePage() {
         <div className="w-full justify-center flex bg-black ">
           <div
             style={{ backgroundImage: `url('${frameImg}')` }}
-            className="bg-cover bg-center max-sm:bg-[-300px] w-[1280px]  h-80 flex justify-around items-center border-[1px] border-black"
+            className="bg-cover bg-center max-sm:bg-[-300px] w-[1280px]  h-[284px] flex justify-around items-center border-[1px] border-black"
           >
             {/* <img src={frameImg} className="w-full " alt="" /> */}
             <div className="hidden lg:block md:block"></div>
