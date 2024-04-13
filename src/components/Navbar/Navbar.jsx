@@ -13,7 +13,6 @@ export default function Navbar() {
   return (
     <div className=" flex justify-between items-center lg:w-[1280px] md:w-[744px] max-sm:w-[360px] lg:h-[92.02px] md:h-[79px] max-sm:h-[72px] p-4 ">
       <div className="flex items-center">
-        {/* <MdPerson className="text-[28px] max-sm:text-[20px]" /> */}
         <img
           src={personIcon}
           alt=""
