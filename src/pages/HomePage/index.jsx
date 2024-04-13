@@ -56,7 +56,7 @@ export default function HomePage() {
               className="lg:w-full  md:h-[586px] max-sm:h-[257px]  opacity-100 "
             />
             <div className="hidden  max-sm:block">
-              <div className="absolute flex flex-col bg-gradient-to-l to-[#FFFFFF] from-[#ffffff4d] lg:gap-[24px] md:gap-[30px]  top-[10px] left-[14px] rounded-[8px] h-[332px] w-[153px] p-[16px] border-[1px] border-[#D4D4D4] ">
+              <div className="absolute flex flex-col bg-gradient-to-l to-[#FFFFFF] from-[#ffffff4d]  lg:gap-[24px] md:gap-[30px]  top-[10px] left-[14px] rounded-[8px] h-[332px] w-[153px] p-[16px] border-[1px] border-[#D4D4D4] ">
                 <div className=" flex items-center h-[57px]">
                   <div className="h-[57px] border-l-[1px] border-[#C0C0C0]"></div>
                   <div className=" flex flex-col    pl-[6px]">

@@ -77,7 +77,7 @@ export default function Footer() {
         </div> */}
         </div>
         <div className="flex lg:justify-between items-center lg:flex-nowrap lg:flex-row flex-col   w-full md:flex-wrap md:justify-center max-sm:justify-center ">
-          <div className="flex flex-col gap-4  mb-6 lg:w-fit md:w-full  max-sm:hidden">
+          <div className="flex flex-col gap-4  mb-6 lg:w-fit md:w-full lg:block md:hidden max-sm:hidden">
             <span>
               <p className="font-semibold text-[#7C7C7C] text-[16px] font[400] mb-2">
                 Trenutno ste na strani:
