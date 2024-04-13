@@ -17,6 +17,9 @@ export default {
     fontFamily: {
       roboto: ["Roboto", "Helvetica", "Arial", "sans-serif"],
     },
+    dropShadow: {
+      textShadow: "0 35px 35px rgba(255, 255, 255, 1)",
+    },
     extend: {
       colors: {
         bg1: "rgba(182, 236, 236, 0.3)",

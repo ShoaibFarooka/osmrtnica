@@ -53,26 +53,26 @@ export default function HomePage() {
             <img
               src={bg_image}
               alt=""
-              className="lg:w-full  md:h-[586px] max-sm:h-[257px]  opacity-100"
+              className="lg:w-full  md:h-[586px] max-sm:h-[257px]  opacity-100 "
             />
             <div className="hidden  max-sm:block">
               <div className="absolute flex flex-col bg-gradient-to-l to-[#FFFFFF] from-[#ffffff4d] gap-[24px] top-[10px] left-[14px] rounded-[8px] h-[332px] w-[153px] p-[16px] border-[1px] border-[#D4D4D4] ">
                 <div className=" flex items-center h-[57px]">
                   <div className="h-[57px] border-l-[1px] border-[#C0C0C0]"></div>
                   <div className=" flex flex-col    pl-[6px]">
-                    <span className="text-[#A2A2A2] font-[200] text-[32px] ">
-                      01
+                    <span className="text-[#A2A2A2] shadow-lg border-3 shadow-white font-[200] text-[64px] ">
+                      01.
                     </span>
-                    <span className="text-[#414141] font-[500] text-[16px] ">
+                    <span className="text-[#414141] font-[500] text-[28px] ">
                       OSMRTNICE
                     </span>
                   </div>
                 </div>
-                <div className=" flex items-center h-[57px]">
+                <div className=" flex items-center h-[57px] border-3 ">
                   <div className="h-[57px] border-l-[1px] border-[#C0C0C0]"></div>
                   <div className=" flex flex-col    pl-[6px]">
                     <span className="text-[#A2A2A2] font-[200] text-[32px] ">
-                      02
+                      02.
                     </span>
                     <span className="text-[#414141] font-[500] text-[16px] ">
                       POGREBI
@@ -105,32 +105,44 @@ export default function HomePage() {
             </div>
             <div className="absolute items-end  mr-16 lg:bottom-14 md:bottom-14    max-sm:hidden  w-4/6 flex flex-wrap justify-around ">
               <div className=" flex flex-col  text-[#DEDEDE]">
-                <span className=" top-0 text-[#7C7C7C] font-[200]  px-2 pb-6 lg:text-[64px] md:text-[40px]">
-                  01
+                <span
+                  className=" top-0  text-[#7C7C7C] font-[200]  px-2 pb-6 lg:text-[64px] md:text-[40px]"
+                  style={{ textShadow: " 1px 1px 1px white" }}
+                >
+                  01.
                 </span>
                 <span className="absolute  bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
                   OSMRTNICE
                 </span>
               </div>
               <div className=" flex flex-col  text-[#DEDEDE]">
-                <span className=" top-0 text-[#7C7C7C] font-[200] px-2 pb-6 lg:text-[64px] md:text-[40px]">
-                  02
+                <span
+                  className=" top-0 text-[#7C7C7C] font-[200] px-2 pb-6 lg:text-[64px] md:text-[40px]"
+                  style={{ textShadow: " 1px 1px 1px white" }}
+                >
+                  02.
                 </span>
                 <span className="absolute bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
                   POGREBI
                 </span>
               </div>
               <div className=" flex flex-col  text-[#DEDEDE]">
-                <span className=" top-0 text-[#7C7C7C] font-[200] px-2 pb-6 lg:text-[64px] md:text-[40px]">
-                  03
+                <span
+                  className=" top-0 text-[#7C7C7C] font-[200] px-2 pb-6 lg:text-[64px] md:text-[40px]"
+                  style={{ textShadow: " 1px 1px 1px white" }}
+                >
+                  03.
                 </span>
                 <span className="absolute bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
                   SPOMINSKA
                 </span>
               </div>
               <div className=" flex flex-col  text-[#DEDEDE]">
-                <span className=" top-0 text-[#7C7C7C] font-[200] px-2 pb-6 lg:text-[64px] md:text-[40px]">
-                  04
+                <span
+                  className=" top-0 text-[#7C7C7C] font-[200] px-2 pb-6 lg:text-[64px] md:text-[40px]"
+                  style={{ textShadow: " 1px 1px 1px white" }}
+                >
+                  04.
                 </span>
                 <span className="absolute bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
                   CVETLIČARNE
