@@ -121,7 +121,7 @@ export default function HomePage() {
                   className=" top-0 text-[#7C7C7C] font-[200] px-2 pb-6 lg:text-[64px] md:text-[40px]"
                   style={{ textShadow: " 1px 1px 1px white" }}
                 >
-                  02.
+                  02
                 </span>
                 <span className="absolute bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
                   POGREBI
@@ -132,7 +132,7 @@ export default function HomePage() {
                   className=" top-0 text-[#7C7C7C] font-[200] px-2 pb-6 lg:text-[64px] md:text-[40px]"
                   style={{ textShadow: " 1px 1px 1px white" }}
                 >
-                  03.
+                  03
                 </span>
                 <span className="absolute bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
                   SPOMINSKA
@@ -143,7 +143,7 @@ export default function HomePage() {
                   className=" top-0 text-[#7C7C7C] font-[200] px-2 pb-6 lg:text-[64px] md:text-[40px]"
                   style={{ textShadow: " 1px 1px 1px white" }}
                 >
-                  04.
+                  04
                 </span>
                 <span className="absolute bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
                   CVETLIČARNE
