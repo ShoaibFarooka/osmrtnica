@@ -60,10 +60,10 @@ export default function HomePage() {
                 <div className=" flex items-center h-[57px]">
                   <div className="h-[57px] border-l-[1px] border-[#C0C0C0]"></div>
                   <div className=" flex flex-col    pl-[6px]">
-                    <span className="text-[#A2A2A2] shadow-lg border-3 shadow-white font-[200] lg:text-[64px] md:text-[40px] max-sm:  ">
+                    <span className="lg:text-[#A2A2A2] md:text-[#A5A7A9] lg:shadow-lg border-3 lg:shadow-white font-[200] lg:text-[64px] md:text-[40px] max-sm:  ">
                       01.
                     </span>
-                    <span className="text-[#414141] font-[500] lg:text-[28px] md:text-[20px] ">
+                    <span className="lg:text-[#414141] md:text-[#DEDEDE]  font-[500] lg:text-[28px] md:text-[20px] ">
                       OSMRTNICE
                     </span>
                   </div>
@@ -71,10 +71,10 @@ export default function HomePage() {
                 <div className=" flex items-center h-[57px] ">
                   <div className="h-[57px] border-l-[1px] border-[#C0C0C0]"></div>
                   <div className=" flex flex-col    pl-[6px]">
-                    <span className="text-[#A2A2A2] font-[200] text-[32px] ">
+                    <span className="lg:text-[#A2A2A2] md:text-[#A5A7A9]  font-[200] text-[32px] ">
                       02.
                     </span>
-                    <span className="text-[#414141] font-[500] text-[16px] ">
+                    <span className="lg:text-[#414141] md:text-[#DEDEDE] font-[500] text-[16px] ">
                       POGREBI
                     </span>
                   </div>
@@ -82,10 +82,10 @@ export default function HomePage() {
                 <div className=" flex items-center h-[57px]">
                   <div className="h-[57px] border-l-[1px] border-[#C0C0C0]"></div>
                   <div className=" flex flex-col    pl-[6px]">
-                    <span className="text-[#A2A2A2] font-[200] text-[32px] ">
+                    <span className="lg:text-[#A2A2A2] md:text-[#A5A7A9] font-[200] text-[32px] ">
                       03
                     </span>
-                    <span className="text-[#414141] font-[500] text-[16px] ">
+                    <span className="lg:text-[#414141] md:text-[#DEDEDE] font-[500] text-[16px] ">
                       SPOMINSKA
                     </span>
                   </div>
@@ -93,23 +93,24 @@ export default function HomePage() {
                 <div className=" flex items-center h-[57px]">
                   <div className="h-[57px] border-l-[1px] border-[#C0C0C0]"></div>
                   <div className=" flex flex-col    pl-[6px]">
-                    <span className="text-[#A2A2A2] font-[200] text-[32px] ">
+                    <span className="lg:text-[#A2A2A2] md:text-[#A5A7A9] font-[200] text-[32px] ">
                       04
                     </span>
-                    <span className="text-[#414141] font-[500] text-[16px] ">
+                    <span className="lg:text-[#414141] md:text-[#DEDEDE] font-[500] text-[16px] ">
                       CVETLIČARNE
                     </span>
                   </div>
                 </div>
               </div>
             </div>
+
             <div className="absolute items-end  mr-16 lg:bottom-14 md:bottom-14    max-sm:hidden  w-4/6 flex flex-wrap justify-around ">
               <div className=" flex flex-col  text-[#DEDEDE]">
                 <span
-                  className=" top-0  text-[#7C7C7C] font-[200]  px-2 pb-6 lg:text-[64px] md:text-[40px]"
+                  className=" top-0 text-[#7C7C7C] font-[200]  px-2 pb-6 lg:text-[64px] md:text-[40px]"
                   style={{ textShadow: " 1px 1px 1px white" }}
                 >
-                  01.
+                  01
                 </span>
                 <span className="absolute  bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
                   OSMRTNICE
@@ -247,7 +248,7 @@ export default function HomePage() {
             <div className="flex justify-center md:h-[1204px] items-center ">
               {/* Tablet and phone */}
               <div className=" flex  md:w-[497.91px]   max-sm:w-full max-lg:flex-wrap-reverse justify-center gap-10 max-sm:gap-0 ">
-                <div className="flex flex-col items-center ">
+                <div className="flex flex-col  items-center ">
                   <div className=" p-5  bg-white rounded-2xl border-2  h-[627.35px] w-[420px] max-sm:w-[294.4px] max-sm:h-[494.65px]">
                     <div className="flex justify-center w-full mb-4 ">
                       <div className="w-1 h-1  border-2 rounded-full bg-gray-500"></div>
