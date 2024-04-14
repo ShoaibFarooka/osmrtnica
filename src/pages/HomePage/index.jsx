@@ -56,14 +56,14 @@ export default function HomePage() {
               className="lg:w-full  md:h-[586px] max-sm:h-[257px]  opacity-100 "
             />
             <div className="hidden  max-sm:block">
-              <div className="absolute flex flex-col bg-gradient-to-l to-[#FFFFFF] from-[#ffffff4d]  lg:gap-[24px] md:gap-[30px]  top-[10px] left-[14px] rounded-[8px] h-[332px] w-[153px] p-[16px] border-[1px] border-[#D4D4D4] ">
+              <div className="absolute flex flex-col bg-gradient-to-l to-[#FFFFFF] from-[#ffffff4d]  gap-[24px] md:gap-[30px]  top-[10px] left-[14px] rounded-[8px] h-[332px] w-[153px] p-[16px] border-[1px] border-[#D4D4D4] ">
                 <div className=" flex items-center h-[57px]">
                   <div className="h-[57px] border-l-[1px] border-[#C0C0C0]"></div>
                   <div className=" flex flex-col    pl-[6px]">
-                    <span className="lg:text-[#A2A2A2] md:text-[#A5A7A9] lg:shadow-lg border-3 lg:shadow-white font-[200] lg:text-[64px] md:text-[40px] max-sm:  ">
+                    <span className="text-[#A2A2A2]  lg:shadow-lg  lg:shadow-white font-[200] text-[32px]  ">
                       01.
                     </span>
-                    <span className="lg:text-[#414141] md:text-[#DEDEDE]  font-[500] lg:text-[28px] md:text-[20px] ">
+                    <span className="text-[#414141]   font-[500] lg:text-[28px] md:text-[20px] ">
                       OSMRTNICE
                     </span>
                   </div>
@@ -71,10 +71,10 @@ export default function HomePage() {
                 <div className=" flex items-center h-[57px] ">
                   <div className="h-[57px] border-l-[1px] border-[#C0C0C0]"></div>
                   <div className=" flex flex-col    pl-[6px]">
-                    <span className="lg:text-[#A2A2A2] md:text-[#A5A7A9]  font-[200] text-[32px] ">
+                    <span className="text-[#A2A2A2] font-[200] text-[32px] ">
                       02.
                     </span>
-                    <span className="lg:text-[#414141] md:text-[#DEDEDE] font-[500] text-[16px] ">
+                    <span className="text-[#414141] font-[500] text-[16px] ">
                       POGREBI
                     </span>
                   </div>
@@ -82,10 +82,10 @@ export default function HomePage() {
                 <div className=" flex items-center h-[57px]">
                   <div className="h-[57px] border-l-[1px] border-[#C0C0C0]"></div>
                   <div className=" flex flex-col    pl-[6px]">
-                    <span className="lg:text-[#A2A2A2] md:text-[#A5A7A9] font-[200] text-[32px] ">
+                    <span className="text-[#A2A2A2] font-[200] text-[32px] ">
                       03
                     </span>
-                    <span className="lg:text-[#414141] md:text-[#DEDEDE] font-[500] text-[16px] ">
+                    <span className="text-[#414141] font-[500] text-[16px] ">
                       SPOMINSKA
                     </span>
                   </div>
@@ -93,24 +93,26 @@ export default function HomePage() {
                 <div className=" flex items-center h-[57px]">
                   <div className="h-[57px] border-l-[1px] border-[#C0C0C0]"></div>
                   <div className=" flex flex-col    pl-[6px]">
-                    <span className="lg:text-[#A2A2A2] md:text-[#A5A7A9] font-[200] text-[32px] ">
+                    <span className="text-[#A2A2A2] font-[200] text-[32px] ">
                       04
                     </span>
-                    <span className="lg:text-[#414141] md:text-[#DEDEDE] font-[500] text-[16px] ">
+                    <span className="text-[#414141] font-[500] text-[16px] ">
                       CVETLIČARNE
                     </span>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div className="absolute items-end  mr-16 lg:bottom-14 md:bottom-14    max-sm:hidden  w-4/6 flex flex-wrap justify-around ">
+            <div className="absolute items-end  mr-16 lg:bottom-14 md:bottom-14  max-sm:hidden  lg:w-4/6 md:w-5/6 flex flex-wrap justify-around ">
               <div className=" flex flex-col  text-[#DEDEDE]">
                 <span
-                  className=" top-0 text-[#7C7C7C] font-[200]  px-2 pb-6 lg:text-[64px] md:text-[40px]"
+                  className=" top-0 hidden lg:block text-[#7C7C7C] font-[200]   px-2 pb-6 lg:text-[64px] md:text-[40px]"
                   style={{ textShadow: " 1px 1px 1px white" }}
                 >
-                  01
+                  01.
+                </span>
+                <span className=" top-0 lg:hidden max-sm:hidden text-[#A5A7A9] font-[200]   px-2 pb-6 lg:text-[64px] md:text-[40px]">
+                  01.
                 </span>
                 <span className="absolute  bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
                   OSMRTNICE
@@ -118,10 +120,13 @@ export default function HomePage() {
               </div>
               <div className=" flex flex-col  text-[#DEDEDE]">
                 <span
-                  className=" top-0 text-[#7C7C7C] font-[200] px-2 pb-6 lg:text-[64px] md:text-[40px]"
+                  className=" top-0 hidden lg:block text-[#7C7C7C] font-[200] px-2 pb-6 lg:text-[64px] md:text-[40px]"
                   style={{ textShadow: " 1px 1px 1px white" }}
                 >
-                  02
+                  02.
+                </span>
+                <span className=" top-0 lg:hidden max-sm:hidden text-[#A5A7A9] font-[200]   px-2 pb-6 lg:text-[64px] md:text-[40px]">
+                  02.
                 </span>
                 <span className="absolute bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
                   POGREBI
@@ -129,10 +134,13 @@ export default function HomePage() {
               </div>
               <div className=" flex flex-col  text-[#DEDEDE]">
                 <span
-                  className=" top-0 text-[#7C7C7C] font-[200] px-2 pb-6 lg:text-[64px] md:text-[40px]"
+                  className=" top-0 hidden lg:block text-[#7C7C7C] font-[200] px-2 pb-6 lg:text-[64px] md:text-[40px]"
                   style={{ textShadow: " 1px 1px 1px white" }}
                 >
-                  03
+                  03.
+                </span>
+                <span className=" top-0 lg:hidden max-sm:hidden text-[#A5A7A9] font-[200]   px-2 pb-6 lg:text-[64px] md:text-[40px]">
+                  03.
                 </span>
                 <span className="absolute bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
                   SPOMINSKA
@@ -140,10 +148,13 @@ export default function HomePage() {
               </div>
               <div className=" flex flex-col  text-[#DEDEDE]">
                 <span
-                  className=" top-0 text-[#7C7C7C] font-[200] px-2 pb-6 lg:text-[64px] md:text-[40px]"
+                  className=" top-0 hidden lg:block text-[#7C7C7C] font-[200] px-2 pb-6 lg:text-[64px] md:text-[40px]"
                   style={{ textShadow: " 1px 1px 1px white" }}
                 >
-                  04
+                  04.
+                </span>
+                <span className=" top-0 lg:hidden max-sm:hidden text-[#A5A7A9] font-[200]   px-2 pb-6 lg:text-[64px] md:text-[40px]">
+                  04.
                 </span>
                 <span className="absolute bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
                   CVETLIČARNE

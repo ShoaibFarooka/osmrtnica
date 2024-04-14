@@ -11,7 +11,7 @@ import MegaMenu from "../MegaMenu/MegaMenu";
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
   return (
-    <div className=" flex justify-between items-center lg:w-[1280px] md:w-[744px] max-sm:w-[360px] lg:h-[92.02px] md:h-[79px] max-sm:h-[72px] p-4 ">
+    <div className=" flex justify-between  items-center lg:w-[1280px] md:w-[744px] max-sm:w-[360px] lg:h-[92.02px] md:h-[79px] max-sm:h-[72px] p-4 ">
       <div className="flex items-center">
         <img
           src={personIcon}
@@ -26,9 +26,9 @@ export default function Navbar() {
         />
       </div>
       <div className="flex items-center  ">
-        <Button
+        <button
           variant="bordered"
-          className="border-white "
+          className=" border-white"
           onClick={() => setMenu(!menu)}
         >
           {menu ? (
@@ -40,7 +40,7 @@ export default function Navbar() {
               className="w-[32px] h-[32px] max-sm:w-[24px] max-sm:h-[20px]"
             />
           )}
-        </Button>
+        </button>
         {menu && <MegaMenu />}
         {/* <Dropdown>
           <DropdownTrigger></DropdownTrigger>
