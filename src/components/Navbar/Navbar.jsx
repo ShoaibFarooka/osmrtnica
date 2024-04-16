@@ -11,12 +11,12 @@ import MegaMenu from "../MegaMenu/MegaMenu";
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
   return (
-    <div className=" flex justify-between  items-center lg:w-[1280px] md:w-[744px] max-sm:w-[360px] lg:h-[92.02px] md:h-[79px] max-sm:h-[72px] p-4 ">
+    <div className=" flex justify-between  items-center lg:w-[1280px] md:w-[744px] max-sm:w-[360px] lg:h-[92.02px] md:h-[79px] max-sm:h-[72px] p-4 max-sm:shadow-sm max-sm:shadow-[#6262624d] z-10">
       <div className="flex items-center">
         <img
           src={personIcon}
           alt=""
-          className="w-[32px] h-[32px] md:h-[34px] md:w-[34px] "
+          className="lg:w-[32px] lg:h-[32px] md:h-[34px] md:w-[34px] max-sm:w-[24px] max-sm:h-[24px]"
         />
       </div>
       <div className="flex items-center">

@@ -52,34 +52,38 @@ export function Card(props) {
 export function Card2(props) {
   return (
     <div
-      className={`${props.style} relative flex items-center justify-center gap-2  shadow-md shadow-[#ebf0f4b3]  w-[762px] h-[200px] bg-gradient-to-r bg-[#ebf0f499] border-2 border-white rounded-lg `}
+      className={`${props.style} relative flex items-center justify-center  shadow-md shadow-[#ebf0f4b3]  lg:w-[762px] md:w-[592px] max-sm:w-[276px] max-sm:h-[259px] lg:h-[200px] md:h-[170px] bg-gradient-to-r bg-[#ebf0f499] border-2 border-white rounded-lg `}
+      style={{ boxShadow: " 5px 5px 5px #c2c2c280" }}
     >
       <div className="flex items-center    justify-center">
         <img
           src={props.profile.img}
           alt="Image"
-          className="w-[230px] h-[140px] absolute left-[32px] top-[30px]"
+          style={{ boxShadow: " 5px 5px 5px #c2c2c280" }}
+          className="rounded-[7px] border-[4px] max-sm:border-[2.54px] border-[#FFFFFF] lg:w-[230px] lg:h-[140px] md:w-[180px] md:h-[118px] max-sm:w-[245px] max-sm:h-[98.53px]  border-red-2 absolute lg:left-[32px] lg:top-[30px] md:left-[34px] md:top-[28.5px] max-sm:top-[15.71px] max-sm:left-[15.5px]"
         />
       </div>
       <div className=" ">
         <div className="flex ">
-          <div className="flex  ">
-            <div className="absolute left-[303px] top-[30px] flex flex-col  w-[332px] h-[139px]  text-[#414141] gap-2 max-md:gap-1 text-[14px]">
-              <span className="text-[24px] text-[#1E2125] font-[400]  ">
+          <div className="flex ">
+            <div className="absolute  lg:left-[303px] lg:top-[30px] md:left-[258px] md:top-[16px] max-sm:left-[15.5px] max-sm:top-[138.3px] flex flex-col  lg:w-[332px] lg:h-[139px] md:w-[293.33px] md:h-[128px]  text-[#414141] gap-2 max-md:gap-1 text-[14px]">
+              <span className="text-[24px] text-[#292424] font-[400]  max-sm:font-[600] max-sm:text-[16px]">
                 {props.profile.name}
               </span>
-              <p className="flex  flex-col text-[16px] ">
+              <p className="flex  flex-col text-[16px] max-sm:text-[14px]">
                 <span>{props.profile.text}</span>
                 <span>{props.profile.number}</span>
               </p>
-              <p className="text-[20px]">{props.profile.website}</p>
+              <p className="lg:text-[20px] md:text-[16px] max-sm:text-[14px]">
+                {props.profile.website}
+              </p>
             </div>
             <div
-              className={` absolute left-[676px] top-[32px] text-[12px] max-md:p-0   ${props.roleStyle}`}
+              className={` absolute  lg:left-[676px] lg:top-[32px] md:left-[506.07px] max-sm:top-[138.3px] max-sm:left-[209.09px] md:top-[16px]  text-[12px] max-md:p-0   ${props.roleStyle}`}
             >
               {props.profile.role}
             </div>
-            <div className="absolute bottom-[32px] left-[676px] flex  justify-end cursor-pointer ">
+            <div className="absolute md:bottom-[16px] lg:left-[676px] md:left-[492.33px] max-sm:top-[229px] max-sm:left-[215.26px]  flex  justify-end cursor-pointer ">
               {props.profile.arrowText && (
                 <span className="flex  items-center text-[14px]">
                   {props.profile.arrowText}{" "}
@@ -121,11 +125,13 @@ export function Card3(props) {
 
 export function Card4(props) {
   return (
-    <div className="flex flex-col gap-3 w-80 p-8 border-1 shadow-lg border-white bg-gradient-to-r from-[#ffffff] to-[#ffffff4d] rounded-2xl">
-      <img className="w-12" src={props.item.icon} alt="" />
+    <div className="flex flex-col gap-[16px] lg:w-[340px] lg:h-[288px] md:w-[292px] md:h-[288px] max-sm:w-[292px] justify-center p-8 border-[2px] shadow-lg border-[#FFFFFF] bg-gradient-to-r from-[#ffffff] to-[#ffffff4d] rounded-[16px]">
+      <img className="w-[58.86px] h-[64px]" src={props.item.icon} alt="" />
       <div className="flex flex-col gap-2">
-        <h3 className="font-semibold">{props.item.heading}</h3>
-        <span className="flex flex-col gap-3 text-[14px]">
+        <h3 className="font-[400] text-[#22281C] text-[20px]">
+          {props.item.heading}
+        </h3>
+        <span className="flex flex-col gap-3 text-[14px] font-[400] text-[#414141]">
           <p>{props.item.line1}</p>
           <p>{props.item.line2}</p>
         </span>

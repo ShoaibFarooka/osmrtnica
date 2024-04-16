@@ -8,8 +8,8 @@ import Carousel from "../Carousel/Carousel";
 
 export default function Footer() {
   return (
-    <div className="  flex flex-col items-center  lg:h-[464px]  border-[1px] border-[#E3E8EC] max-sm:items-center lg:bg-[#EEF2F2] max-sm:bg-[#EEF2F2]  md:bg-white  border-t-1 flex-wrap">
-      <div className="lg:w-[1157px] max-sm:w-[311px] md:w-[620px] lg:h-[464px] md:py-5 flex flex-col justify-center gap-5">
+    <div className="  flex flex-col items-center  lg:h-[464px]   border-[#E3E8EC] max-sm:items-center lg:bg-[#EEF2F2] max-sm:bg-[#EEF2F2]  md:bg-white  border-t-[1pfx] flex-wrap">
+      <div className="lg:w-[1157px] max-sm:w-[311px]  md:mt-[63px] md:w-[620px] lg:h-[464px]  flex flex-col justify-center gap-5">
         <div className="  flex 7 max-sm:flex-wrap max-sm:justify-between lg:justify-between max-sm:gap-10 md:justify-between lg:gap-0">
           <div className=" max-sm:w-full items-center p-4 flex flex-col gap-10 mt-4">
             <img src={groupLogo} alt="" className="w-[200px]" />

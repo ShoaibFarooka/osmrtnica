@@ -9,7 +9,10 @@ export default function Navbar2() {
   const [menu, setMenu] = useState(false);
 
   return (
-    <div className="flex justify-between p-4 shadow-sm md:w-[744px] lg:w-[1280px]">
+    <div
+      className="flex justify-between p-4 shadow-sm md:w-[744px] lg:w-[1280px] z-10"
+      style={{ boxShadow: " 0px 4px 4px #00000024" }}
+    >
       <div className="flex items-center">
         <img src={logo} className="md:w-[182.76px] lg:w-[265.83px]" />
       </div>
@@ -21,7 +24,7 @@ export default function Navbar2() {
           <button>Cvetličarne</button>
         </div>
         <div className="flex items-center ">
-          <Button
+          <button
             variant="bordered"
             className="border-white text-[#333333] font-[700]"
             onClick={() => setMenu(!menu)}
@@ -31,7 +34,7 @@ export default function Navbar2() {
             ) : (
               <RxHamburgerMenu className="text-[24px]" />
             )}
-          </Button>
+          </button>
           {menu && <MegaMenu />}
         </div>
       </div>
