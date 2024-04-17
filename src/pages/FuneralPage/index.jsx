@@ -149,7 +149,7 @@ export default function Funeral() {
             </p>
             <div className="flex lg:absolute flex-col max-sm:gap-3 lg:top-[122px] lg:left-[177px] md:gap-2  max-sm:w-[286.82px] ">
               <p className="text-[16px]  font-[400]  text-[#D4D4D4]">
-                px Imate ideje, vprašanja, predloge?
+                Imate ideje, vprašanja, predloge?
               </p>
               <p className="text-[16px]  font-[400] text-[#D4D4D4]">
                 Kontaktirajte nas! Z veseljem vam bomo prisluhnili!

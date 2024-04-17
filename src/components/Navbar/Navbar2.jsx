@@ -15,7 +15,7 @@ export default function Navbar2() {
         <img src={logo} className="md:w-[182.76px] lg:w-[265.83px]" />
       </div>
       <div className="flex lg:gap-5 items-center">
-        <div className="flex text-[20px] md:text-[18px] text-[#1E2125] gap-[16px] px-5 items-center ">
+        <div className="flex lg:text-[20px] md:text-[18px] text-[#1E2125] gap-[16px] px-5 items-center ">
           <button>Osmrtnice</button>
           <button>Pogrebi</button>
           <button>Spominske</button>
@@ -28,9 +28,9 @@ export default function Navbar2() {
             onClick={() => setMenu(!menu)}
           >
             {menu ? (
-              <RxCrossCircled className="text-[24px]" />
+              <RxCrossCircled className="w-[32px] h-[26.67px]" />
             ) : (
-              <RxHamburgerMenu className="text-[24px]" />
+              <RxHamburgerMenu className=" w-[32px] h-[26.67px]" />
             )}
           </button>
           {menu && <MegaMenu />}
