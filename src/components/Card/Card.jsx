@@ -52,7 +52,7 @@ export function Card(props) {
 export function Card2(props) {
   return (
     <div
-      className={`${props.style} relative flex items-center justify-center  shadow-md shadow-[#ebf0f4b3]  lg:w-[762px] md:w-[592px] max-sm:w-[276px] max-sm:h-[259px] lg:h-[200px] md:h-[170px] bg-gradient-to-r bg-[#ebf0f499] border-2 border-white rounded-lg `}
+      className={`${props.style} relative flex items-center justify-center  shadow-md shadow-[#ebf0f4b3]  lg:w-[762px] md:w-[592px] max-sm:w-[276px] max-sm:h-[259px] lg:h-[200px] md:h-[170px] bg-gradient-to-r bg-[#ebf0f499] border-2 border-white rounded-lg`}
       style={{ boxShadow: " 5px 5px 5px #c2c2c280" }}
     >
       <div className="flex items-center    justify-center">
@@ -60,7 +60,7 @@ export function Card2(props) {
           src={props.profile.img}
           alt="Image"
           style={{ boxShadow: " 5px 5px 5px #c2c2c280" }}
-          className="rounded-[7px] border-[4px] max-sm:border-[2.54px] border-[#FFFFFF] lg:w-[230px] lg:h-[140px] md:w-[180px] md:h-[118px] max-sm:w-[245px] max-sm:h-[98.53px]  border-red-2 absolute lg:left-[32px] lg:top-[30px] md:left-[34px] md:top-[28.5px] max-sm:top-[15.71px] max-sm:left-[15.5px]"
+          className={`rounded-[7px] border-[4px] max-sm:border-[2.54px] border-[#FFFFFF]   border-red-2 absolute lg:left-[32px] lg:top-[30px] md:left-[34px] md:top-[28.5px] max-sm:top-[15.71px] max-sm:left-[15.5px] ${props.imageStyle}`}
         />
       </div>
       <div className=" ">
@@ -104,17 +104,75 @@ export function Card2(props) {
     </div>
   );
 }
+export function Card5(props) {
+  return (
+    <div
+      className={`${props.style} relative flex items-center justify-center  shadow-md shadow-[#ebf0f4b3]  lg:w-[762px] md:w-[592px] max-sm:w-[276px] max-sm:h-[259px] lg:h-[200px] md:h-[170px] bg-gradient-to-r bg-[#ebf0f499] border-2 border-white rounded-lg`}
+      style={{ boxShadow: " 5px 5px 5px #c2c2c280" }}
+    >
+      <div className="flex items-center    justify-center">
+        <img
+          src={props.profile.img}
+          alt="Image"
+          style={{ boxShadow: " 5px 5px 5px #c2c2c280" }}
+          className={`rounded-[7px] border-[4px] max-sm:border-[2.54px] border-[#FFFFFF] absolute lg:left-[32px] lg:top-[30px] md:left-[34px] md:top-[28.5px] max-sm:top-[15.71px] max-sm:left-[15.5px] ${props.imageStyle}`}
+        />
+      </div>
+      <div className=" ">
+        <div className="flex ">
+          <div className="flex ">
+            <div className="absolute  lg:left-[200px] lg:top-[30px] md:left-[258px] md:top-[16px] max-sm:left-[15.5px] max-sm:top-[138.3px] flex flex-col  lg:w-[332px] lg:h-[139px] md:w-[293.33px] md:h-[128px]  text-[#414141] gap-[16px] max-md:gap-1 text-[14px]">
+              <span className="text-[24px] text-[#1E2125] font-[400]  max-sm:font-[600] max-sm:text-[16px]">
+                {props.profile.name}
+              </span>
+              <p className="flex  flex-col text-[16px] max-sm:text-[14px] gap-[8px]">
+                <span>{props.profile.text}</span>
+                <span>{props.profile.number}</span>
+              </p>
+              <p className="lg:text-[20px] md:text-[16px] max-sm:text-[14px]">
+                {props.profile.website}
+              </p>
+            </div>
+            <div
+              className={` absolute text-[#CC6F6F]  lg:left-[676px] lg:top-[32px] md:left-[506.07px] max-sm:top-[138.3px] max-sm:left-[209.09px] md:top-[16px]  text-[14px] max-md:p-0   ${props.roleStyle}`}
+            >
+              {props.profile.role}
+            </div>
+            <div className="absolute md:bottom-[16px] lg:left-[676px] md:left-[492.33px] max-sm:top-[229px] max-sm:left-[215.26px]  flex  justify-end cursor-pointer ">
+              {props.profile.arrowText && (
+                <span className="flex  items-center text-[14px]">
+                  {props.profile.arrowText}{" "}
+                  <MdOutlineKeyboardArrowRight className="text-[20px]" />
+                </span>
+              )}
+            </div>
+          </div>
+          {/* <div className="">
+            {props.profile.symbol_img ? (
+              <img src={props.profile.symbol_img} className="" alt="img" />
+            ) : (
+              <></>
+            )}
+          </div> */}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function Card3(props) {
   return (
     <div className=" relative">
-      <div className="absolute w-full ">
-        <img
+      <div className="absolute w-full border-3">
+        {/* <img
           src={props.info.num}
           alt=""
           className="p-10 max-lg:p-5 max-lg:w-28"
-        />
-        <div className="w-full flex justify-center h-80">
+        /> */}
+        <p className="text-[128px] border-3 font-[200] w-[171px]  flex justify-center">
+          01
+        </p>
+        <div className="w-full flex justify-center h-80 border-3">
           <div className="w-4/5 h-full">{props.children}</div>
         </div>
       </div>
@@ -125,16 +183,18 @@ export function Card3(props) {
 
 export function Card4(props) {
   return (
-    <div className="flex flex-col gap-[16px] lg:w-[340px] lg:h-[288px] md:w-[292px] md:h-[288px] max-sm:w-[292px] justify-center p-8 border-[2px] shadow-lg border-[#FFFFFF] bg-gradient-to-r from-[#ffffff] to-[#ffffff4d] rounded-[16px]">
-      <img className="w-[58.86px] h-[64px]" src={props.item.icon} alt="" />
-      <div className="flex flex-col gap-2">
-        <h3 className="font-[400] text-[#22281C] text-[20px]">
-          {props.item.heading}
-        </h3>
-        <span className="flex flex-col gap-3 text-[14px] font-[400] text-[#414141]">
-          <p>{props.item.line1}</p>
-          <p>{props.item.line2}</p>
-        </span>
+    <div className="flex flex-col items-center gap-[16px] lg:w-[340px] lg:h-[288px] w-[292px] h-[288px]  justify-center  border-[2px] shadow-lg border-[#FFFFFF] bg-gradient-to-r from-[#ffffff] to-[#ffffff4d] rounded-[16px]">
+      <div className="flex lg:w-[250px]  lg:h-[191px] w-[207px] h-[207px] flex-col gap-[16px]">
+        <img className="w-[64px]  h-[64px]" src={props.item.icon} alt="" />
+        <div className="flex flex-col gap-[8px]">
+          <span className="font-[400] text-[#22281C] text-[20px]">
+            {props.item.heading}
+          </span>
+          <span className="flex flex-col h-[80px] gap-[8px] text-[14px] font-[400] text-[#414141]">
+            <span>{props.item.line1}</span>
+            <span>{props.item.line2}</span>
+          </span>
+        </div>
       </div>
     </div>
   );

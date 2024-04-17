@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar2 from "../../components/Navbar/Navbar2";
 import HeaderTop from "../../components/HeaderTop/HeaderTop";
 import topBanner from "../../assets/images/topBanner3.jpg";
@@ -7,9 +7,9 @@ import icon2 from "../../assets/images/mini_icon2.png";
 import icon3 from "../../assets/images/mini_icon3.png";
 import banner1 from "../../assets/images/flowerBanner2.jpg";
 import banner2 from "../../assets/images/banner2.jpeg";
-import Suponcer1 from "../../assets/images/Suponcer1.png";
-import Suponcer2 from "../../assets/images/Suponcer2.png";
-import Suponcer3 from "../../assets/images/Suponcer3.png";
+import Suponcer1 from "../../assets/svgs/Embrace.svg";
+import Suponcer2 from "../../assets/svgs/Loral.svg";
+import Suponcer3 from "../../assets/svgs/Ando.svg";
 
 import { CiSearch } from "react-icons/ci";
 import { Select, SelectItem } from "@nextui-org/select";
@@ -23,14 +23,33 @@ import Navbar from "../../components/Navbar/Navbar";
 export default function Funeral() {
   const [banner, setBanner] = useState();
   const [width, setWidth] = useState();
+  const backgroundRef = useRef(null);
   useEffect(() => {
     setWidth(window.innerWidth);
     if (window.innerWidth < 1200) {
       setBanner(banner2);
     } else if (window.innerWidth > 1200) {
-      setBanner(banner2);
+      setBanner(banner1);
     }
   }, [window.innerWidth]);
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const backgroundImage = width < 1200 ? banner2 : banner1;
+    backgroundRef.current.style.backgroundImage = `url(${backgroundImage})`;
+  }, [width]);
+
   return (
     <div className="text-[#1E2125] font-[400] ">
       <header className=" flex flex-col justify-center">
@@ -98,6 +117,9 @@ export default function Funeral() {
                         style={
                           "max-sm:flex-col  max-sm:h-fit max-sm:items-center max-sm:pl-3 max-sm:pt-3"
                         }
+                        imageStyle={
+                          "lg:w-[230px] lg:h-[140px] md:w-[180px] md:h-[118px] max-sm:w-[245px] max-sm:h-[98.53px]"
+                        }
                         roleStyle={"text-[#6F94CC]"}
                         profile={profile}
                       />
@@ -120,12 +142,12 @@ export default function Funeral() {
         </div>
 
         {/* Section 2 */}
-        <div className="w-full  bg-[#083545] flex justify-center max-sm:text-center md:text-center">
-          <div className=" text-[#D4D4D4]  lg:w-[1280px] md:w-[744px] max-sm:w-[360px] md:h-[280px] max-sm:h-[289px] max-sm:justify-center max-sm:items-center flex flex-col max-sm:gap-0 gap-5 md:gap-2 md:items-center md:justify-center lg:items-start">
-            <p className="text-[40px] max-sm:text-[28px]  font-[400] text-[#DAEBF1] max-sm:h-[48px]">
+        <div className="w-full  bg-[#083545] flex justify-center lg:text-start max-sm:text-center md:text-center">
+          <div className="relative text-[#D4D4D4] lg:w-[1280px] md:w-[744px] max-sm:w-[360px] lg:h-[269px] md:h-[280px] max-sm:h-[289px] max-sm:justify-center max-sm:items-center flex flex-col max-sm:gap-0 gap-5 md:gap-2 md:items-center md:justify-center lg:items-start">
+            <p className="text-[40px] lg:absolute max-sm:text-[28px] lg:top-[60px] lg:left-[177px]  font-[400] text-[#DAEBF1] max-sm:h-[48px]">
               Sodelujmo!
             </p>
-            <div className="flex flex-col max-sm:gap-3  md:gap-2  max-sm:w-[286.82px] ">
+            <div className="flex lg:absolute flex-col max-sm:gap-3 lg:top-[122px] lg:left-[177px] md:gap-2  max-sm:w-[286.82px] ">
               <p className="text-[16px]  font-[400]  text-[#D4D4D4]">
                 px Imate ideje, vprašanja, predloge?
               </p>
@@ -133,7 +155,7 @@ export default function Funeral() {
                 Kontaktirajte nas! Z veseljem vam bomo prisluhnili!
               </p>
             </div>
-            <div className="my-3">
+            <div className="my-3 lg:hidden">
               <Button
                 style={
                   "py-[12px] px-[24px] to-[#FFFFFF] from-[#E3E8EC] text-[#1E2125] border-none"
@@ -163,7 +185,7 @@ export default function Funeral() {
               />
               <Card4
                 item={{
-                  icon: icon2,
+                  icon: icon3,
                   heading: "Cvetličarne",
                   line1:
                     "Naj bo vaša spletna predstavitev samo začetek našega širšega sodelovanja.",
@@ -172,14 +194,14 @@ export default function Funeral() {
               />
               <Card4
                 item={{
-                  icon: icon3,
+                  icon: icon2,
                   heading: "Oglaševalci in drugi",
                   line1:
                     "Ponujate produkte ali storitve, ki so lahko zanimive obiskovalcem naših strani?",
                   line2: "Stopite v stik z nami!",
                 }}
               />
-              <div className="hidden md:block">
+              <div className="lg:hidden max-sm:hidden">
                 <div className="h-fit w-fit flex justify-center ">
                   <button className="shadow-md text-[#F6F6F6] bg-[#083545] w-[211px] h-[73px] rounded-[16px] border-[2px] border-white">
                     Stopimo skupaj
@@ -225,25 +247,31 @@ export default function Funeral() {
         </div>
         {/* Section 5 Banner*/}
         <div
-          className="relative flex justify-center items-center  max-sm:hidden bg-cover bg-center h-[284px] lg:w-[1280px] md:w-[744px]  border "
-          style={{ backgroundImage: `url('${banner}')` }}
+          className=" flex justify-center items-center  max-sm:hidden bg-cover lg:bg-[0px] md:bg-[-150px] bg-center w-full bg-no-repeat "
+          // style={{ backgroundImage: `url('${banner}')` }}
+          ref={backgroundRef}
         >
-          <div className="absolute lg:left-[691px] md:left-[100px]  gap-[29px] flex flex-col  lg:items-end justify-center">
-            <p className="text-[40px] text-[400] text-[#3C3E41] md:text-white">
-              Lokalne cvetličarne
-            </p>
-            <Select
-              size={"sm"}
-              style={{ backgroundColor: "white" }}
-              label="Izberi kraj"
-              className=" border-gray-300  w-[476px]"
-            >
-              {animals.map((animal) => (
-                <SelectItem key={animal.value} value={animal.value}>
-                  {animal.label}
-                </SelectItem>
-              ))}
-            </Select>
+          <div className="relative flex justify-center items-center  max-sm:hidden bg-cover bg-center h-[284px] lg:w-[1280px] md:w-[744px]">
+            <div className="absolute lg:left-[691px] md:left-[100px]  gap-[29px] flex flex-col  lg:items-end justify-center">
+              <p className="hidden lg:block text-[40px] text-[400] lg:text-[#3C3E41] text-white">
+                Lokalne cvetličarne
+              </p>
+              <p className="lg:hidden text-[40px] text-[400]  text-white">
+                Poišči lokalne cvetličarne
+              </p>
+              <Select
+                size={"sm"}
+                style={{ backgroundColor: "white" }}
+                label="Izberi kraj"
+                className=" border-gray-300  w-[476px]"
+              >
+                {animals.map((animal) => (
+                  <SelectItem key={animal.value} value={animal.value}>
+                    {animal.label}
+                  </SelectItem>
+                ))}
+              </Select>
+            </div>
           </div>
           {/* <img src={banner} alt="" /> */}
         </div>

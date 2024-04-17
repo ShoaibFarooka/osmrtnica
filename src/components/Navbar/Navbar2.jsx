@@ -9,10 +9,8 @@ export default function Navbar2() {
   const [menu, setMenu] = useState(false);
 
   return (
-    <div
-      className="flex justify-between p-4 shadow-sm md:w-[744px] lg:w-[1280px] z-10"
-      style={{ boxShadow: " 0px 4px 4px #00000024" }}
-    >
+    // <div style={{ boxShadow: " 0px 4px 4px #00000024" }} className=" border-3">
+    <div className="flex justify-between p-4 shadow-sm md:w-[744px] lg:w-[1280px] z-10">
       <div className="flex items-center">
         <img src={logo} className="md:w-[182.76px] lg:w-[265.83px]" />
       </div>
@@ -39,5 +37,6 @@ export default function Navbar2() {
         </div>
       </div>
     </div>
+    // </div>
   );
 }

@@ -5,7 +5,7 @@ import banner from "../../assets/images/flowersBanner.jpg";
 
 import { FlowerCard, animals, profiles } from "./data";
 import { Select, SelectItem } from "@nextui-org/react";
-import { Card2, Card3 } from "../../components/Card/Card";
+import { Card2, Card3, Card5 } from "../../components/Card/Card";
 import Footer from "../../components/Footer/Footer";
 import HeaderTop from "../../components/HeaderTop/HeaderTop";
 import topBanner from "../../assets/images/topBanner2.jpg";
@@ -20,84 +20,97 @@ export default function FloristsListing() {
     setWidth(window.innerWidth);
   }, [window.innerWidth]);
   return (
-    <div className="w-full ">
+    <div className="w-full text-[400]">
       {/* HEADER */}
-      <header className="w-full">
+      <header className="w-full ">
         {/* NAVBAR */}
-        <div className="w-full">{width < 800 ? <Navbar /> : <Navbar2 />}</div>
+        <div className="w-full flex flex-col items-center">
+          {width < 800 ? <Navbar /> : <Navbar2 />}
+        </div>
         {/* HEADER BACKGROUND IMAGE */}
         <div className="w-full">
           <HeaderTop btnText={"Cvetličarne"} topBanner={topBanner} />
         </div>
       </header>
 
-      <body className=" flex flex-col items-center ">
+      <body className="w-full flex flex-col items-center ">
         {/* Section 1 */}
-        <div className="w-5/6 flex flex-col my-20 gap-10">
-          <div className="flex justify-between items-center flex-wrap ">
-            <div className="flex gap-2 lg:w-fit md:w-full max-sm:w-full">
-              <Select
-                size="sm"
-                label="Išči po krajih"
-                className="lg:w-52 h-fit  border-2 border-gray-400 rounded-md md:w-full"
-                style={{ backgroundColor: "white" }}
-              >
-                {animals.map((animal) => (
-                  <SelectItem key={animal.value} value={animal.value}>
-                    {animal.label}
-                  </SelectItem>
-                ))}
-              </Select>
-              <button className="h-12 w-12 border-1 flex justify-center items-center text-[24px] rounded-lg bg-[#414141] text-white shadow-sm">
-                <CiSearch />
-              </button>
-            </div>
+        <div className="w-[1280px] flex justify-center">
+          <div className="w-[1088px] flex flex-col my-20 gap-10">
+            <div className="flex justify-between items-center flex-wrap ">
+              <div className="flex gap-2 lg:w-fit md:w-full max-sm:w-full">
+                <Select
+                  size="sm"
+                  label="Išči po krajih"
+                  className="w-[225px] h-fit  border-2 border-gray-400 rounded-md"
+                  style={{ backgroundColor: "white" }}
+                >
+                  {animals.map((animal) => (
+                    <SelectItem key={animal.value} value={animal.value}>
+                      {animal.label}
+                    </SelectItem>
+                  ))}
+                </Select>
+                <div className="hidden">
+                  <button className="h-12  w-12 border-1 flex justify-center items-center text-[24px] rounded-lg bg-[#414141] text-white shadow-sm">
+                    <CiSearch />
+                  </button>
+                </div>
+              </div>
 
-            <div className="flex flex-col gap-3">
-              <h2 className="text-[28px]">Hitri izbor</h2>
-              <div className="flex gap-2 flex-wrap">
-                <Button2>Ljubljana</Button2>
-                <Button2>Maribor</Button2>
-                <Button2>Celje</Button2>
-                <Button2>Kranj</Button2>
-                <Button2>Koper</Button2>
-                <Button2>Novo Mesto</Button2>
-                <Button2>Domžale</Button2>
-                <Button2>Velenje</Button2>
-                <Button2>Nova Gorica</Button2>
+              <div className="flex flex-col gap-3 w-[781px] ">
+                <h2 className="text-[32px]">Hitri izbor</h2>
+                <div className="flex gap-[19px] flex-wrap ">
+                  <Button2>Ljubljana</Button2>
+                  <Button2>Maribor</Button2>
+                  <Button2>Celje</Button2>
+                  <Button2>Kranj</Button2>
+                  <Button2>Koper</Button2>
+                  <Button2>Novo Mesto</Button2>
+                  <Button2>Domžale</Button2>
+                  <Button2>Velenje</Button2>
+                  <Button2>Nova Gorica</Button2>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="flex gap-5">
-            <div className="w-full">
-              {profiles.map((profile) => (
-                <span>
-                  <Card2 profile={profile} />
-                </span>
-              ))}
-            </div>
-            <div className=" w-2/5 max-sm:hidden max-lg:hidden">
-              <div className="flex text-gray-400 gap-2 justify-center items-center shadow-sm  w-full h-48 border-1 border-gray-300  rounded-lg m-3">
-                Kmalu
+            <div className="flex gap-5">
+              <div className="w-full flex flex-col gap-[32px]">
+                {profiles.map((profile) => (
+                  <span>
+                    <Card5
+                      profile={profile}
+                      imageStyle={
+                        "lg:w-[120px] lg:h-[140px] md:w-[95px] md:h-[130px] max-sm:w-[245px] max-sm:h-[98.53px]"
+                      }
+                    />
+                  </span>
+                ))}
               </div>
-              <div className="flex text-gray-400 gap-2 justify-center items-center shadow-sm  w-full h-96 border-1 border-gray-300  rounded-lg m-3">
-                Kmalu
+              <div className=" w-[286px] text-[24px] font-[100] text-[#414141] max-sm:hidden max-lg:hidden mt-1 flex flex-col gap-[32px]">
+                <div className="flex  w-[286px] h-[200px]  gap-2 justify-center items-center shadow-sm  border-[1px] border-gray-300  rounded-[8px]">
+                  Kmalu
+                </div>
+                <div className="flex  gap-2 justify-center items-center shadow-sm  w-[286px] h-[429px] border-[1px] border-gray-300  rounded-[8px]">
+                  Kmalu
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Section 2 Flower Cards*/}
-        <div className="bg-[#F2F1EA] w-full flex justify-center py-10">
+        <div className="bg-[#F2F1EA] w-full h-[908px] items-center flex justify-center py-10 text-[400]">
           {width > 480 ? (
-            <div className="w-5/6 flex flex-col items-center">
-              <span className="text-center pb-10">
-                <p className="text-[28px]">Prednosti lokalnih cvetličarn</p>
-                <p className="text-[16px] font-semibold">
+            <div className="w-[1280px] h-[788px] flex flex-col items-center gap-[48px] ">
+              <span className="text-center  gap-[8px] w-[688px]">
+                <p className="text-[40px] text-[#000000] ">
+                  Prednosti lokalnih cvetličarn
+                </p>
+                <p className="text-[24px] font-[600]">
                   (napram cvetju iz velikih trgovin)
                 </p>
               </span>
-              <div className="w-full flex justify-around">
+              <div className="flex gap-[50px] w-[1087px] ">
                 <Card3 info={FlowerCard[0]}>
                   <span className="flex flex-col gap-3">
                     <h3 className="font-semibold text-[16px] ">
@@ -140,7 +153,7 @@ export default function FloristsListing() {
                   </span>
                 </Card3>
               </div>
-              <div className="mt-10">
+              <div className="">
                 <p className="text-[28px]">Podprimo lokalno!</p>
               </div>
             </div>

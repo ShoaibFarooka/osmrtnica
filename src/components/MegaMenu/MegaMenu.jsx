@@ -8,7 +8,7 @@ import { HiChevronDoubleDown } from "react-icons/hi";
 export default function MegaMenu() {
   const [selected, setSelected] = useState(0);
   return (
-    <div className="bg-white text-[#686868] w-full max-sm: z-10 p-5 justify-center  absolute right-0 top-[58px] border-t    flex border-b-2 shadow-lg ">
+    <div className="bg-white text-[#686868] w-full max-sm: z-10 p-5 flex justify-center  absolute right-0 top-[58px]   border-b-2 shadow-lg ">
       <span className="flex w-[1191px]  max-sm:flex-wrap  md:justify-center gap-[25px]">
         <div className="max-sm:border-b-1 max-sm:pb-2">
           {menu.map((item, index) => (

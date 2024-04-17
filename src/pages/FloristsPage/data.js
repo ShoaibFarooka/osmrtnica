@@ -5,7 +5,7 @@ import img3 from "../../assets/images/flower1.png";
 import num1 from "../../assets/images/01.png";
 import num2 from "../../assets/images/02.png";
 import num3 from "../../assets/images/03.png";
-import bg1 from "../../assets/images/CardFlower1.png";
+import bg1 from "../../assets/images/CardFlower1.jpeg";
 import bg2 from "../../assets/images/CardFlower2.png";
 import bg3 from "../../assets/images/CardFlower3.png";
 
@@ -87,7 +87,7 @@ export const profiles = [
     website: "www.cvlucijan.si",
     arrowText: "Odpri",
     // role: "Partner",
-    img: img2,
+    img: img1,
   },
   {
     name: "Mestna cvetličarna",
@@ -96,7 +96,7 @@ export const profiles = [
     website: "www.mestnacv1.si",
     arrowText: "Odpri",
     // role: "Partner",
-    img: img3,
+    img: img1,
   },
   {
     name: "Naša cvetličarna ",
@@ -105,7 +105,7 @@ export const profiles = [
     website: "www.nasacvtl.si",
     arrowText: "Odpri",
     // role: "Partner",
-    img: img3,
+    img: img1,
   },
 ];
 

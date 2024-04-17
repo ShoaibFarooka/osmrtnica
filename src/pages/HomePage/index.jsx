@@ -114,7 +114,7 @@ export default function HomePage() {
                 <span className=" top-0 lg:hidden max-sm:hidden text-[#A5A7A9] font-[200]   px-2 pb-6 lg:text-[64px] md:text-[40px]">
                   01.
                 </span>
-                <span className="absolute  bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
+                <span className="absolute  bottom-0 pt-5 font-[500] border-l-1 px-2 text-[28px]">
                   OSMRTNICE
                 </span>
               </div>
@@ -128,7 +128,7 @@ export default function HomePage() {
                 <span className=" top-0 lg:hidden max-sm:hidden text-[#A5A7A9] font-[200]   px-2 pb-6 lg:text-[64px] md:text-[40px]">
                   02.
                 </span>
-                <span className="absolute bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
+                <span className="absolute bottom-0 pt-5 font-[500] border-l-1 px-2 text-[28px]">
                   POGREBI
                 </span>
               </div>
@@ -142,7 +142,7 @@ export default function HomePage() {
                 <span className=" top-0 lg:hidden max-sm:hidden text-[#A5A7A9] font-[200]   px-2 pb-6 lg:text-[64px] md:text-[40px]">
                   03.
                 </span>
-                <span className="absolute bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
+                <span className="absolute bottom-0 pt-5 font-[500] border-l-1 px-2 text-[28px]">
                   SPOMINSKA
                 </span>
               </div>
@@ -156,7 +156,7 @@ export default function HomePage() {
                 <span className=" top-0 lg:hidden max-sm:hidden text-[#A5A7A9] font-[200]   px-2 pb-6 lg:text-[64px] md:text-[40px]">
                   04.
                 </span>
-                <span className="absolute bottom-0 pt-5 font-[500] border-l-1 px-2 text-[20px]">
+                <span className="absolute bottom-0 pt-5 font-[500] border-l-1 px-2 text-[28px]">
                   CVETLIČARNE
                 </span>
               </div>
