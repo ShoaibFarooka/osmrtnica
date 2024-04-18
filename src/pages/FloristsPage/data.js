@@ -6,8 +6,8 @@ import num1 from "../../assets/images/01.png";
 import num2 from "../../assets/images/02.png";
 import num3 from "../../assets/images/03.png";
 import bg1 from "../../assets/images/CardFlower1.jpeg";
-import bg2 from "../../assets/images/CardFlower2.png";
-import bg3 from "../../assets/images/CardFlower3.png";
+import bg2 from "../../assets/images/CardFlower2.jpeg";
+import bg3 from "../../assets/images/CardFlower3.jpeg";
 
 export const animals = [
   {

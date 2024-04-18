@@ -163,20 +163,31 @@ export function Card5(props) {
 export function Card3(props) {
   return (
     <div className=" relative">
-      <div className="absolute w-full border-3">
+      <div className="absolute w-full ">
         {/* <img
           src={props.info.num}
           alt=""
           className="p-10 max-lg:p-5 max-lg:w-28"
         /> */}
-        <p className="text-[128px] border-3 font-[200] w-[171px]  flex justify-center">
-          01
-        </p>
-        <div className="w-full flex justify-center h-80 border-3">
-          <div className="w-4/5 h-full">{props.children}</div>
-        </div>
+        {props.children}
       </div>
-      <img src={props.info.bgImg} alt="img" />
+      <div
+        className=""
+        // style={{
+        //   borderImage: "linear-gradient(to right, #E3E8EC, #FFFFFF) 30",
+        //   borderImageWidth: "4px",
+        // }}
+      >
+        <img
+          src={props.info.bgImg}
+          className="w-[329px] h-[560px]  border-[4px] border-[#FFFFFF] rounded-[8px] "
+          alt="img"
+          // style={{
+          //   borderImage: "linear-gradient(to right, #E3E8EC, #FFFFFF) 30",
+          //   borderImageWidth: "4px",
+          // }}
+        />
+      </div>
     </div>
   );
 }
