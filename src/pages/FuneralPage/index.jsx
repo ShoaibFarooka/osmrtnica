@@ -115,7 +115,7 @@ export default function Funeral() {
                     >
                       <Card2
                         style={
-                          "max-sm:flex-col  max-sm:h-fit max-sm:items-center max-sm:pl-3 max-sm:pt-3"
+                          "max-sm:flex-col  max-sm:items-center max-sm:pl-3 max-sm:pt-3"
                         }
                         imageStyle={
                           "lg:w-[230px] lg:h-[140px] md:w-[180px] md:h-[118px] max-sm:w-[245px] max-sm:h-[98.53px]"
