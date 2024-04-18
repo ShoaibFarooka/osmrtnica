@@ -12,10 +12,10 @@ export default function Navbar() {
   const [menu, setMenu] = useState(false);
   return (
     <div
-      className="w-full flex justify-center"
-      style={{ boxShadow: " 0px 4px 4px #00000024" }}
+      className="w-screen flex justify-center shadow-lg"
+      // style={{ boxShadow: " 0px 4px 4px #00000024" }}
     >
-      <div className=" flex justify-between  items-center lg:w-[1280px] md:w-[744px] max-sm:w-[360px] lg:h-[92.02px] md:h-[79px] max-sm:h-[72px] p-4 max-sm:shadow-sm max-sm:shadow-[#6262624d] z-10">
+      <div className=" flex justify-between  items-center lg:w-[1280px] md:w-[744px] max-sm:w-[360px] lg:h-[92.02px] md:h-[79px] max-sm:h-[72px] p-4  z-10">
         <div className="flex items-center">
           <img
             src={personIcon}

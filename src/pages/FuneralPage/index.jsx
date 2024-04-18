@@ -60,7 +60,7 @@ export default function Funeral() {
           </span>
         </div>
         <div className="  max-sm:hidden flex justify-center">
-          <span className="md:w-[744px] lg:w-[1280px] max-sm: flex justify-center ">
+          <span className="w-screen flex justify-center ">
             <Navbar2 />
           </span>
         </div>
