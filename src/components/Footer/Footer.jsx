@@ -8,7 +8,7 @@ import Carousel from "../Carousel/Carousel";
 
 export default function Footer() {
   return (
-    <div className="  flex flex-col items-center  lg:h-[464px]   border-[#E3E8EC] max-sm:items-center lg:bg-[#EEF2F2] max-sm:bg-[#EEF2F2]  md:bg-white  border-t-[1pfx] flex-wrap">
+    <div className="  flex flex-col items-center  lg:h-[464px]  border-t-[1px] border-[#E3E8EC] max-sm:items-center lg:bg-[#EEF2F2]bg-white  border-t-[1pfx] flex-wrap">
       <div className="lg:w-[1157px] max-sm:w-[311px]  md:mt-[63px] md:w-[620px] lg:h-[464px]  flex flex-col justify-center gap-5">
         <div className="  flex 7 max-sm:flex-wrap max-sm:justify-between lg:justify-between max-sm:gap-10 md:justify-between lg:gap-0">
           <div className=" max-sm:w-full items-center p-4 flex flex-col gap-10 mt-4">
@@ -91,41 +91,46 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex w-full lg:hidden justify-around pb-3 text-[13px] text-[#414141]">
+          <div className="flex md:w-[566px] max-sm:w-[311px] max-sm:justify-center max-sm:flex-wrap  lg:hidden md:gap-[18px] max-sm:gap-[30px] pb-3 text-[13px] text-[#414141]">
             <span>Splošni pogoji poslovanja</span>
             <span>Politika zasebnosti </span>
             <span>Politika varovanja osebnih podatkov </span>
             <span>Piškotki </span>
           </div>
-          <div className="lg:w-[718px] md:w-full max-sm:w-full hidden lg:block md:block ">
-            <Carousel
-              style={" flex lg:flex-row   md:flex-col md:gap-0 "}
-              circleStyle={
-                "lg:flex-col  md:items-end md:p-0 lg:justify-start md:justify-end md:gap-2 lg:gap-0 md:mr-10 "
-              }
-            >
-              <Banner
-                title={"Imate cvetličarno?"}
-                content={
-                  "Otvoritvena akcija BREZ RIZIKA pravkar poteka. Sodelujmo!"
+          <p className="hidden max-sm:block text-[12px] text-[#414141]">
+            © osmrtnica.com, 2024. Vse pravice pridržane.
+          </p>
+          <div className="max-sm:hidden ">
+            <div className="lg:w-[718px]  flex  md:w-[612px] max-sm:w-full   ">
+              <Carousel
+                style={" flex lg:flex-row   md:flex-col md:gap-0 "}
+                circleStyle={
+                  "lg:flex-col  md:items-end md:p-0 lg:justify-start md:justify-end md:gap-2 lg:gap-0 md:mr-10 "
                 }
-                style={"from-[#083545eb]  to-[#083545c9] ml-5"}
-              />
-              <Banner
-                title={"Brezplačni skrbnik"}
-                content={
-                  "Podarjajo vam ga cvetličarne in pogrebna podjetja. Povprašajte jih!"
-                }
-                style={"from-[#451808eb]  to-[#451808c9] ml-5"}
-              />
-              <Banner
-                title={"Brezplačne MOBI predloge"}
-                content={
-                  "Podarjajo vam jih cvetličarne. Enako tudi Posvetilo, Zadnji klic."
-                }
-                style={"from-[#240845eb]  to-[#240845c9] ml-5"}
-              />
-            </Carousel>
+              >
+                <Banner
+                  title={"Imate cvetličarno?"}
+                  content={
+                    "Otvoritvena akcija BREZ RIZIKA pravkar poteka. Sodelujmo!"
+                  }
+                  style={"from-[#083545eb]  to-[#083545c9]"}
+                />
+                <Banner
+                  title={"Brezplačni skrbnik"}
+                  content={
+                    "Podarjajo vam ga cvetličarne in pogrebna podjetja. Povprašajte jih!"
+                  }
+                  style={"from-[#451808eb]  to-[#451808c9] "}
+                />
+                <Banner
+                  title={"Brezplačne MOBI predloge"}
+                  content={
+                    "Podarjajo vam jih cvetličarne. Enako tudi Posvetilo, Zadnji klic."
+                  }
+                  style={"from-[#240845eb]  to-[#240845c9]"}
+                />
+              </Carousel>
+            </div>
           </div>
         </div>
       </div>
@@ -145,17 +150,17 @@ export default function Footer() {
 const Banner = (props) => {
   return (
     <div
-      className={` p-3 rounded-b-xl lg:w-[596px]  bg-gradient-to-r ${props.style} flex justify-between max-sm:flex max-sm:flex-col `}
+      className={` p-3 rounded-b-xl lg:w-[596px] h-[71px]  bg-gradient-to-r ${props.style} flex justify-between items-center max-sm:flex max-sm:flex-col `}
     >
       <div className="text-[14px] ">
-        <h3 className="font-bold text-[#E8FDF1]">{props.title}</h3>
-        <p className="text-[#CAF0F8]">{props.content}</p>
+        <h3 className="font-[700] text-[16px] text-[#E8FDF1]">{props.title}</h3>
+        <p className="text-[#CAF0F8] text-[12px]">{props.content}</p>
       </div>
       <div className="">
         <SimpButton
           bgColor={"bg-[#CAF0F8]"}
-          padding={"p-2"}
-          px={"px-5"}
+          padding={"w-[139px]"}
+          px={"h-[34px] flex justify-center items-center text-[14px]"}
           className=""
         >
           Več <span> informacij</span>

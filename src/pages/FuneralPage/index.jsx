@@ -66,37 +66,43 @@ export default function Funeral() {
         </div>
         {/* Top Header */}
         <div>
-          <HeaderTop btnText={"Pogrebna podjetja"} topBanner={topBanner} />
+          <HeaderTop
+            btnText={"Pogrebna podjetja"}
+            btnStyle={"w-[335px] h-[79px] max-sm:w-[260px] max-sm:h-[65px]"}
+            topBanner={topBanner}
+          />
         </div>
       </header>
 
       <body className="w-full flex flex-col items-center">
         {/* Section 1 */}
         <div className=" flex flex-col items-center  lg:w-[1280px] md:w-[744px] ">
-          <div className="flex justify-center items-center py-16  gap-3">
-            <div>
-              <Select
-                size="sm"
-                label="Išči po krajih"
-                className="lg:w-[227px] md:w-[372px] max-sm:w-[244.47px] h-fit  border-1 border-gray-400 rounded-md"
-                style={{ backgroundColor: "white" }}
-              >
-                {animals.map((animal) => (
-                  <SelectItem key={animal.value} value={animal.value}>
-                    {animal.label}
-                  </SelectItem>
-                ))}
-              </Select>
-            </div>
-            <div className="hidden lg:block max-sm:block">
-              <button className=" h-[48px] w-[48px] border-1 flex justify-center items-center text-[24px] rounded-lg bg-[#414141] text-[#F6F6F6] shadow-sm">
-                <CiSearch />
-              </button>
-            </div>
-            <div className="lg:hidden max-sm:hidden md:block">
-              <button className=" h-[48px] w-[211px] border-1 flex justify-center items-center text-[16px] font-[400] rounded-lg bg-[#414141] text-[#F6F6F6] shadow-sm">
-                Prikaži
-              </button>
+          <div className="lg:w-[1088px] md:w-[744px] max-sm:w-[360px]">
+            <div className="flex lg:justify-end justify-center items-center py-10   gap-[16px] lg:w-[762px] ">
+              <div className="">
+                <Select
+                  size="sm"
+                  label="Išči po krajih"
+                  className="lg:w-[227px] md:w-[372px] max-sm:w-[244.47px] h-fit  border-1 border-gray-400 rounded-md"
+                  style={{ backgroundColor: "white" }}
+                >
+                  {animals.map((animal) => (
+                    <SelectItem key={animal.value} value={animal.value}>
+                      {animal.label}
+                    </SelectItem>
+                  ))}
+                </Select>
+              </div>
+              <div className="hidden lg:block max-sm:block">
+                <button className=" h-[48px] w-[48px] border-1 flex justify-center items-center text-[24px] rounded-lg bg-[#414141] text-[#F6F6F6] shadow-sm">
+                  <CiSearch />
+                </button>
+              </div>
+              <div className="lg:hidden max-sm:hidden md:block">
+                <button className=" h-[48px] w-[211px] border-1 flex justify-center items-center text-[16px] font-[400] rounded-lg bg-[#414141] text-[#F6F6F6] shadow-sm">
+                  Prikaži
+                </button>
+              </div>
             </div>
           </div>
           {/* Cards Sub-Section*/}
@@ -168,12 +174,12 @@ export default function Funeral() {
         </div>
 
         {/* Section 3 Partners*/}
-        <div className="py-10 bg-[#DAEBF1] w-full flex justify-center">
-          <div className="lg:w-[1280px] md:w-[744px] lg:h-[574px] md:h-[819px] flex flex-col justify-center items-center gap-[24px]">
-            <h3 className="text-[40px] text-[#083545] text-center py-4">
+        <div className=" bg-[#DAEBF1] w-full flex justify-center">
+          <div className="relative lg:w-[1280px] md:w-[744px] lg:h-[574px] md:h-[819px] max-sm:h-[1182px] flex flex-col justify-center items-center gap-[24px]">
+            <h3 className="absolute md:top-[56px] max-sm:top-[47px] max-sm:w-[360px] text-[40px] text-[#083545] text-center ">
               Postani partner!
             </h3>
-            <div className="flex gap-[24px] flex-wrap lg:flex-nowrap lg:w-[1068px] md:w-[615px] max-sm:w-[340px] max-sm:justify-center lg:justify-center ">
+            <div className="absolute md:top-[140px] max-sm:top-[135px] flex gap-[24px]  flex-wrap lg:flex-nowrap lg:w-[1068px] md:w-[615px] max-sm:w-[340px] max-sm:justify-center lg:justify-center ">
               <Card4
                 item={{
                   icon: icon1,
@@ -238,10 +244,22 @@ export default function Funeral() {
             <p className="font-[600] text-[24px] max-sm:font-[400]">
               Sponsorji
             </p>
-            <div className="flex gap-[80px] max-sm:gap-[48px] items-center ">
-              <img className="h-fit max-sm:w-[120px]" src={Suponcer3} alt="" />
-              <img className="h-fitmax-sm:w-[120px]" src={Suponcer2} alt="" />
-              <img className="h-fit  max-sm:hidden" src={Suponcer1} alt="" />
+            <div className="flex gap-[80px] md:gap-[48px] max-sm:gap-[48px] max-sm:flex-row-reverse md:w-[596px] justify-center max-sm:w-[360px] items-center ">
+              <img
+                className="h-fit w-[150px] max-sm:w-[120px]"
+                src={Suponcer3}
+                alt=""
+              />
+              <img
+                className="h-fit w-[200px] max-sm:w-[150px]"
+                src={Suponcer2}
+                alt=""
+              />
+              <img
+                className="h-fit w-[150px]  max-sm:hidden"
+                src={Suponcer1}
+                alt=""
+              />
             </div>
           </div>
         </div>

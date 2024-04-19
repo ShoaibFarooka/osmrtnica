@@ -17,7 +17,7 @@ const Carousel = (props) => {
 
   return (
     <div
-      className={` max-sm:px-0 md:px-0 lg:px-5  lg:gap-6 lg:border-t-1 lg:w-[718px] pl-10 border-gray-300 ${props.style}`}
+      className={`relative max-sm:px-0 md:px-0 flex justify-center  lg:gap-6 lg:border-t-1 lg:w-[718px] md:w-[612px] border-gray-300 ${props.style}`}
     >
       <div className=" ">
         {props.children.map((item, index) => (
@@ -32,7 +32,7 @@ const Carousel = (props) => {
           </div>
         ))}
       </div>
-      <div className="flex items-center  justify-between">
+      <div className=" right-0 flex items-center  justify-between">
         <p className="lg:hidden pl-6  w-fit text-[12px]">
           © osmrtnica.com, 2024. Vse pravice pridržane.
         </p>

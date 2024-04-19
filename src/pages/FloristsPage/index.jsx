@@ -62,7 +62,7 @@ export default function FloristsListing() {
         {/* Section 1 */}
         <div className="lg:w-[1280px] md:w-[744px] flex justify-center">
           <div className="lg:w-[1088px] md:w-[744px] flex flex-col my-20 gap-10">
-            <div className="flex justify-between md:justify-center items-center flex-wrap ">
+            <div className="flex justify-between md:justify-center md:gap-14 items-center flex-wrap ">
               <div className="flex gap-[16px] lg:w-fit   max-sm:w-full">
                 <div className="lg:w-[225px] md:w-[372px]  h-[48px]">
                   <Select
@@ -85,9 +85,11 @@ export default function FloristsListing() {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-[16px] lg:w-[781px] md:w-[607px] ">
-                <h2 className="text-[32px] text-[#1E2125]">Hitri izbor</h2>
-                <div className="flex gap-[19px] flex-wrap ">
+              <div className="flex lg:flex-col gap-[16px] lg:w-[781px] md:w-[607px] ">
+                <h2 className="lg:text-[32px] md:text-[24px] text-[#1E2125]">
+                  Hitri izbor:
+                </h2>
+                <div className="flex lg:gap-[19px] md:gap-[16px] flex-wrap md:w-[478px]">
                   <Button2>Ljubljana</Button2>
                   <Button2>Maribor</Button2>
                   <Button2>Celje</Button2>
@@ -100,8 +102,8 @@ export default function FloristsListing() {
                 </div>
               </div>
             </div>
-            <div className="flex gap-5 border-3">
-              <div className="w-full flex flex-col gap-[32px]">
+            <div className="flex gap-5">
+              <div className="w-full flex flex-col gap-[32px] border-3 items-center">
                 {profiles.map((profile) => (
                   <span>
                     <Card5
@@ -126,10 +128,10 @@ export default function FloristsListing() {
         </div>
 
         {/* Section 2 Flower Cards*/}
-        <div className="bg-[#F2F1EA] w-full  h-[908px] items-center flex justify-center py-10 text-[400]">
-          {width > 480 ? (
-            <div className="lg:w-[1280px] md:w-[744px]  h-[788px] flex flex-col items-center gap-[48px] ">
-              <span className="text-center  gap-[8px] w-[688px]">
+        <div className="bg-[#F2F1EA] w-full  lg:h-[908px] md:h-[700px]  items-center flex justify-center  text-[400]">
+          {window.innerWidth > 600 ? (
+            <div className="lg:w-[1280px] md:w-[744px]  lg:h-[788px] md:h-[585px] flex flex-col items-center gap-[48px] ">
+              <span className="text-center  gap-[8px] w-[688px] md:h-[84px]">
                 <p className="text-[40px] text-[#000000] ">
                   Prednosti lokalnih cvetličarn
                 </p>
@@ -137,25 +139,28 @@ export default function FloristsListing() {
                   (napram cvetju iz velikih trgovin)
                 </p>
               </span>
-              <div className="relative flex gap-[50px] lg:w-[1087px] md:w-[666px] md:gap-[18px]">
+              <div className="relative flex lg:gap-[50px] md:gap-[18px]">
                 <Card3 info={FlowerCard[0]}>
                   <h1
-                    className="absolute top-[38px] left-[13.5px] text-[128px]  font-[200] w-[171px] h-[129px]  text-center text-[#EDF1F3]"
+                    className="absolute lg:top-[38px] md:top-[9px] md:left-[13.5px]  lg:text-[128px] md:text-[80px]  font-[200] lg:w-[171px] md:w-[132.61px] lg:h-[129px] md:h-[100.04px]  text-center text-[#EDF1F3]"
                     style={{
-                      lineHeight: "150px",
+                      lineHeight: window.innerWidth >= 1200 ? "150px" : "100px",
                       textShadow: " 0px 4px 4px #006598",
                     }}
                   >
                     01
                   </h1>
                   <div
-                    className="absolute top-[199px] left-[13.5px] w-full flex justify-center "
+                    className="absolute lg:top-[199px] md:top-[108px] left-[13.5px]  w-full flex justify-center "
                     style={{ lineHeight: "16.41px" }}
                   >
                     <div className=" ">
                       {" "}
                       <span className="flex flex-col gap-[24px] px-2 lg:w-[302px] ">
-                        <h3 className="font-semibold text-[16px] text-[#1E2125]">
+                        <h3
+                          className="font-[500] text-[16px] text-[#1E2125]"
+                          style={{ lineHeight: "18.75px" }}
+                        >
                           Znanja in dolgoletne izkušnje
                         </h3>
                         <p className="text-[14px] hidden lg:block text-[200] text-[#414141] ">
@@ -170,9 +175,9 @@ export default function FloristsListing() {
                 </Card3>
                 <Card3 info={FlowerCard[1]}>
                   <h1
-                    className="absolute top-[38px] left-[13.5px] text-[128px]  font-[200] w-[171px] h-[129px]  text-center text-[#EDF1F3]"
+                    className="absolute hidden lg:block lg:top-[38px] md:top-[9px] md:left-[13.5px]  lg:text-[128px] md:text-[80px]  font-[200] lg:w-[171px] md:w-[132.61px] lg:h-[129px] md:h-[100.04px]  text-center text-[#EDF1F3]"
                     style={{
-                      lineHeight: "150px",
+                      lineHeight: window.innerWidth >= 1200 ? "150px" : "100px",
                       textShadow: " 0px 4px 4px #006598",
                     }}
                   >
@@ -181,13 +186,23 @@ export default function FloristsListing() {
                   <div className=" w-full flex justify-center  ">
                     <div className=" h-full">
                       <span className="flex lg:items-end h-full  md:items-center">
-                        <div className="absolute top-[399px] left-[13.5px] bg-white bg-opacity-50 flex flex-col justify-center p-3 sm:p-2  gap-[24px] lg:w-[302px] lg:h-[144px]">
+                        <div className="absolute lg:top-[399px] md:top-[179px]  left-[13.5px] bg-white bg-opacity-50 flex flex-col md:items-center lg:justify-center p-3 sm:p-2  gap-[24px] lg:w-[302px] md:w-[186px] lg:h-[144px] md:h-[166px]">
                           <h1
-                            className="font-semibold text-[16px]  text-gray-600"
+                            className="absolute lg:hidden md:top-[3px] md:left-[0px]  md:text-[80px]  font-[200]  md:w-[132.61px] md:h-[100.04px]  text-center text-[#EDF1F3]"
+                            style={{
+                              lineHeight:
+                                window.innerWidth >= 1200 ? "150px" : "100px",
+                              textShadow: " 0px 4px 4px #006598",
+                            }}
+                          >
+                            02
+                          </h1>
+                          <h3
+                            className="font-[500] text-[16px] text-[#1E2125] md:w-[149px] md:h-[150px] flex items-end"
                             style={{ lineHeight: "18.75px" }}
                           >
                             Obstojnost cvetja je praviloma večja
-                          </h1>
+                          </h3>
                           <p
                             className="text-gray-500 hidden lg:block text-[200] w-[276px] text-[14px]"
                             style={{ lineHeight: "16.41px" }}
@@ -204,9 +219,9 @@ export default function FloristsListing() {
                 </Card3>
                 <Card3 info={FlowerCard[2]}>
                   <h1
-                    className="absolute top-[38px] left-[13.5px] text-[128px]  font-[200] w-[171px] h-[129px]  text-center text-[#EDF1F3]"
+                    className="absolute lg:top-[38px] md:top-[9px] md:left-[13.5px]  lg:text-[128px] md:text-[80px]  font-[200] lg:w-[171px] md:w-[132.61px] lg:h-[129px] md:h-[100.04px]  text-center text-[#EDF1F3]"
                     style={{
-                      lineHeight: "150px",
+                      lineHeight: window.innerWidth >= 1200 ? "150px" : "100px",
                       textShadow: " 0px 4px 4px #006598",
                     }}
                   >
@@ -214,8 +229,11 @@ export default function FloristsListing() {
                   </h1>
                   <div className="w-full flex justify-center h-80">
                     <div className=" h-full">
-                      <span className="flex absolute top-[204px] left-[13.5px] flex-col gap-[24px] px-2   lg:w-[302px] lg:h-[151px]">
-                        <h3 className="font-semibold text-[16px] text-[#1E2125]">
+                      <span className="flex absolute lg:top-[204px] md:top-[106px] left-[13.5px] flex-col gap-[24px] px-2   lg:w-[302px] lg:h-[151px]">
+                        <h3
+                          className="font-[500] text-[16px] text-[#1E2125]"
+                          style={{ lineHeight: "18.75px" }}
+                        >
                           Cvetje prilagojeno vsaki priložnosti
                         </h3>
                         <p
@@ -233,7 +251,9 @@ export default function FloristsListing() {
                 </Card3>
               </div>
               <div className="">
-                <p className="text-[40px]">Podprimo lokalno!</p>
+                <p className="lg:text-[40px] md:text-[32px]">
+                  Podprimo lokalno!
+                </p>
               </div>
             </div>
           ) : (
@@ -256,7 +276,10 @@ export default function FloristsListing() {
                   </p>
                   <h3 className="font-[700] text-[24px]">Sodelujmo!</h3>
                 </span>
-                <button className="bg-gradient-to-r text-[20px]  text-[#1E2125] px-5 py-2 rounded-md from-[#E3E8EC] to-[#FFFFFF]">
+                <button
+                  className="bg-gradient-to-r text-[20px]  text-[#1E2125] px-5 py-2 rounded-md from-[#E3E8EC] to-[#FFFFFF]"
+                  style={{ boxShadow: "-3px, -3px, 4px, #FFFFFF" }}
+                >
                   Naprej
                 </button>
               </div>

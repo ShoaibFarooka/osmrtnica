@@ -12,7 +12,7 @@ export default function Navbar2() {
   return (
     <div
       style={{ boxShadow: " 0px 4px 4px #00000024" }}
-      className=" w-screen justify-center flex "
+      className=" w-screen justify-center flex lg:h-[92.02px] md:h-[80px]"
     >
       <div className="flex justify-between p-4 shadow-sm md:w-[744px] lg:w-[1280px] z-10">
         <div className="flex items-center">
