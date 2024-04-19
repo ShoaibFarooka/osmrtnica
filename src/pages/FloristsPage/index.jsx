@@ -54,7 +54,11 @@ export default function FloristsListing() {
         </div>
         {/* HEADER BACKGROUND IMAGE */}
         <div className="w-full">
-          <HeaderTop btnText={"Cvetličarne"} topBanner={topBanner} />
+          <HeaderTop
+            btnText={"Cvetličarne"}
+            btnStyle={"w-[224px] h-[79px] max-sm:w-[178px] max-sm:h-[65px]"}
+            topBanner={topBanner}
+          />
         </div>
       </header>
 
@@ -89,21 +93,21 @@ export default function FloristsListing() {
                 <h2 className="lg:text-[32px] md:text-[24px] text-[#1E2125]">
                   Hitri izbor:
                 </h2>
-                <div className="flex gap-[16px]   md:flex-wrap lg:w-[781px] md:w-[478px] ">
-                  <Button2>Ljubljana</Button2>
-                  <Button2>Maribor</Button2>
-                  <Button2>Celje</Button2>
-                  <Button2>Kranj</Button2>
-                  <Button2>Koper</Button2>
-                  <Button2>Novo Mesto</Button2>
-                  <Button2>Domžale</Button2>
-                  <Button2>Velenje</Button2>
-                  <Button2>Nova Gorica</Button2>
+                <div className="flex gap-[16px] lg:gap-[19px]  md:flex-wrap lg:w-[781px] md:w-[478px] ">
+                  <Button2 styles={"w-[78px] h-[24px]"}>Ljubljana</Button2>
+                  <Button2 styles={"w-[68px] h-[24px]"}>Maribor</Button2>
+                  <Button2 styles={"w-[49px] h-[24px]"}>Celje</Button2>
+                  <Button2 styles={"w-[51px] h-[24px]"}>Kranj</Button2>
+                  <Button2 styles={"w-[55px] h-[24px]"}>Koper</Button2>
+                  <Button2 styles={"w-[95px] h-[24px]"}>Novo Mesto</Button2>
+                  <Button2 styles={"w-[73px] h-[24px]"}>Domžale</Button2>
+                  <Button2 styles={"w-[64px] h-[24px]"}>Velenje</Button2>
+                  <Button2 styles={"w-[96px] h-[24px]"}>Nova Gorica</Button2>
                 </div>
               </div>
             </div>
             <div className="flex gap-5">
-              <div className="w-full flex flex-col gap-[32px] border-3 items-center">
+              <div className="w-full flex flex-col gap-[32px] items-center">
                 {profiles.map((profile) => (
                   <span>
                     <Card5
@@ -142,7 +146,7 @@ export default function FloristsListing() {
               <div className="relative flex lg:gap-[50px] md:gap-[18px]">
                 <Card3 info={FlowerCard[0]}>
                   <h1
-                    className="absolute lg:top-[38px] md:top-[9px] md:left-[13.5px]  lg:text-[128px] md:text-[80px]  font-[200] lg:w-[171px] md:w-[132.61px] lg:h-[129px] md:h-[100.04px]  text-center text-[#EDF1F3]"
+                    className="absolute lg:top-[38px] md:top-[9px] lg:left-[13.5px]  lg:text-[128px] md:text-[80px]  font-[200] lg:w-[171px] md:w-[132.61px] lg:h-[129px] md:h-[100.04px]  text-center text-[#EDF1F3]"
                     style={{
                       lineHeight: window.innerWidth >= 1200 ? "150px" : "100px",
                       textShadow: " 0px 4px 4px #006598",
@@ -217,7 +221,7 @@ export default function FloristsListing() {
                 </Card3>
                 <Card3 info={FlowerCard[2]}>
                   <h1
-                    className="absolute lg:top-[38px] md:top-[9px] md:left-[13.5px]  lg:text-[128px] md:text-[80px]  font-[200] lg:w-[171px] md:w-[132.61px] lg:h-[129px] md:h-[100.04px]  text-center text-[#EDF1F3]"
+                    className="absolute lg:top-[38px] md:top-[9px] lg:left-[13.5px]  lg:text-[128px] md:text-[80px]  font-[200] lg:w-[171px] md:w-[132.61px] lg:h-[129px] md:h-[100.04px]  text-center text-[#EDF1F3]"
                     style={{
                       lineHeight: window.innerWidth >= 1200 ? "150px" : "100px",
                       textShadow: " 0px 4px 4px #006598",
@@ -262,14 +266,14 @@ export default function FloristsListing() {
         {/* Section 3 Banner*/}
         <div className=" w-full">
           <div
-            className=" bg-cover bg-center h-[284px] flex flex-col items-center justify-center text-white gap-10"
+            className=" bg-cover bg-center h-[284px] flex flex-col items-center justify-center md:text-[#1E2125] lg:text-white gap-10"
             style={{ backgroundImage: `url('${banner}')` }}
             ref={backgroundRef}
           >
             <div className="lg:w-[1280px] md:w-[745px] flex justify-end">
               <div className="flex flex-col items-center gap-5 h-[178.5px]">
-                <span className="text-center lg:w-[476px] md:w-fit h-[133px]">
-                  <p className="text-[40px] font-thin max-sm:text-[26px]">
+                <span className="text-center lg:w-[476px] md:w-fit h-[133px] ">
+                  <p className="text-[40px] max-sm:text-[26px]">
                     Imate cvetličarno?
                   </p>
                   <h3 className="font-[700] text-[24px]">Sodelujmo!</h3>

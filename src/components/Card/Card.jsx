@@ -116,7 +116,7 @@ export function Card5(props) {
             src={props.profile.img}
             alt="Image"
             style={{
-              boxShadow: " 5px 5px 10px #c2c2c280",
+              boxShadow: "5px 5px 10px #c2c2c280 ,-3px -3px 10px  #FFFFFF",
               // borderImage: "linear-gradient(to right, #E3E8EC, #FFFFFF) 10",
               // borderRadius: "8px",
             }}

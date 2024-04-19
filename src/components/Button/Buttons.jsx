@@ -23,7 +23,7 @@ export const SimpButton = (props) => {
 export const Button2 = (props) => {
   return (
     <button
-      className={` italic bg-gradient-to-r from-[#E3E8EC] to-[#FFFFFF] border-1 border-gray-300 rounded-[2px] px-[7.5px] py-[4px] text-[14px] font-[800] text-gray-800 ${props.styles}`}
+      className={` italic bg-gradient-to-r from-[#E3E8EC] to-[#FFFFFF] border-1 border-[#C3C6C8] rounded-[2px]  text-[14px] font-[800] text-gray-800 ${props.styles}`}
     >
       {props.children}
     </button>
