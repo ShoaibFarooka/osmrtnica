@@ -85,11 +85,11 @@ export default function FloristsListing() {
                 </div>
               </div>
 
-              <div className="flex lg:flex-col gap-[16px] lg:w-[781px] md:w-[607px] ">
+              <div className="flex lg:flex-col gap-[16px]  lg:w-[781px] md:w-[607px] ">
                 <h2 className="lg:text-[32px] md:text-[24px] text-[#1E2125]">
                   Hitri izbor:
                 </h2>
-                <div className="flex lg:gap-[19px] md:gap-[16px] flex-wrap md:w-[478px]">
+                <div className="flex gap-[16px]   md:flex-wrap lg:w-[781px] md:w-[478px] ">
                   <Button2>Ljubljana</Button2>
                   <Button2>Maribor</Button2>
                   <Button2>Celje</Button2>
@@ -184,37 +184,35 @@ export default function FloristsListing() {
                     02
                   </h1>
                   <div className=" w-full flex justify-center  ">
-                    <div className=" h-full">
-                      <span className="flex lg:items-end h-full  md:items-center">
-                        <div className="absolute lg:top-[399px] md:top-[179px]  left-[13.5px] bg-white bg-opacity-50 flex flex-col md:items-center lg:justify-center p-3 sm:p-2  gap-[24px] lg:w-[302px] md:w-[186px] lg:h-[144px] md:h-[166px]">
-                          <h1
-                            className="absolute lg:hidden md:top-[3px] md:left-[0px]  md:text-[80px]  font-[200]  md:w-[132.61px] md:h-[100.04px]  text-center text-[#EDF1F3]"
-                            style={{
-                              lineHeight:
-                                window.innerWidth >= 1200 ? "150px" : "100px",
-                              textShadow: " 0px 4px 4px #006598",
-                            }}
-                          >
-                            02
-                          </h1>
-                          <h3
-                            className="font-[500] text-[16px] text-[#1E2125] md:w-[149px] md:h-[150px] flex items-end"
-                            style={{ lineHeight: "18.75px" }}
-                          >
-                            Obstojnost cvetja je praviloma večja
-                          </h3>
-                          <p
-                            className="text-gray-500 hidden lg:block text-[200] w-[276px] text-[14px]"
-                            style={{ lineHeight: "16.41px" }}
-                          >
-                            Cvetličarji namenjajo cvetju vso potrebno nego, da
-                            to ostane sveže in zdravo, ustrezno je
-                            prezračevanje, osvetljenost, vlažnost v prostoru.
-                            Njihove rože izžarevajo drugače in to se zazna.
-                          </p>
-                        </div>
-                      </span>
-                    </div>
+                    <span className="flex lg:items-end h-full  md:items-center">
+                      <div className="absolute  lg:top-[399px] md:top-[179px]  left-[13.5px] bg-white bg-opacity-50 flex flex-col md:items-center lg:justify-center sm:p-2  gap-[24px] lg:w-[302px] md:w-[186px] lg:h-[144px] md:h-[166px]">
+                        <h1
+                          className="absolute lg:hidden md:top-[3px] md:left-[0px]  md:text-[80px]  font-[200]  md:w-[132.61px] md:h-[100.04px]  text-center text-[#EDF1F3]"
+                          style={{
+                            lineHeight:
+                              window.innerWidth >= 1200 ? "150px" : "100px",
+                            textShadow: " 0px 4px 4px #006598",
+                          }}
+                        >
+                          02
+                        </h1>
+                        <h3
+                          className="font-[500] text-[16px] lg:w-[275px]  text-[#1E2125] md:w-[149px] md:h-[150px] flex items-end"
+                          style={{ lineHeight: "18.75px" }}
+                        >
+                          Obstojnost cvetja je praviloma večja
+                        </h3>
+                        <p
+                          className="text-gray-500 hidden lg:block text-[200] w-[276px] text-[14px]"
+                          style={{ lineHeight: "16.41px" }}
+                        >
+                          Cvetličarji namenjajo cvetju vso potrebno nego, da to
+                          ostane sveže in zdravo, ustrezno je prezračevanje,
+                          osvetljenost, vlažnost v prostoru. Njihove rože
+                          izžarevajo drugače in to se zazna.
+                        </p>
+                      </div>
+                    </span>
                   </div>
                 </Card3>
                 <Card3 info={FlowerCard[2]}>
@@ -280,7 +278,9 @@ export default function FloristsListing() {
                   className="bg-gradient-to-r text-[20px]    text-[#1E2125] w-[107px] h-[47px] rounded-md from-[#E3E8EC] to-[#FFFFFF]"
                   style={{
                     boxShadow:
-                      "5px 5px 10px #c2c2c280 ,-3px -3px 10px  #FFFFFF",
+                      window.innerWidth <= 1200
+                        ? "5px 5px 10px #c2c2c280 ,-3px -3px 10px  #FFFFFF"
+                        : "",
                   }}
                 >
                   Naprej

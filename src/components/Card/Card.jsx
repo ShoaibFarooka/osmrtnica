@@ -172,10 +172,11 @@ export function Card3(props) {
       <div className="absolute w-full ">{props.children}</div>
       <div
         className=""
-        // style={{
-        //   borderImage: "linear-gradient(to right, #E3E8EC, #FFFFFF) 30",
-        //   borderImageWidth: "4px",
-        // }}
+        style={{
+          boxShadow: "5px 5px 10px #c2c2c280",
+          // borderImage: "linear-gradient(to right, #E3E8EC, #FFFFFF) 30",
+          // borderImageWidth: "4px",
+        }}
       >
         <img
           src={props.info.bgImg}
