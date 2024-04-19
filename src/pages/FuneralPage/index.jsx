@@ -161,10 +161,10 @@ export default function Funeral() {
                 Kontaktirajte nas! Z veseljem vam bomo prisluhnili!
               </p>
             </div>
-            <div className="my-3 lg:hidden">
+            <div className="my-3 lg:hidden ">
               <Button
                 style={
-                  "py-[12px] px-[24px] to-[#FFFFFF] from-[#E3E8EC] text-[#1E2125] border-none"
+                  "py-[12px] px-[24px] to-[#FFFFFF] absolute  from-[#E3E8EC] text-[#1E2125] border-none"
                 }
               >
                 Kontaktirajte nas
@@ -222,7 +222,7 @@ export default function Funeral() {
                 </div>
               </div>
             </div>
-            <div className="hidden lg:block">
+            <div className="hidden lg:block absolute top-[478px]">
               <div className="w-full flex justify-center ">
                 <Button
                   className="shadow-md "

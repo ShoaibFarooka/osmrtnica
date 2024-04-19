@@ -105,7 +105,7 @@ export default function Footer() {
               <Carousel
                 style={" flex lg:flex-row   md:flex-col md:gap-0 "}
                 circleStyle={
-                  "lg:flex-col  md:items-end md:p-0 lg:justify-start md:justify-end md:gap-2 lg:gap-0 md:mr-10 "
+                  "lg:flex-col  md:items-end md:p-0 lg:justify-start md:justify-end md:gap-2 lg:gap-0 md:mr-10 lg:m-0"
                 }
               >
                 <Banner
@@ -150,7 +150,7 @@ export default function Footer() {
 const Banner = (props) => {
   return (
     <div
-      className={` p-3 rounded-b-xl lg:w-[596px] h-[71px]  bg-gradient-to-r ${props.style} flex justify-between items-center max-sm:flex max-sm:flex-col `}
+      className={` p-3 rounded-b-xl lg:w-[596px] h-[71px] bg-gradient-to-r ${props.style} flex justify-between items-center max-sm:flex max-sm:flex-col `}
     >
       <div className="text-[14px] ">
         <h3 className="font-[700] text-[16px] text-[#E8FDF1]">{props.title}</h3>

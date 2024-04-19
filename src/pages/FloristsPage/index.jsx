@@ -269,7 +269,7 @@ export default function FloristsListing() {
             ref={backgroundRef}
           >
             <div className="lg:w-[1280px] md:w-[745px] flex justify-end">
-              <div className="flex flex-col items-center gap-5 h-[178.5px] border-3">
+              <div className="flex flex-col items-center gap-5 h-[178.5px]">
                 <span className="text-center lg:w-[476px] md:w-fit h-[133px]">
                   <p className="text-[40px] font-thin max-sm:text-[26px]">
                     Imate cvetličarno?
@@ -277,8 +277,11 @@ export default function FloristsListing() {
                   <h3 className="font-[700] text-[24px]">Sodelujmo!</h3>
                 </span>
                 <button
-                  className="bg-gradient-to-r text-[20px]  text-[#1E2125] px-5 py-2 rounded-md from-[#E3E8EC] to-[#FFFFFF]"
-                  style={{ boxShadow: "-3px, -3px, 4px, #FFFFFF" }}
+                  className="bg-gradient-to-r text-[20px]    text-[#1E2125] w-[107px] h-[47px] rounded-md from-[#E3E8EC] to-[#FFFFFF]"
+                  style={{
+                    boxShadow:
+                      "5px 5px 10px #c2c2c280 ,-3px -3px 10px  #FFFFFF",
+                  }}
                 >
                   Naprej
                 </button>
