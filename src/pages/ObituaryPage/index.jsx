@@ -31,7 +31,11 @@ export default function Obituary() {
         <div className="w-full">{width < 800 ? <Navbar /> : <Navbar2 />}</div>
         {/* HEADER BACKGROUND IMAGE */}
         <div className="w-full">
-          <HeaderTop btnText={"Osmrtnice"} topBanner={topBanner} />
+          <HeaderTop
+            btnText={"Osmrtnice"}
+            btnStyle={"w-[213px] h-[79px]"}
+            topBanner={topBanner}
+          />
         </div>
       </header>
 
@@ -42,36 +46,44 @@ export default function Obituary() {
             <div className="">
               {/* Search */}
               <div className="w-full flex justify-end">
-                <div className="flex gap-3 lg:w-fit max-lg:w-full w-full max-sm:w-full flex-wrap max-lg:justify-center ">
+                <div className="flex gap-3 lg:w-[777px] h-[48px] border-3 max-lg:w-full w-full max-sm:w-full flex-wrap max-lg:justify-center ">
                   <Input
-                    className="border-2 border-gray-400 w-52 max-lg:w-72"
+                    className="border-2 border-gray-400 w-52 max-lg:w-72 placeholder:text-[#7C7C7C] h-[48px] placeholder:text-[16px]"
                     placeholder="Išči po imenu / priimku"
                   />
 
-                  <Select
-                    size="sm"
-                    label="Išči po krajih"
-                    className="w-52 h-fit  border-2 max-lg:w-72 border-gray-400 rounded-md "
+                  <select
+                    id="animalSelect"
+                    className="w-52 h-[48px] border-2 max-lg:w-72 border-gray-400 text-[#7C7C7C] rounded-md p-2"
                     style={{ backgroundColor: "white" }}
+                    // value={selectedAnimal}
+                    // onChange={handleAnimalChange}
                   >
+                    <option value={""} disabled selected>
+                      Išči po kraju
+                    </option>
                     {animals.map((animal) => (
-                      <SelectItem key={animal.value} value={animal.value}>
+                      <option key={animal.value} value={animal.value}>
                         {animal.label}
-                      </SelectItem>
+                      </option>
                     ))}
-                  </Select>
-                  <Select
-                    size="sm"
-                    label="Išči po regiji"
-                    className="w-52 h-fit  border-2 max-lg:w-72 border-gray-400 rounded-md "
+                  </select>
+                  <select
+                    id="animalSelect"
+                    className="w-52 h-[48px] border-2 max-lg:w-72  border-gray-400 text-[#7C7C7C] rounded-md p-2"
                     style={{ backgroundColor: "white" }}
+                    // value={selectedAnimal}
+                    // onChange={handleAnimalChange}
                   >
+                    <option value={""} disabled selected>
+                      Išči po regiji
+                    </option>
                     {animals.map((animal) => (
-                      <SelectItem key={animal.value} value={animal.value}>
+                      <option key={animal.value} value={animal.value}>
                         {animal.label}
-                      </SelectItem>
+                      </option>
                     ))}
-                  </Select>
+                  </select>
                   <button className="h-12 max-lg:w-72 w-12 border-1 flex justify-center items-center text-[24px] rounded-lg bg-[#414141] text-white shadow-sm">
                     <CiSearch />
                   </button>

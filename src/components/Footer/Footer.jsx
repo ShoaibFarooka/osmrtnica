@@ -4,7 +4,7 @@ import { MdAlternateEmail } from "react-icons/md";
 import { HiPhone } from "react-icons/hi";
 import groupLogo from "../../assets/images/GroupLogo.png";
 import { CiFacebook } from "react-icons/ci";
-import Carousel from "../Carousel/Carousel";
+import { Carousel } from "../Carousel/Carousel";
 
 export default function Footer() {
   return (

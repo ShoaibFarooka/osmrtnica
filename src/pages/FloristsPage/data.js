@@ -86,7 +86,7 @@ export const profiles = [
     number: "055-0012345",
     website: "www.cvlucijan.si",
     arrowText: "Odpri",
-    // role: "Partner",
+    role: "Partner",
     img: img1,
   },
   {
@@ -95,7 +95,7 @@ export const profiles = [
     number: "055-009123",
     website: "www.mestnacv1.si",
     arrowText: "Odpri",
-    // role: "Partner",
+    role: "Partner",
     img: img1,
   },
   {
@@ -104,7 +104,7 @@ export const profiles = [
     number: "055-006142",
     website: "www.nasacvtl.si",
     arrowText: "Odpri",
-    // role: "Partner",
+    role: "Partner",
     img: img1,
   },
 ];
