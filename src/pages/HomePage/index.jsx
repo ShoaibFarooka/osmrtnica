@@ -229,7 +229,7 @@ export default function HomePage() {
               </button>
             </div>
             {/* Cards Display */}
-            <div className=" flex  md:flex-wrap max-sm:flex-wrap  max-sm:w-full max-md:w-full justify-center lg:w-[1280px] md:w-[470px]">
+            <div className=" flex gap-[24px] md:flex-wrap max-sm:flex-wrap  max-sm:w-full max-md:w-full justify-center lg:w-[1280px] md:w-[470px]">
               {profiles.map((data) => (
                 <div>
                   <Card profile={data} />
