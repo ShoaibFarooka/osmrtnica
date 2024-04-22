@@ -110,7 +110,7 @@ export function Card5(props) {
       className={`${props.style} relative flex items-center justify-center  shadow-md shadow-[#ebf0f4b3]   lg:w-[762px] md:w-[466px] max-sm:w-[296px] max-sm:h-[150px] lg:h-[200px] md:h-[170px] bg-gradient-to-r bg-[#ebf0f499]  border-[2px] border-white rounded-lg`}
       style={{ boxShadow: " 5px 5px 5px #c2c2c280" }}
     >
-      <div className=" max-sm:flex   max-sm:gap-[20.33px] max-sm:w-[245px] max-sm:h-[98.53px]">
+      <div className=" max-sm:flex    max-sm:gap-[20.33px] max-sm:w-[245px] max-sm:h-[98.53px]">
         {/* <div className="flex items-center    justify-center"> */}
         <img
           src={props.profile.img}
@@ -125,7 +125,7 @@ export function Card5(props) {
         {/* </div> */}
         <div className="max-sm:w-[153px] max-sm:h-[98.24px] ">
           <div className="flex ">
-            <div className="lg:absolute md:absolute max-sm:gap-[10.16px] lg:left-[200px]  lg:top-[30px] md:left-[151px] md:top-[20px]  flex flex-col  lg:w-[332px] lg:h-[139px] md:w-[293.33px] md:h-[128px]  text-[#414141] gap-[16px] max-md:gap-1 text-[14px]">
+            <div className="lg:absolute md:absolute max-sm:gap-[10.16px] gap-[16px] lg:left-[200px]  lg:top-[30px]  md:left-[151px] md:top-[20px]  flex flex-col  lg:w-[332px] lg:h-[139px] md:w-[293.33px] md:h-[128px]  text-[#414141] text-[14px]">
               <div className="max-sm:h-[37px]">
                 <div
                   style={{ lineHeight: "14.06px" }}
@@ -134,26 +134,36 @@ export function Card5(props) {
                   {props.profile.role}
                 </div>
                 <div
-                  style={{ lineHeight: "18.75px" }}
+                  style={{
+                    lineHeight:
+                      window.innerWidth < 1200 ? "18.75px" : "28.13px",
+                  }}
                   className="text-[24px]  border-green-900 text-[#1E2125] font-[400] max-sm:font-[600] max-sm:text-[16px] max-sm:w-[186.32px]"
                 >
                   {props.profile.name}
                 </div>
               </div>
               <p
-                className="flex  flex-col text-[16px] max-sm:text-[12px] gap-[4px] max-sm:gap-[2.54px]"
+                className="flex  flex-col text-[16px] max-sm:text-[12px] gap-[8px] max-sm:gap-[2.54px]"
                 style={{ lineHeight: "15.24px" }}
               >
                 <span>{props.profile.text}</span>
                 <span>{props.profile.number}</span>
                 <p
-                  className="lg:text-[20px] md:text-[14px] max-sm:text-[12px]"
+                  className="lg:text-[20px] md:hidden max-sm:hidden md:text-[14px] max-sm:text-[12px]"
                   style={{ lineHeight: "14.06px" }}
                 >
                   {props.profile.website}
                 </p>
               </p>
+              <p
+                className="lg:text-[20px] hidden lg:block md:text-[14px] max-sm:text-[12px]"
+                style={{ lineHeight: "14.06px" }}
+              >
+                {props.profile.website}
+              </p>
             </div>
+
             <div
               className={` absolute max-sm:hidden text-[#CC6F6F]  lg:left-[676px] lg:top-[32px] md:left-[399.07px]  md:top-[20px]  text-[14px] max-md:p-0   ${props.roleStyle}`}
             >

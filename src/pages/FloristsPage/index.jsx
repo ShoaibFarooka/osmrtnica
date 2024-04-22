@@ -82,7 +82,7 @@ export default function FloristsListing() {
                     ))}
                   </Select>
                 </div>
-                <div className="hidden md:block">
+                <div className="lg:hidden max-sm:hidden md:block">
                   <button className="md:h-[48px]  md:w-[211px]  flex justify-center items-center text-[16px] rounded-lg bg-[#414141] text-white shadow-sm">
                     Prikaži
                   </button>
@@ -94,11 +94,11 @@ export default function FloristsListing() {
                 </div>
               </div>
 
-              <div className="flex flex-col md:flex-row gap-[16px] mt-12  lg:w-[781px] md:w-[607px] max-sm:w-[308px] ">
+              <div className="flex lg:flex-col md:flex-row gap-[16px]   lg:w-[781px] md:w-[607px] max-sm:w-[308px] ">
                 <h2 className="lg:text-[32px] text-[24px] text-[#1E2125]">
                   Hitri izbor:
                 </h2>
-                <div className="flex gap-[16px] lg:gap-[19px]    lg:flex-nowrap flex-wrap lg:w-[781px] md:w-[478px] ">
+                <div className="flex gap-[16px] lg:gap-[19px]  lg:flex-nowrap flex-wrap lg:w-[781px] md:w-[478px] ">
                   <Button2 styles={"w-[78px] h-[24px]"}>Ljubljana</Button2>
                   <Button2 styles={"w-[68px] h-[24px]"}>Maribor</Button2>
                   <Button2 styles={"w-[49px] h-[24px]"}>Celje</Button2>
@@ -276,7 +276,7 @@ export default function FloristsListing() {
             ref={backgroundRef}
           >
             <div className="lg:w-[1280px] md:w-[745px] max-sm:w-[360px] flex justify-end">
-              <div className="flex flex-col items-center gap-7 h-[178.5px] text-[#1E2125]">
+              <div className="flex flex-col items-center gap-7 h-[178.5px] lg:text-white text-[#1E2125]">
                 <span className="text-center  lg:w-[476px] md:w-fit max-sm:h-fit h-[133px] ">
                   <p className="text-[40px] max-sm:text-[28px] ">
                     Imate cvetličarno?
@@ -284,7 +284,7 @@ export default function FloristsListing() {
                   <h3 className="font-[700] text-[24px]">Sodelujmo!</h3>
                 </span>
                 <button
-                  className="bg-gradient-to-r text-[20px]    text-[#1E2125] w-[107px] h-[47px] rounded-md from-[#E3E8EC] to-[#FFFFFF]"
+                  className="bg-gradient-to-r text-[20px]   text-[#1E2125] w-[107px] h-[47px] rounded-md from-[#E3E8EC] to-[#FFFFFF]"
                   style={{
                     boxShadow:
                       window.innerWidth <= 1200
