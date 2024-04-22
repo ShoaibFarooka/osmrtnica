@@ -125,7 +125,7 @@ export function Card5(props) {
         {/* </div> */}
         <div className="max-sm:w-[153px] max-sm:h-[98.24px] ">
           <div className="flex ">
-            <div className="lg:absolute md:absolute max-sm:gap-[10.16px] gap-[16px] lg:left-[200px]  lg:top-[30px]  md:left-[151px] md:top-[20px]  flex flex-col  lg:w-[332px] lg:h-[139px] md:w-[293.33px] md:h-[128px]  text-[#414141] text-[14px]">
+            <div className="lg:absolute md:absolute max-sm:gap-[10.16px] gap-[16px] lg:left-[200px]  lg:top-[30px]  md:left-[151px] md:top-[20px]  flex flex-col  lg:w-[332px] lg:h-[139px] md:w-[293.33px] md:h-[116px]  text-[#414141] text-[14px]">
               <div className="max-sm:h-[37px]">
                 <div
                   style={{ lineHeight: "14.06px" }}
@@ -134,24 +134,28 @@ export function Card5(props) {
                   {props.profile.role}
                 </div>
                 <div
-                  style={{
-                    lineHeight:
-                      window.innerWidth < 1200 ? "18.75px" : "28.13px",
-                  }}
-                  className="text-[24px]  border-green-900 text-[#1E2125] font-[400] max-sm:font-[600] max-sm:text-[16px] max-sm:w-[186.32px]"
+                  // style={{
+                  //   lineHeight:
+                  //     window.innerWidth < 1200 ? "18.75px" : "28.13px",
+                  // }}
+                  className="text-[24px] max-sm:leading-[18.75px] md:leading-[28.13px] lg:leading-[28.13px] border-green-900 text-[#1E2125] font-[400] max-sm:font-[600] max-sm:text-[16px] max-sm:w-[186.32px]"
                 >
                   {props.profile.name}
                 </div>
               </div>
               <p
-                className="flex  flex-col text-[16px] max-sm:text-[12px] gap-[8px] max-sm:gap-[2.54px]"
-                style={{ lineHeight: "15.24px" }}
+                className="flex  flex-col text-[16px] max-sm:text-[12px] lg:gap-[8px] md:gap-[4px] max-sm:gap-[2.54px] max-sm:leading-[24px] md:leading-[24px] lg:leading-[28.13px]"
+                // style={{
+                //   lineHeight: window.innerWidth > 1200 ? "24px" : "15.24px",
+                // }}
               >
                 <span>{props.profile.text}</span>
                 <span>{props.profile.number}</span>
                 <p
-                  className="lg:text-[20px] md:hidden max-sm:hidden md:text-[14px] max-sm:text-[12px]"
-                  style={{ lineHeight: "14.06px" }}
+                  className="lg:text-[20px]  lg:hidden md:text-[14px] max-sm:text-[12px]"
+                  style={{
+                    lineHeight: window.innerWidth > 1200 ? "24px" : "14.06px",
+                  }}
                 >
                   {props.profile.website}
                 </p>
