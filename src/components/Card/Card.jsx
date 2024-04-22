@@ -111,7 +111,6 @@ export function Card5(props) {
       style={{ boxShadow: " 5px 5px 5px #c2c2c280" }}
     >
       <div className=" max-sm:flex    max-sm:gap-[20.33px] max-sm:w-[245px] max-sm:h-[98.53px]">
-        {/* <div className="flex items-center    justify-center"> */}
         <img
           src={props.profile.img}
           alt="Image"
@@ -122,41 +121,29 @@ export function Card5(props) {
           }}
           className={`lg:absolute md:absolute rounded-[8px] border-[4px] max-sm:border-[2.54px] border-[#FFFFFF]  lg:left-[32px] md:left-[24px]  lg:top-[30px]  md:top-[20px]  ${props.imageStyle}`}
         />
-        {/* </div> */}
         <div className="max-sm:w-[153px] max-sm:h-[98.24px] ">
           <div className="flex ">
             <div className="lg:absolute md:absolute max-sm:gap-[10.16px] gap-[16px] lg:left-[200px]  lg:top-[30px]  md:left-[151px] md:top-[20px]  flex flex-col  lg:w-[332px] lg:h-[139px] md:w-[293.33px] md:h-[116px]  text-[#414141] text-[14px]">
-              <div className="max-sm:h-[37px]">
+              <div className="max-sm:h-[37px] flex flex-col gap-[4px]">
                 <div
                   style={{ lineHeight: "14.06px" }}
                   className={`hidden max-sm:block text-[#CC6F6F]  lg:left-[676px] lg:top-[32px] md:left-[399.07px]  md:top-[20px]  text-[14px] max-sm:text-[12px]   ${props.roleStyle}`}
                 >
                   {props.profile.role}
                 </div>
-                <div
-                  // style={{
-                  //   lineHeight:
-                  //     window.innerWidth < 1200 ? "18.75px" : "28.13px",
-                  // }}
-                  className="text-[24px] max-sm:leading-[18.75px] md:leading-[28.13px] lg:leading-[28.13px] border-green-900 text-[#1E2125] font-[400] max-sm:font-[600] max-sm:text-[16px] max-sm:w-[186.32px]"
-                >
+                <div className="text-[24px] max-sm:leading-[18.75px] md:leading-[28.13px] lg:leading-[28.13px] border-green-900 text-[#1E2125] font-[400] max-sm:font-[600] max-sm:text-[16px] max-sm:w-[186.32px]">
                   {props.profile.name}
                 </div>
               </div>
               <p
-                className="flex  flex-col text-[16px] max-sm:text-[12px] lg:gap-[8px] md:gap-[4px] max-sm:gap-[2.54px] max-sm:leading-[24px] md:leading-[24px] lg:leading-[28.13px]"
+                className="flex  flex-col text-[16px] max-sm:text-[12px] lg:gap-[8px] md:gap-[4px] max-sm:gap-[2.54px] max-sm:leading-[15.24px] md:leading-[24px] lg:leading-[28.13px]"
                 // style={{
                 //   lineHeight: window.innerWidth > 1200 ? "24px" : "15.24px",
                 // }}
               >
                 <span>{props.profile.text}</span>
                 <span>{props.profile.number}</span>
-                <p
-                  className="lg:text-[20px]  lg:hidden md:text-[14px] max-sm:text-[12px]"
-                  style={{
-                    lineHeight: window.innerWidth > 1200 ? "24px" : "14.06px",
-                  }}
-                >
+                <p className="lg:text-[20px] lg:leading-[24px] md:leading-[14.06px] max-sm:leading-[14.06px] lg:hidden md:text-[14px] max-sm:text-[12px]">
                   {props.profile.website}
                 </p>
               </p>

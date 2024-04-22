@@ -64,9 +64,9 @@ export default function FloristsListing() {
 
       <body className="w-full flex flex-col items-center ">
         {/* Section 1 */}
-        <div className="lg:w-[1280px] md:w-[744px] flex justify-center">
-          <div className="lg:w-[1088px] md:w-[744px] flex flex-col my-20 gap-12">
-            <div className="flex lg:justify-between  justify-center max-sm:gap-10 md:gap-14 items-center flex-wrap ">
+        <div className="lg:w-[1280px] md:w-[744px]  flex justify-center">
+          <div className="lg:w-[1088px] md:w-[744px] flex flex-col my-[54px] gap-[55px] ">
+            <div className="flex lg:justify-between  justify-center max-sm:gap-[45px] md:gap-[48px] items-center flex-wrap ">
               <div className="flex gap-[16px] lg:w-fit   max-sm:w-[311px]">
                 <div className="lg:w-[225px] md:w-[372px] max-sm:w-[244.47px] h-[48px]">
                   <Select
@@ -111,8 +111,8 @@ export default function FloristsListing() {
                 </div>
               </div>
             </div>
-            <div className="flex gap-5">
-              <div className="w-full flex flex-col gap-[32px] items-center">
+            <div className="flex gap-5 ">
+              <div className="w-full flex flex-col lg:gap-[32px] gap-[24px] items-center">
                 {profiles.map((profile) => (
                   <span>
                     <Card5
@@ -269,14 +269,14 @@ export default function FloristsListing() {
         </div>
 
         {/* Section 3 Banner*/}
-        <div className=" w-full">
+        <div className="relative w-full">
           <div
             className=" bg-cover bg-center h-[284px] flex flex-col items-center justify-center md:text-[#1E2125] lg:text-white gap-10"
             style={{ backgroundImage: `url('${banner}')` }}
             ref={backgroundRef}
           >
-            <div className="lg:w-[1280px] md:w-[745px] max-sm:w-[360px] flex justify-end">
-              <div className="flex flex-col items-center gap-7 h-[178.5px] lg:text-white text-[#1E2125]">
+            <div className="lg:w-[1280px]  md:w-[745px] max-sm:w-[360px] flex justify-end">
+              <div className="max-sm:absolute max-sm:left-[111px] max-sm:top-[53px] flex flex-col items-center gap-7 h-[178.5px] lg:text-white text-[#1E2125]">
                 <span className="text-center  lg:w-[476px] md:w-fit max-sm:h-fit h-[133px] ">
                   <p className="text-[40px] max-sm:text-[28px] ">
                     Imate cvetličarno?

@@ -42,7 +42,7 @@ export default function Obituary() {
       <main className="w-full">
         {/* Section 1 */}
         <div className="bg-[#F3F6F8] flex justify-center">
-          <div className="w-5/6 py-16 ">
+          <div className=" w-[1041px] border-3 py-16 ">
             <div className="">
               {/* Search */}
               <div className="w-full flex justify-end">
@@ -89,28 +89,28 @@ export default function Obituary() {
                   </button>
                 </div>
               </div>
-              <div className="mt-5">
-                <h2 className="text-[28px]">Hitri izbor</h2>
-                <div className="flex flex-col gap-3 pl-10 max-md:pl-0">
-                  <div className="flex gap-3 flex-wrap ">
-                    <Button2>Ljubljana</Button2>
-                    <Button2>Maribor</Button2>
-                    <Button2>Celje</Button2>
-                    <Button2>Kranj</Button2>
-                    <Button2>Koper</Button2>
-                    <Button2>Novo Mesto</Button2>
-                    <Button2>Domžale</Button2>
-                    <Button2>Velenje</Button2>
-                    <Button2>Nova Gorica</Button2>
-                    <Button2>Koroška</Button2>
-                    <Button2>Zasavje</Button2>
+              <div className="mt-5 flex flex-col gap-[8px]">
+                <h2 className="text-[24px] leading-[28.13px]">Hitri izbor</h2>
+                <div className="flex flex-col gap-3 pl-10 w-full items-end max-md:pl-0  ">
+                  <div className="flex gap-[16px]  flex-wrap border-3 lg:w-[956px]">
+                    <Button2 styles={"h-[24px] w-[78px]"}>Ljubljana</Button2>
+                    <Button2 styles={"h-[24px] w-[68px]"}>Maribor</Button2>
+                    <Button2 styles={"h-[24px] w-[49px]"}>Celje</Button2>
+                    <Button2 styles={"h-[24px] w-[51px]"}>Kranj</Button2>
+                    <Button2 styles={"h-[24px] w-[55px]"}>Koper</Button2>
+                    <Button2 styles={"h-[24px] w-[95px]"}>Novo Mesto</Button2>
+                    <Button2 styles={"h-[24px] w-[73px]"}>Domžale</Button2>
+                    <Button2 styles={"h-[24px] w-[64px]"}>Velenje</Button2>
+                    <Button2 styles={"h-[24px] w-[96px]"}>Nova Gorica</Button2>
+                    <Button2 styles={"h-[24px] w-[70px]"}>Koroška</Button2>
+                    <Button2 styles={"h-[24px] w-[67px]"}>Zasavje</Button2>
                   </div>
                 </div>
               </div>
               {/* Cards */}
               <div className="flex flex-col w-full items-center  py-10 gap-5">
                 <h2 className="text-[24px] w-full">Zasavska regija</h2>
-                <div className=" flex flex-wrap  w-5/6 max-sm:w-full max-md:w-full   justify-center ">
+                <div className=" flex flex-wrap  max-sm:w-full max-md:w-full   justify-center ">
                   {profiles.map((data) => (
                     <Card profile={data} />
                   ))}

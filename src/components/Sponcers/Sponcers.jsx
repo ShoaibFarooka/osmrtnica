@@ -8,8 +8,8 @@ export default function Sponcers() {
   return (
     <div>
       <div className="my-10 w-full  flex flex-col gap-[48px] items-center ">
-        <p className="text-[20px] font-[400]">Sponsorji</p>
-        <div className="flex lg:w-[1084px] md:w-[603px]  justify-between max-lg:justify-center  items-center md:flex-wrap gap-[80px] ">
+        <p className="lg:text-[20px] text-[24px]  font-[400]">Sponsorji</p>
+        <div className="flex lg:w-[1084px] md:w-[603px]  justify-between max-lg:justify-center  items-center md:flex-wrap gap-[80px] max-sm:gap-[48px] ">
           <img
             className="h-fit w-[200px] max-sm:w-[150px]"
             src={Suponcer5}
