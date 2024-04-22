@@ -14,7 +14,8 @@ export function Card(props) {
 
               // boxShadow: `5px 5px 10px 0px #C2C2C280`,
 
-              boxShadow: `1px 4px 4px 0px #00000040`,
+              boxShadow:
+                "-3px -3px 7px #FFFFFFB2, 5px 5px 10px #C2C2C280, 1px 4px 4px #00000040",
             }}
             className="h-[130px] w-[95px] drop-shadow-xl max-sm:w-[72px] max-sm:h-[98.53px] border-[4px] border-[#FFFFFF] rounded-[8px]"
           />
@@ -39,7 +40,7 @@ export function Card(props) {
             </span>
           </div>
           <div className=" flex justify-end cursor-pointer  w-full">
-            <span className="flex  items-center text-[14px] p-3 max-sm:p-0">
+            <span className="flex  items-center text-[14px] p-3 text-[#7C7C7C] max-sm:p-0">
               Odpri <MdOutlineKeyboardArrowRight className="text-[20px]" />
             </span>
           </div>

@@ -41,12 +41,12 @@ export default function Obituary() {
 
       <main className="w-full">
         {/* Section 1 */}
-        <div className="bg-[#F3F6F8] flex justify-center">
-          <div className=" w-[1041px] border-3 py-16 ">
+        <div className="bg-[#F5F7F9] flex justify-center">
+          <div className=" w-[1041px] py-16 ">
             <div className="">
               {/* Search */}
               <div className="w-full flex justify-end">
-                <div className="flex gap-3 lg:w-[777px] h-[48px] border-3 max-lg:w-full w-full max-sm:w-full flex-wrap max-lg:justify-center ">
+                <div className="flex justify-between lg:w-[777px] h-[48px] max-lg:w-full w-full max-sm:w-full flex-wrap max-lg:justify-center ">
                   <Input
                     className="border-2 border-gray-400 w-52 max-lg:w-72 placeholder:text-[#7C7C7C] h-[48px] placeholder:text-[16px]"
                     placeholder="Išči po imenu / priimku"
@@ -92,7 +92,7 @@ export default function Obituary() {
               <div className="mt-5 flex flex-col gap-[8px]">
                 <h2 className="text-[24px] leading-[28.13px]">Hitri izbor</h2>
                 <div className="flex flex-col gap-3 pl-10 w-full items-end max-md:pl-0  ">
-                  <div className="flex gap-[16px]  flex-wrap border-3 lg:w-[956px]">
+                  <div className="flex gap-[16px]  flex-wrap lg:w-[956px]">
                     <Button2 styles={"h-[24px] w-[78px]"}>Ljubljana</Button2>
                     <Button2 styles={"h-[24px] w-[68px]"}>Maribor</Button2>
                     <Button2 styles={"h-[24px] w-[49px]"}>Celje</Button2>

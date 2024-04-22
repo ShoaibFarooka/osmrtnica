@@ -269,14 +269,14 @@ export default function FloristsListing() {
         </div>
 
         {/* Section 3 Banner*/}
-        <div className="relative w-full">
+        <div className=" w-full">
           <div
             className=" bg-cover bg-center h-[284px] flex flex-col items-center justify-center md:text-[#1E2125] lg:text-white gap-10"
             style={{ backgroundImage: `url('${banner}')` }}
             ref={backgroundRef}
           >
-            <div className="lg:w-[1280px]  md:w-[745px] max-sm:w-[360px] flex justify-end">
-              <div className="max-sm:absolute max-sm:left-[111px] max-sm:top-[53px] flex flex-col items-center gap-7 h-[178.5px] lg:text-white text-[#1E2125]">
+            <div className="relative h-[284px] lg:w-[1280px]  md:w-[745px] max-sm:w-[360px] flex justify-end">
+              <div className="absolute md:left-[369.5px] lg:left-[726px] top-[53px] max-sm:left-[111px] flex flex-col items-center gap-7 h-[178.5px] lg:text-white text-[#1E2125]">
                 <span className="text-center  lg:w-[476px] md:w-fit max-sm:h-fit h-[133px] ">
                   <p className="text-[40px] max-sm:text-[28px] ">
                     Imate cvetličarno?
