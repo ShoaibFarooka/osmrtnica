@@ -66,7 +66,7 @@ export default function FloristsListing() {
         {/* Section 1 */}
         <div className="lg:w-[1280px] md:w-[744px] flex justify-center">
           <div className="lg:w-[1088px] md:w-[744px] flex flex-col my-20 gap-12">
-            <div className="flex lg:justify-between justify-center md:gap-14 items-center flex-wrap ">
+            <div className="flex lg:justify-between  justify-center max-sm:gap-10 md:gap-14 items-center flex-wrap ">
               <div className="flex gap-[16px] lg:w-fit   max-sm:w-[311px]">
                 <div className="lg:w-[225px] md:w-[372px] max-sm:w-[244.47px] h-[48px]">
                   <Select
@@ -94,7 +94,7 @@ export default function FloristsListing() {
                 </div>
               </div>
 
-              <div className="flex lg:flex-col md:flex-row gap-[16px]   lg:w-[781px] md:w-[607px] max-sm:w-[308px] ">
+              <div className="flex lg:flex-col max-sm:flex-col md:flex-row gap-[16px]   lg:w-[781px] md:w-[607px] max-sm:w-[308px] ">
                 <h2 className="lg:text-[32px] text-[24px] text-[#1E2125]">
                   Hitri izbor:
                 </h2>
