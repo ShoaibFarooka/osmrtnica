@@ -265,8 +265,7 @@ export default function Funeral() {
         </div>
         {/* Section 5 Banner*/}
         <div
-          className=" flex justify-center items-center  max-sm:hidden bg-cover lg:bg-[0px] md:bg-[-150px] bg-center w-full bg-no-repeat "
-          // style={{ backgroundImage: `url('${banner}')` }}
+          className=" flex justify-center items-center  max-sm:hidden  bg-cover lg:bg-[0px] md:bg-[-150px] bg-center w-full bg-no-repeat "
           ref={backgroundRef}
         >
           <div className="relative flex justify-center items-center  max-sm:hidden bg-cover bg-center h-[284px] lg:w-[1280px] md:w-[744px]">
