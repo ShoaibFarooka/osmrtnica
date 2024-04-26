@@ -13,11 +13,6 @@ export default function HeaderTop(props) {
           {props.btnText}
         </button>
       </div>
-      {/* <img
-        src={props.topBanner}
-        className=" lg:w-[1280px] md:w-[744px] max-sm:w-[360px] lg:h-[300px] md:h-[220px] max-sm:h-[192px]"
-        alt=""
-      /> */}
     </div>
   );
 }

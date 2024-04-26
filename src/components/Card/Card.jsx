@@ -8,7 +8,7 @@ export function Card(props) {
         boxShadow:
           " 5px 5px 10 #c2c2c280, 1px 3px 6px #00000033, -2px -2px 7px #ffffff66",
       }}
-      className="flex  gap-2  shadow-md shadow-[#c2c2c280] h-[170px] w-[466px] max-sm:h-[124px] max-sm:w-[296px] justify-center items-center  bg-gradient-to-r from-[#E3EAEF] to-[#F3F6F8] border-2 border-white rounded-lg "
+      className="flex  gap-2  shadow-md shadow-[#c2c2c280] h-[170px] w-[466px] max-sm:h-[124px] max-sm:w-[296px] justify-center items-center  bg-gradient-to-r from-[#E3EAEF] to-[#F3F6F8] border-[2px] border-white rounded-lg "
     >
       <div className="w-[420px] h-[130px] max-sm:w-[261px] flex gap-[32px] items-center max-sm:justify-normal">
         <div className="flex items-center h-fit max-sm:w-[100px]">

@@ -60,21 +60,6 @@ export default function Footer() {
             <a href="#">Piškotki</a>
             <a href="#">Povej naprej</a>
           </div>
-          {/* <div className="flex flex-col gap-3  justify-center items-center p-3 w-[240px] border-2 bg-gradient-to-r from-p_bg1 to-p_bg shadow-lg rounded-lg">
-          <h2 className="text-[20px] font-semibold">Spremljajte nas na FB </h2>
-          <p className="text-[14px]">
-            Med drugim tam najdete tudi občasne popuste samo za prve, brezplačne
-            nadgradnje in prihajajoče novosti.{" "}
-          </p>
-          <SimpButton
-            padding={"p-2"}
-            px={"px-16"}
-            textColor={"white"}
-            bgColor={"#5470B0"}
-          >
-            Facebook
-          </SimpButton>
-        </div> */}
         </div>
         <div className="flex lg:justify-between items-center lg:flex-nowrap lg:flex-row flex-col   w-full md:flex-wrap md:justify-center max-sm:justify-center ">
           <div className="flex flex-col gap-4  mb-6 lg:w-fit md:w-full lg:block md:hidden max-sm:hidden">

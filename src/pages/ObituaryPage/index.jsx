@@ -27,11 +27,6 @@ export default function Obituary() {
   const bgBanner = useRef(null);
   useEffect(() => {
     setWidth(window.innerWidth);
-    // if (window.innerWidth < 600) {
-    //   setBanner(bgCover);
-    // } else if (window.innerWidth > 1200) {
-    //   setBanner(bgCover2);
-    // }
   }, [window.innerWidth]);
   useEffect(() => {
     const handleResize = () => {
@@ -51,10 +46,6 @@ export default function Obituary() {
     const bgBannerImage = width > 600 ? flowerImg : flowerImg2;
 
     bgBanner.current.style.backgroundImage = `url(${bgBannerImage})`;
-    // width < 600
-    //   ? (backgroundRef.current.style.backgroundImage.transform =
-    //       "rotate(90deg)")
-    //   : "";
   }, [width]);
   return (
     <div className="w-full flex flex-col items-center ">
