@@ -23,6 +23,7 @@ export default function FuneralCompany() {
   const [selectedImage, setSelectedImage] = useState(images[0]);
   const [width, setWidth] = useState();
   const [dropdownInfo, setDropdownInfo] = useState([]);
+  const [selectedDropdown, setSelectedDropdown] = useState(0);
   const backgroundRef = useRef(null);
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -54,7 +55,7 @@ export default function FuneralCompany() {
     <div className="w-full text-[400] leading-[24px]   text-[#414141] text-[16px] bg-[#F5F7F9]">
       <header className="relative flex  flex-col items-center ">
         {/* Navbar */}
-        <div className="bg-white">
+        <div className="bg-white w-full border ">
           <Navbar2 />
         </div>
 
@@ -390,80 +391,83 @@ export default function FuneralCompany() {
         </div>
 
         {/* /////////////////// SECTION 4 ////////////////////*/}
+        <div className="h-full">
+          <div className="h-[661px] w-full flex justify-center">
+            <div className="absolute top-[3725px]  border-[#D4D4D4]  w-[866px]">
+              <p className="leading-[46.88px] text-[40px] text-[#1E2125]">
+                Pogosta vprašanja
+              </p>
+              <div className="flex flex-col gap-[32px]">
+                {/* Button */}
+                <div className="w-full flex justify-end">
+                  <button
+                    className=" w-[200px] h-[48px] rounded-[8px] bg-gradient-to-l to-[#E3E8EC] from-[#FFFFFF] flex justify-center items-center"
+                    style={{ boxShadow: "5px 5px 10px #c2c2c280" }}
+                  >
+                    Kaj storiti, ko se zgodi
+                  </button>
+                </div>
+                {/* Dropdown */}
+                <div className="w-[866px] h-[380px]">
+                  <div className="border-b-[1px] border-[#D4D4D4]">
+                    {dropdownInfo.map((item, index) => (
+                      <div className="relative w-[866] h-fit border-t-[1px] border-[#D4D4D4]">
+                        <div className="w-[866px] my-[11px] px-[22.39px] items-center  flex justify-between  text-[#1E2125]">
+                          <p className="">{item.text}</p>
+                          {selectedDropdown === index ? (
+                            <RxCross2
+                              className="text-[#3C3E41]"
+                              onClick={() => {
+                                setSelectedDropdown(null);
+                                // const updatedDropdownInfo = [...dropdownInfo];
+                                // updatedDropdownInfo[index] = {
+                                //   ...updatedDropdownInfo[index],
+                                //   open: false,
+                                // };
+                                // setDropdownInfo(updatedDropdownInfo);
+                              }}
+                            />
+                          ) : (
+                            <FiPlus
+                              className="text-[#3C3E41]"
+                              onClick={() => {
+                                setSelectedDropdown(index);
 
-        <div className="h-[661px] w-full flex justify-center">
-          <div className="absolute top-[3725px] border-[#D4D4D4] w-[866px]">
-            <p className="leading-[46.88px] text-[40px] text-[#1E2125]">
-              Pogosta vprašanja
-            </p>
-            <div className="flex flex-col gap-[32px]">
-              {/* Button */}
-              <div className="w-full flex justify-end">
-                <button
-                  className=" w-[200px] h-[48px] rounded-[8px] bg-gradient-to-l to-[#E3E8EC] from-[#FFFFFF] flex justify-center items-center"
-                  style={{ boxShadow: "5px 5px 10px #c2c2c280" }}
-                >
-                  Kaj storiti, ko se zgodi
-                </button>
-              </div>
-              {/* Dropdown */}
-              <div className="w-[866px] h-[380px] overflow-y-scroll  ">
-                <div className="border-b-[1px] border-[#D4D4D4]">
-                  {dropdownInfo.map((item, index) => (
-                    <div className="relative w-[866] h-fit border-t-[1px] border-[#D4D4D4]">
-                      <div className="w-[866px] my-[11px] px-[22.39px] items-center  flex justify-between  text-[#1E2125]">
-                        <p className="">{item.text}</p>
-                        {item.open ? (
-                          <RxCross2
-                            className="text-[#3C3E41]"
-                            onClick={() => {
-                              const updatedDropdownInfo = [...dropdownInfo];
-                              updatedDropdownInfo[index] = {
-                                ...updatedDropdownInfo[index],
-                                open: false,
-                              };
-                              setDropdownInfo(updatedDropdownInfo);
-                            }}
-                          />
-                        ) : (
-                          <FiPlus
-                            className="text-[#3C3E41]"
-                            onClick={() => {
-                              const updatedDropdownInfo = [...dropdownInfo];
-                              updatedDropdownInfo[index] = {
-                                ...updatedDropdownInfo[index],
-                                open: true,
-                              };
-                              setDropdownInfo(updatedDropdownInfo);
-                            }}
-                          />
+                                // const updatedDropdownInfo = [...dropdownInfo];
+                                // updatedDropdownInfo[index] = {
+                                //   ...updatedDropdownInfo[index],
+                                //   open: true,
+                                // };
+                                // setDropdownInfo(updatedDropdownInfo);
+                              }}
+                            />
+                          )}
+                        </div>
+                        {selectedDropdown === index && (
+                          <div className=" mt-[29px] ml-[53px] mb-[64px] h-[110px] w-[688px] text-[14px]">
+                            <p className="leading-[18px]">
+                              Pogrebna dejavnost obsega:
+                            </p>
+                            <ul className="list-disc ml-[18px] leading-[18px]">
+                              <li>24-urno dežurno službo,</li>
+                              <li>
+                                prevoz pokojnika/pokojnice (v nadaljevanju:
+                                pokojnik),
+                              </li>
+                              <li>pripravo pokojnika,</li>
+                              <li>upepelitev pokojnika,</li>
+                              <li>pripravo in izvedbo pogreba.</li>
+                            </ul>
+                          </div>
                         )}
                       </div>
-                      {item.open && (
-                        <div className=" mt-[29px] ml-[53px] mb-[64px] h-[110px] w-[688px] text-[14px]">
-                          <p className="leading-[18px]">
-                            Pogrebna dejavnost obsega:
-                          </p>
-                          <ul className="list-disc ml-[18px] leading-[18px]">
-                            <li>24-urno dežurno službo,</li>
-                            <li>
-                              prevoz pokojnika/pokojnice (v nadaljevanju:
-                              pokojnik),
-                            </li>
-                            <li>pripravo pokojnika,</li>
-                            <li>upepelitev pokojnika,</li>
-                            <li>pripravo in izvedbo pogreba.</li>
-                          </ul>
-                        </div>
-                      )}
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         {/* /////////////////// SECTION 5 Footer////////////////////*/}
 
         <div className=" w-full h-[341px] flex justify-center bg-[#D4E6F9]">
