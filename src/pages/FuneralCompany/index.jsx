@@ -14,10 +14,11 @@ import { Card } from "../../components/Card/Card";
 import { profiles } from "../HomePage/data";
 import Pagenation from "../../components/Pagenation/Pagenation";
 import { dropdownData, images, tableData, tableData2 } from "../data";
-import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { RxCross2, RxEnvelopeClosed } from "react-icons/rx";
 import { FiPhone, FiPlus } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";
+import { TfiWorld } from "react-icons/tfi";
 
 export default function FuneralCompany() {
   const [selectedImage, setSelectedImage] = useState(images[0]);
@@ -42,17 +43,14 @@ export default function FuneralCompany() {
     };
   }, []);
   useEffect(() => {
-    const backgroundImage = width < 1281 ? background : "";
+    const backgroundImage = width > 1281 ? background : "";
     backgroundRef.current.style.backgroundImage = `url('${backgroundImage}')`;
-    // const bgBannerImage = width > 600 ? flowerImg : flowerImg2;
-
-    // bgBanner.current.style.backgroundImage = `url(${backgroun})`;
   }, [width]);
   const handleImageClick = (image) => {
     setSelectedImage(image);
   };
   return (
-    <div className="w-full text-[400] leading-[24px]   text-[#414141] text-[16px] bg-[#F5F7F9]">
+    <div className="w-full text-[400] leading-[24px]   text-[#414141] text-[16px] lg:bg-[#F5F7F9] md:bg-white">
       <header className="relative flex  flex-col items-center ">
         {/* Navbar */}
         <div className="bg-white w-full border ">
@@ -62,27 +60,27 @@ export default function FuneralCompany() {
         {/* TopBanner */}
 
         <div className="w-full flex flex-col items-center bg-gradient-to-l to-[#E8F0F5] from-[#EBEDEF] ">
-          <div className="relative w-[1280px] h-[865px]">
-            <img
-              src={topBannerImg}
-              className="absolute top-[0px] w-[1280px] h-[300px]"
-              alt=""
-              srcset=""
+          <div className="relative lg:w-[1280px] md:w-[744px] lg:h-[865px] md:h-[826px]">
+            {/* Set Background image */}
+            <div
+              className="absolute bg-cover bg-center top-[0px] lg:w-[1280px] md:w-[744px] lg:h-[300px] md:h-[220px]"
+              style={{ backgroundImage: `url('${topBannerImg}')` }}
             />
-            <div className="absolute top-[197.37px] left-[135.5px] border-[2px] border-[#EDF1F3] bg-white rounded-[16px] w-[1009px] h-[185px]">
-              <div className="relative text-[#1E2125] w-[1009px] h-[185px]">
-                <div className="absolute top-[21.63px] left-[44.5px] flex items-center w-[200px] h-[82px]">
+
+            <div className="absolute lg:top-[197.37px] md:top-[152px] lg:left-[135.5px] md:left-[72px] border-[2px] border-[#EDF1F3] bg-white rounded-[16px] lg:w-[1009px] md:w-[600px] lg:h-[185px] md:h-[273px]">
+              <div className="relative text-[#1E2125] lg:w-[1009px] md:w-[600px] lg:h-[185px] md:h-[273px]">
+                <div className="absolute lg:top-[21.63px] md:top-[24px] lg:left-[44.5px] md:left-[30px] flex items-center  w-[200px] h-[82px]">
                   <img src={Komunala} alt="" className=" w-[200px] " />
                 </div>
-                <p className="absolute text-[24px] font-[600] top-[54.63px] left-[296.5px]">
+                <p className="absolute text-[24px] font-[600] lg:top-[54.63px] md:top-[42.92px] lg:left-[296.5px] left-[295px]">
                   Pogrebni zavod Trbovlje
                 </p>
-                <div className="absolute left-[871.5px] flex gap-[8px] top-[40.63px] w-[104px] h-[48px] ">
+                <div className="absolute lg:top-[40.63px] md:top-[189.92px] lg:left-[871.5px] md:left-[482px] flex gap-[8px]  w-[104px] h-[48px] ">
                   <div
                     className=" w-[48px] h-[48px] rounded-[8px] bg-gradient-to-l to-[#E3E8EC] from-[#FFFFFF] flex justify-center items-center"
                     style={{ boxShadow: "5px 5px 10px #c2c2c280" }}
                   >
-                    <CiFacebook className="h-[20px] w-[20px] " />
+                    <TfiWorld className="h-[20px] w-[20px] " />
                   </div>
                   <div
                     className=" w-[48px] h-[48px] rounded-[8px] bg-gradient-to-l to-[#E3E8EC] from-[#FFFFFF] flex justify-center items-center"
@@ -92,7 +90,7 @@ export default function FuneralCompany() {
                   </div>
                 </div>
 
-                <div className="absolute top-[114.63px] w-[962px] items-center left-[44.5px] flex gap-[24px]">
+                <div className="absolute lg:flex-nowrap md:flex-wrap lg:left-[44.5px] md:left-[47px] lg:top-[114.63px] md:top-[137.92px] lg:w-[962px] md:w-[553px] lg:h-[40px] md:h-[100px] items-center  flex gap-[24px]">
                   {/* Address */}
                   <div className="">
                     <p className="text-[14px] leading-[16.41px] text-[#939393]">
@@ -113,7 +111,7 @@ export default function FuneralCompany() {
                       javno.podjetje@komunala-trbovlje.si
                     </p>
                   </div>
-                  <hr className="w-[21.33px] border-[#D4D4D4] border-[1px] rotate-[-90deg]" />
+                  <hr className="w-[21.33px] hidden lg:block border-[#D4D4D4] border-[1px] rotate-[-90deg]" />
 
                   {/* Phone */}
                   <div className="">
@@ -137,9 +135,9 @@ export default function FuneralCompany() {
               </div>
             </div>
             {/* Predstavitev text */}
-            <div className="absolute flex flex-col justify-center gap-[15px] top-[472px] left-[162px] border h-[334px] w-[452px]">
-              <h3 className="text-[40px]">Predstavitev</h3>
-              <p className="leading-[24px] w-[432px]">
+            <div className="absolute flex flex-col justify-center gap-[16px] lg:top-[472px] md:top-[519px] lg:left-[162px] md:left-[72px] lg:h-[334px] lg:w-[452px] ">
+              <h3 className="text-[40px] leading-[46.88px]">Predstavitev</h3>
+              <p className=" leading-[24px] lg:w-[432px] md:w-[276px]">
                 Komunala Trbovlje v okviru pogrebnega zavoda izvaja pogrebno in
                 pokopališko dejavnost. Delovni čas zavoda je od ponedeljka do
                 petka med 7. in 15. uro v letnem času oziroma med 6. in 14. uro
@@ -151,12 +149,12 @@ export default function FuneralCompany() {
             <div>
               <img
                 src={img1}
-                className="absolute top-[509px] left-[756.79px] w-[361.21px] h-[250px] rounded-[8px] border-[3px] border-white"
+                className="absolute lg:top-[509px] md:top-[542.47px] lg:left-[756.79px] md:left-[405.25px] lg:w-[361.21px] md:w-[260.98px] lg:h-[250px] md:h-[180.63px] rounded-[8px] border-[3px] border-white"
                 alt=""
               />
               <img
                 src={img2}
-                className="absolute top-[648px] z-20 left-[708px] w-[216.72px] h-[150px] rounded-[8px] border-[3px] border-white"
+                className="absolute lg:top-[648px] md:top-[642.9px] z-20 lg:left-[708px] md:left-[370px] lg:w-[216.72px] md:w-[156.59px] lg:h-[150px] md:h-[108.38px] rounded-[8px] border-[3px] border-white"
                 alt=""
               />
             </div>
@@ -167,9 +165,9 @@ export default function FuneralCompany() {
       <main className="w-full flex flex-col items-center ">
         {/* //////////////SECTION 1 Profile Card Display and other ///////////*/}
 
-        <div className="w-[1280px] h-[1681px] flex flex-col items-center">
+        <div className="lg:w-[1280px] md:w-[744px] lg:h-[1681px] md:h-[2214px] flex flex-col items-center md:border-b-[1px]">
           {/* Card */}
-          <div className="absolute w-[956px]  flex flex-col items-center gap-[48px] h-[789px] top-[1021.58px] ">
+          <div className="absolute lg:w-[956px] md:w-[466px] lg:top-[1021.58px] md:top-[958px] lg:h-[789px] md:h-[1371px] flex flex-col items-center gap-[48px]   ">
             <div className="flex flex-col gap-[16px]">
               <p className="text-[40px] text-[#1E2125]">Zadnje osmrtnice</p>
               <p className="text-[16px]">
@@ -177,31 +175,32 @@ export default function FuneralCompany() {
               </p>
             </div>
 
-            <div className="w-[956px] flex flex-wrap gap-[24px]">
+            <div className="lg:w-[956px] lg:h-[558px] md:h-[1140px] flex flex-wrap gap-[24px]">
               {profiles.slice(0, 6).map((data) => (
                 <div>
                   <Card profile={data} />
                 </div>
               ))}
             </div>
-            <dir>
+            <dir className="">
               <Pagenation totalItems={10} itemsPerPage={4} />
             </dir>
           </div>
+          <div className="absolute lg:hidden top-[2391px] w-full border-t-[1px] border-[#D4D4D4]" />
           {/* Searches */}
-          <div className="absolute flex flex-col top-[1914px] w-[1087px] h-[159px] gap-[32px]">
+          <div className="absolute flex flex-col lg:top-[1914px] md:top-[2426px] lg:w-[1087px] md:w-[598px] h-[159px] gap-[32px]">
             <p className="text-[#1E2125] text-[40px] leading-[46.88px] w-[501px] text-end">
               Pogrebi v prihodnjih dneh
             </p>
-            <div className="w-[997px] flex gap-[24px] justify-end">
-              <div className="flex gap-[16px]">
+            <div className="lg:w-[997px] md:w-[590px] flex gap-[24px] justify-end">
+              <div className="flex lg:gap-[16px] md:gap-[24px] ">
                 <input
                   type="text"
                   placeholder="Išči po imenu"
-                  className="h-[48px] w-[380px] rounded-[8px] border-[1px] border-[#7C7C7C] placeholder:px-[24px] placeholder::py-[12px]"
+                  className="h-[48px] lg:w-[380px] md:w-[490px] rounded-[8px] border-[1px] border-[#7C7C7C] placeholder:px-[24px] placeholder::py-[12px]"
                 />
                 <button
-                  className="w-[48px] h-[48px] flex justify-center items-center text-[24px] rounded-lg bg-gradient-to-l from-[#FFFFFF] to-[#E3E8EC] text-[#414141]"
+                  className="lg:w-[48px] md:w-[84px] h-[48px] flex justify-center items-center text-[24px] rounded-lg bg-gradient-to-l from-[#FFFFFF] to-[#E3E8EC] text-[#414141]"
                   style={{
                     boxShadow:
                       "-3px -1px 10px 0px #FFFFFF, 1px 3px 4px rgba(0, 0, 0, 0.25)",
@@ -210,37 +209,63 @@ export default function FuneralCompany() {
                   <CiSearch />
                 </button>
               </div>
-              <div className="flex gap-[16px]">
-                <input
-                  type="text"
-                  placeholder="Išči po imenu"
-                  className="h-[48px] w-[380px] rounded-[8px] border-[1px] border-[#7C7C7C] placeholder:px-[24px] placeholder::py-[12px]"
-                />
-                <button
-                  className="w-[48px] h-[48px] flex justify-center items-center text-[24px] rounded-lg bg-gradient-to-l from-[#FFFFFF] to-[#E3E8EC] text-[#414141]"
-                  style={{
-                    boxShadow:
-                      "-3px -1px 10px 0px #FFFFFF, 1px 3px 4px rgba(0, 0, 0, 0.25)",
-                  }}
-                >
-                  <CiSearch />
-                </button>
+              <div className="hidden lg:block">
+                <div className=" flex gap-[16px]">
+                  <input
+                    type="text"
+                    placeholder="Išči po pokopališču"
+                    className="h-[48px] w-[380px] rounded-[8px] border-[1px] border-[#7C7C7C] placeholder:px-[24px] placeholder::py-[12px]"
+                  />
+                  <button
+                    className="w-[48px] h-[48px] flex justify-center items-center text-[24px] rounded-lg bg-gradient-to-l from-[#FFFFFF] to-[#E3E8EC] text-[#414141]"
+                    style={{
+                      boxShadow:
+                        "-3px -1px 10px 0px #FFFFFF, 1px 3px 4px rgba(0, 0, 0, 0.25)",
+                    }}
+                  >
+                    <CiSearch />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-
-          <div className="absolute flex justify-between w-[1089.98px] h-[530px] top-[2094px] ">
+          {/* Table */}
+          <div className="absolute flex justify-between  lg:w-[1089.98px] md:w-[598px] h-[530px] lg:top-[2094px] md:top-[2601px] ">
             <img
               src={leftArow}
-              className="w-[25px] h-[59.05px] pt-[16px]"
+              className="w-[25px] hidden lg:block h-[59.05px] pt-[16px]"
               alt=""
             />
-            <div className="">
-              <table className="w-[420px] font-[300] h-[445px] border-y-[1px] bg-[#CAF0F8] border-[#C3C6C8]">
+            <div className=" flex justify-center">
+              <table className="lg:w-[420px] md:w-[586px] font-[300] lg:h-[445px] md:h-[445px] border-y-[1px] bg-[#CAF0F8] border-[#C3C6C8]">
                 <thead>
                   <th className="relative h-[89px] border-t-[1px] border-[#C3C6C8] w-full">
                     <td className="absolute text-[28px] text-[#000000] font-[300] leading-[24px] top-[33px] left-[27px]">
                       Torek, 04.01.
+                    </td>
+                    <td className="absolute lg:hidden flex gap-[56px] top-[22px] left-[414px]">
+                      <button
+                        // onClick={() => handlePageChange(currentPage - 1)}
+                        // disabled={currentPage === 1}
+                        className=" w-[48px] h-[48px] bg-gradient-to-l to-[#E3E8EC] from-[#FFFFFF] flex justify-center items-center rounded-[8px]"
+                        style={{
+                          boxShadow:
+                            "-3px -1px 10px  0px #FFFFFF, 1px 3px 4px #00000040",
+                        }}
+                      >
+                        <IoIosArrowBack />
+                      </button>
+                      <button
+                        // onClick={() => handlePageChange(currentPage + 1)}
+                        style={{
+                          boxShadow:
+                            "-3px -1px 10px  0px #FFFFFF, 1px 3px 4px #00000040",
+                        }}
+                        className=" w-[48px] h-[48px] bg-gradient-to-l to-[#E3E8EC] from-[#FFFFFF] flex justify-center items-center rounded-[8px]"
+                        // disabled={currentPage === totalPages}
+                      >
+                        <IoIosArrowForward />
+                      </button>
                     </td>
                   </th>
                 </thead>
@@ -255,7 +280,7 @@ export default function FuneralCompany() {
                           {item.text}
                         </span>
                       </td>
-                      <td className="absolute top-[33px] left-[376px]">
+                      <td className="absolute top-[33px] lg:left-[376px] md:left-[530px]">
                         <IoIosArrowForward />
                       </td>
                     </tr>
@@ -263,12 +288,36 @@ export default function FuneralCompany() {
                 </tbody>
               </table>
             </div>
-            <div className="">
+            <div className="hidden lg:block">
               <table className="w-[420px] font-[300] h-[445px] border-y-[1px] bg-[#FFE5B4] border-[#C3C6C8]">
                 <thead>
                   <th className="relative h-[89px] border-t-[1px] border-[#C3C6C8] w-full">
                     <td className="absolute text-[28px] text-[#000000]  font-[300] leading-[24px] top-[33px] left-[27px]">
                       Sreda, 05.01.
+                    </td>
+                    <td className="absolute lg:hidden flex gap-[56px] top-[22px] left-[414px]">
+                      <button
+                        // onClick={() => handlePageChange(currentPage - 1)}
+                        // disabled={currentPage === 1}
+                        className=" w-[48px] h-[48px] bg-gradient-to-l to-[#E3E8EC] from-[#FFFFFF] flex justify-center items-center rounded-[8px]"
+                        style={{
+                          boxShadow:
+                            "-3px -1px 10px  0px #FFFFFF, 1px 3px 4px #00000040",
+                        }}
+                      >
+                        <IoIosArrowBack />
+                      </button>
+                      <button
+                        // onClick={() => handlePageChange(currentPage + 1)}
+                        style={{
+                          boxShadow:
+                            "-3px -1px 10px  0px #FFFFFF, 1px 3px 4px #00000040",
+                        }}
+                        className=" w-[48px] h-[48px] bg-gradient-to-l to-[#E3E8EC] from-[#FFFFFF] flex justify-center items-center rounded-[8px]"
+                        // disabled={currentPage === totalPages}
+                      >
+                        <IoIosArrowForward />
+                      </button>
                     </td>
                   </th>
                 </thead>
@@ -283,7 +332,7 @@ export default function FuneralCompany() {
                           {item.text}
                         </span>
                       </td>
-                      <td className="absolute top-[33px] left-[376px]">
+                      <td className="absolute top-[33px] lg:left-[376px] md:left-[530px]">
                         <IoIosArrowForward />
                       </td>
                     </tr>
@@ -293,7 +342,7 @@ export default function FuneralCompany() {
             </div>
             <img
               src={rightArrow}
-              className="w-[25px] h-[59.05px] pt-[16px]"
+              className="w-[25px] hidden lg:block h-[59.05px] pt-[16px]"
               alt=""
             />
           </div>
@@ -301,9 +350,9 @@ export default function FuneralCompany() {
 
         {/*//////////////////// SECTION 2 Image Display /////////// */}
 
-        <div className="w-full flex justify-center bg-gradient-to-l h-[639px]  from-[#e6ebfaa8] to-[#e2eefca8]">
-          <div className="absolute top-[2738px] flex items-center  w-[1280px]">
-            <div className="flex flex-col ml-[158px] w-[600.36px] h-[452px] items-center justify-between">
+        <div className="w-full flex justify-center lg:h-[639px] md:h-[782px] bg-gradient-to-l md:bg-none  from-[#e6ebfaa8] to-[#e2eefca8]">
+          <div className="absolute lg:top-[2738px] md:top-[3162px] md:gap-[52px]  flex md:flex-wrap-reverse items-center lg:w-[1280px] md:w-[744px]">
+            <div className="flex flex-col lg:ml-[158px] md:ml-[76px] lg:w-[600.36px] h-[452px] items-center justify-between">
               {/* Main Image */}
               <div
                 className="w-[600px] h-[337.71px] bg-cover bg-center rounded-[8px] border-[5px] border-[#FFFFFF]"
@@ -335,17 +384,17 @@ export default function FuneralCompany() {
                 )}
               </div>
             </div>
-            <div className="w-[384.84px] h-[183px] flex flex-col gap-[24px] ml-[41px]">
+            <div className="lg:w-[384.84px] h-[183px] flex flex-col gap-[24px] lg:ml-[41px] md:ml-[76px]">
               <div className="flex flex-col gap-[16px]">
                 <p className="text-[40px] text-[#1E2125] leading-[46.88px]">
                   Naša pokopališča
                 </p>
-                <p className="text-[16px] leading-[24px]">
+                <p className="text-[16px]">
                   Upravljamo z naslednjimi pokopališči:
                 </p>
               </div>
               <div>
-                <ol className="leading-[24px] text-[16px]">
+                <ol className="text-[16px]">
                   <li>1. Pokopališče v Gabrskem, Trbovlje</li>
                   <li>2. Pokopališče na Dobovcu</li>
                   <li>3. Pokopališče na Sveti Planini</li>
@@ -357,19 +406,15 @@ export default function FuneralCompany() {
 
         {/*//////////////////// SECTION 3 /////////////////////*/}
 
-        <div className="w-full flex justify-center">
+        <div className="w-full flex justify-center bg-gradient-to-l to-[#e6ebfaa8] from-[#e2eefca8]">
           <div
-            className="w-[1280px] h-[398px] bg-cover bg-center flex justify-center items-center"
-            // style={{
-            //   backgroundImage:
-            //     window.innerWidth < 1281 ? `url('${background}')` : "",
-            // }}
+            className="w-[1280px] lg:h-[398px] md:h-[359px] bg-cover bg-center  flex justify-center items-center"
             ref={backgroundRef}
           >
-            <div className="w-[873px] h-[250px] flex justify-between">
-              <div className=" flex flex-col border-b-[1px] border-[#9898981a] gap-[15px] w-[413.73px]">
+            <div className="lg:w-[873px] md:w-[594.33px] lg:h-[250px] md:h-[265px] flex items-center justify-between">
+              <div className=" flex flex-col  border-[#9898981a] gap-[15px] lg:w-[413.73px] md:w-[269px]">
                 <h3 className="leading-[46.88px] text-[40px]">Naš ponos</h3>
-                <p className="flex flex-col gap-[16px]">
+                <p className="flex flex-col gap-[16px] lg:text-[16px] md:text-[14px] md:leading-[22.5px]">
                   <span>
                     Projekt prenove trboveljskega pokopališča je bil leta 2020
                     izbran kot primer dobre prakse trajnostnega urbanega razvoja
@@ -383,7 +428,7 @@ export default function FuneralCompany() {
                 </p>
               </div>
               <div
-                className="w-[355.33px] h-[250px] bg-cover bg-center rounded-[8px] border-[8px] border-white"
+                className="lg:w-[355.33px] md:w-[261.06px] lg:h-[250px] md:h-[180.69px] bg-cover bg-center rounded-[8px] lg:border-[8px] md:border-[3px] border-white"
                 style={{ backgroundImage: `url('${img4}')` }}
               />
             </div>
@@ -392,12 +437,12 @@ export default function FuneralCompany() {
 
         {/* /////////////////// SECTION 4 ////////////////////*/}
         <div className="h-full">
-          <div className="h-[661px] w-full flex justify-center">
-            <div className="absolute top-[3725px]  border-[#D4D4D4]  w-[866px]">
+          <div className="h-[661px] flex justify-center ">
+            <div className="absolute lg:top-[3725px] md:top-[4331px]  border-[#D4D4D4]  lg:w-[866px] md:w-[600px]">
               <p className="leading-[46.88px] text-[40px] text-[#1E2125]">
                 Pogosta vprašanja
               </p>
-              <div className="flex flex-col gap-[32px]">
+              <div className="flex flex-col gap-[32px] h-[460px]">
                 {/* Button */}
                 <div className="w-full flex justify-end">
                   <button
@@ -408,23 +453,17 @@ export default function FuneralCompany() {
                   </button>
                 </div>
                 {/* Dropdown */}
-                <div className="w-[866px] h-[380px]">
+                <div className="lg:w-[866px] md:w-[600px] h-[380px]">
                   <div className="border-b-[1px] border-[#D4D4D4]">
                     {dropdownInfo.map((item, index) => (
                       <div className="relative w-[866] h-fit border-t-[1px] border-[#D4D4D4]">
-                        <div className="w-[866px] my-[11px] px-[22.39px] items-center  flex justify-between  text-[#1E2125]">
+                        <div className="lg:w-[866px] md:w-[600px] my-[11px] px-[22.39px] items-center  flex justify-between  text-[#1E2125]">
                           <p className="">{item.text}</p>
                           {selectedDropdown === index ? (
                             <RxCross2
                               className="text-[#3C3E41]"
                               onClick={() => {
                                 setSelectedDropdown(null);
-                                // const updatedDropdownInfo = [...dropdownInfo];
-                                // updatedDropdownInfo[index] = {
-                                //   ...updatedDropdownInfo[index],
-                                //   open: false,
-                                // };
-                                // setDropdownInfo(updatedDropdownInfo);
                               }}
                             />
                           ) : (
@@ -432,19 +471,12 @@ export default function FuneralCompany() {
                               className="text-[#3C3E41]"
                               onClick={() => {
                                 setSelectedDropdown(index);
-
-                                // const updatedDropdownInfo = [...dropdownInfo];
-                                // updatedDropdownInfo[index] = {
-                                //   ...updatedDropdownInfo[index],
-                                //   open: true,
-                                // };
-                                // setDropdownInfo(updatedDropdownInfo);
                               }}
                             />
                           )}
                         </div>
                         {selectedDropdown === index && (
-                          <div className=" mt-[29px] ml-[53px] mb-[64px] h-[110px] w-[688px] text-[14px]">
+                          <div className=" mt-[29px] ml-[53px] mb-[64px] h-[110px] lg:w-[688px] md:w-[483px] text-[14px]">
                             <p className="leading-[18px]">
                               Pogrebna dejavnost obsega:
                             </p>
@@ -471,8 +503,8 @@ export default function FuneralCompany() {
         {/* /////////////////// SECTION 5 Footer////////////////////*/}
 
         <div className=" w-full h-[341px] flex justify-center bg-[#D4E6F9]">
-          <div className="relative w-[1280px] h-[341px] ">
-            <div className="absolute flex flex-col items-center gap-[24px] w-[610px] h-[245px] top-[53px] left-[334.5px]">
+          <div className="relative lg:w-[1280px] md:w-[744px] h-[341px] ">
+            <div className="absolute flex flex-col items-center gap-[24px] w-[610px] h-[245px] top-[53px] lg:left-[334.5px] md:left-[68px]">
               <div className="flex gap-[48px] w-[610px]">
                 <p className="text-[40px] text-[#1E2125] leading-[46.88px]">
                   Več informacij:
